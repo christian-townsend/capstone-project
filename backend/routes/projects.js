@@ -17,4 +17,41 @@ router.route("/add").post((req, res) => {
   const skills = req.body.skills;
   const size = req.body.size;
   const duration = req.body.duration;
+
+  const newProject = new Project({
+    title,
+    active,
+    description,
+    scope,
+    skills,
+    size,
+    duration,
+  });
+
+  newProject
+    .save()
+    .then(() => res.json("Project added!"))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
+
+// Get Project by ID
+router.route("/id").get((req, res) => {
+  Project.findById(req.params.id)
+    .then((project) => res.json(project))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
+// Update Existing Project
+router.route("/update/:id").post((req, res) => {
+  Project.findById(req.params.id).then((project) => {
+    project.title = req.body.username;
+    project.active = req.body.active;
+    project.description = req.body.description;
+    project.scope = req.body.scope;
+    project.skills = req.body.skills;
+    project.size = req.body.size;
+    project.duration = req.body.duration;
+  });
+});
+
+module.exports = router;
