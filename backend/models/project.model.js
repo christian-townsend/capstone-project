@@ -9,7 +9,7 @@ const projectSchema = new Schema(
     scope: { type: String, required: true }, // The scope of the Project
     skills: { type: String, required: true }, // Preferred skills for the Project
     size: { type: String, required: true }, // The size of the Project. E.g. (3-4 students)
-    duration: { type: Number, required: true }, // The estimated duration of the Project.
+    duration: { type: String, required: true }, // The estimated duration of the Project.
     approved: { type: Boolean, required: false }, // A flag to indicate if a submitted project has been approved by an admin
     project_sponsor_mapping_id: { type: Date, required: false }, // The Project's sponsor/s
     student_teams: {
