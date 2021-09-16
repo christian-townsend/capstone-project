@@ -64,13 +64,25 @@ router.route("/redirect").get((req, res) => {
         uc_staff = false; // set uc staff to false
       }
 
+      const newUser = new User({
+        email,
+        username,
+        first_name,
+        last_name,
+        student,
+        uc_staff,
+      });
+
       console.log(email);
       console.log(username);
       console.log(first_name);
       console.log(last_name);
       console.log(student);
 
-      res.sendStatus(200);
+      newUser
+        .save()
+        .then(() => res.json("User added!"))
+        .catch((err) => res.status(400).json("Error: " + err));
     })
     .catch((error) => {
       console.log(error);

@@ -17,7 +17,7 @@ const userSchema = new Schema(
     last_name: { type: String, required: true }, // The user's last name
     email: { type: String, required: true }, // The user's email
     student: { type: Boolean, required: true }, // A flag to indicate if the user is a student
-    industry_sponsor: { type: Boolean, required: true }, // A flag to indicate if the user is an industry sponsor
+    industry_sponsor: { type: Boolean, required: false }, // A flag to indicate if the user is an industry sponsor
     uc_staff: { type: Boolean, required: true }, // A flag to indicate if the user is a member of UC staff
   },
   {
