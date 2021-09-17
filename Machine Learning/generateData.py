@@ -9,10 +9,10 @@ maxGroupsPerProject=2
 unitsPerProject = 2
 minStudentsPerGroup=3
 maxStudentsPerGroup = 5
-skillsPerProject = 11
-skillsPerGroup = 12
-totalGroups = 200
-totalProjects = 400
+skillsPerProject = 3
+skillsPerGroup = 3
+totalGroups = 10
+totalProjects = 10
 pointsFactorPerSkillMatch = 2
 pointsForPreference = 12
 pointsForGroupSize = 10
@@ -78,12 +78,22 @@ def AllocateProjects():#allocate projects to groups
         projects[groups[i].allocatedProject].numGroupsAllocated+=1#increment number of groups allocated to project
         if projects[groups[i].allocatedProject].numGroupsAllocated==projects[groups[i].allocatedProject].numGroupsForProject:#set project to unavailable if allocation limit reached
             projects[groups[i].allocatedProject].available=False       
-        print('group ',groups[i].groupNumber,' has been allocated project ', groups[i].allocatedProject)
+        #print('group ',groups[i].groupNumber,' has been allocated project ', groups[i].allocatedProject)
+
+def WriteToFile():
+    for i in range(0,len(groups)):  
+        formattedGroupSkills=' '.join(groups[i].skills)
+        for j in range(0, len(projects)):
+            formattedProjectSkills=' '.join(projects[j].skills)
+            print(groups[i].groupNumber,formattedGroupSkills,',',
+            formattedProjectSkills,projects[j].projectNumber,groups[i].allocatedProject==projects[j].projectNumber)
+
+                       
 
 #driver code
 with open('sampleskills.txt') as f:#read sample skills file to skills array
-    skills = f.readlines()
-
+    skills = f.read().splitlines()   
+    
 for j in range(0,totalProjects):#generate n projects and store in list of objects
     projects.append(Project(skills, j))
 
@@ -92,12 +102,10 @@ for x in range(0,totalGroups):#generate n groups and store in groups[]
     
 AllocateProjects()
 
+WriteToFile()
 
-##rand timestamp - not implementing
-##academic sponsor preferences - done
-##units - done
-##groups per project - done
-##group size - done 
+
+
 
 
         
