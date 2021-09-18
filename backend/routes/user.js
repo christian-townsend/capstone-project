@@ -74,12 +74,6 @@ router.route("/redirect").get((req, res) => {
         uc_staff,
       });
 
-      console.log(email);
-      console.log(username);
-      console.log(first_name);
-      console.log(last_name);
-      console.log(student);
-
       newUser
         .save()
         .then(() => res.json("User added!"))
