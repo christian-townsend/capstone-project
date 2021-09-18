@@ -60,8 +60,9 @@ router.route("/redirect").get((req, res) => {
       var uc_staff = false; // Boolean for UC staff flag
 
       if (email.startsWith("u")) {
-        student = true; // if email begins with "u", user is a student
-        uc_staff = false; // set uc staff to false
+        student = true; // If email begins with "u", user is a student
+        uc_staff = false; // Set uc staff to false
+        industry_sponsor = false; // Set to false
       }
 
       const newUser = new User({
