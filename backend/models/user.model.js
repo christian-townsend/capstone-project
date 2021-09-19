@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
-  // The following are collected after authentication is successful with UC email/password
   {
     username: {
       // The user's username

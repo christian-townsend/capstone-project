@@ -32,7 +32,7 @@ router.route("/").get((req, res) => {
     redirectUri: "http://localhost:3000/users/redirect",
   };
 
-  // get url to sign user in and consent to scopes needed for application
+  // Get url to sign user in and consent to scopes needed for application
   cca
     .getAuthCodeUrl(authCodeUrlParameters)
     .then((response) => {
@@ -41,6 +41,7 @@ router.route("/").get((req, res) => {
     .catch((error) => console.log(JSON.stringify(error)));
 });
 
+// Re-direct after attempted authentication
 router.route("/redirect").get((req, res) => {
   const tokenRequest = {
     code: req.query.code,
