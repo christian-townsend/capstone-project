@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const teamSchema = new Schema({
   name: { type: "String", required: true }, // The teams's name. The only value required upon creation.
-  students: [{ type: Schema.Types.ObjectId, ref: "User", required: false }], // An array of User's assigned to the team
+  students: [{ type: Schema.Types.ObjectId, ref: "User", required: false }], // An array of Students assigned to the team
   preferences: [
     { type: Schema.Types.ObjectId, ref: "Project", required: false },
   ], // An array of Project's included in the Team's preferences

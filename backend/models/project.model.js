@@ -12,12 +12,9 @@ const projectSchema = new Schema(
     duration: { type: String, required: true }, // The estimated duration of the Project.
     approved: { type: Boolean, required: false }, // A flag to indicate if a submitted project has been approved by an admin
     project_sponsor_mapping_id: { type: Date, required: false }, // The Project's sponsor/s
-    student_teams: {
-      teamOne_id: String,
-      teamTwo_id: String,
-      teamThree_id: String,
-      required: false,
-    }, // The Team/s assigned to the Project
+    student_teams: [
+      { type: Schema.Types.ObjectId, ref: "Team", required: false },
+    ], // An array of Team's assigned to the Project
   },
   {
     timestamps: true,
