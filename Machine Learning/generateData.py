@@ -9,11 +9,11 @@ maxGroupsPerProject=2
 unitsPerProject = 2
 minStudentsPerGroup=3
 maxStudentsPerGroup = 5
-skillsPerProject = 3
-skillsPerGroup = 3
-totalGroups = 10
-totalProjects = 10
-pointsFactorPerSkillMatch = 2
+skillsPerProject = 6
+skillsPerGroup = 8
+totalGroups = 50
+totalProjects = 100
+pointsFactorPerSkillMatch = 8
 pointsForPreference = 12
 pointsForGroupSize = 10
 
@@ -44,11 +44,12 @@ class StudentGroup:#StudentGroup constructor class
     skills=[]
     groupPreferences=[]
     groupSize=None
-    allocatedProject=None
+    allocatedProject=random.randint(0,totalProjects)
     groupUnit=None
     groupNumber=0
     def __init__(self, skills, groupNumber):
         self.skills=[]
+        self.groupPreferences=[]
         for i in range(0,3):#add 3 random preferences
             self.groupPreferences.append(random.randint(0,totalProjects))
         for x in range(0,skillsPerGroup):#add 3 random skills
@@ -77,16 +78,23 @@ def AllocateProjects():#allocate projects to groups
                 groups[i].allocatedProject=projects[k].projectNumber#allocate highest scoring project
         projects[groups[i].allocatedProject].numGroupsAllocated+=1#increment number of groups allocated to project
         if projects[groups[i].allocatedProject].numGroupsAllocated==projects[groups[i].allocatedProject].numGroupsForProject:#set project to unavailable if allocation limit reached
-            projects[groups[i].allocatedProject].available=False       
-        #print('group ',groups[i].groupNumber,' has been allocated project ', groups[i].allocatedProject)
+            projects[groups[i].allocatedProject].available=False
+        
 
 def WriteToFile():
     for i in range(0,len(groups)):  
         formattedGroupSkills=' '.join(groups[i].skills)
+        string_ints = [str(int) for int in groups[i].groupPreferences]
+        formattedGroupPreferences=' '.join(string_ints)
         for j in range(0, len(projects)):
+            string_ints = [str(int) for int in projects[j].supervisorPreferences]
+            formattedProjectPreferences=' '.join(string_ints)
             formattedProjectSkills=' '.join(projects[j].skills)
-            print(groups[i].groupNumber,formattedGroupSkills,',',
-            formattedProjectSkills,projects[j].projectNumber,groups[i].allocatedProject==projects[j].projectNumber)
+            string_ints = [str(int) for int in projects[j].relevantUnits]
+            formattedUnits = ' '.join(string_ints)
+            print(groups[i].groupNumber,groups[i].groupUnit,formattedGroupSkills,formattedGroupPreferences,
+            projects[j].projectNumber,formattedUnits,formattedProjectSkills,formattedProjectPreferences,groups[i].allocatedProject==projects[j].projectNumber,sep=',')
+    
 
                        
 
@@ -105,7 +113,11 @@ AllocateProjects()
 WriteToFile()
 
 
-
+##rand timestamp
+##academic sponsor preferences
+##units - done
+##groups per project - done
+##group size - done 
 
 
         
