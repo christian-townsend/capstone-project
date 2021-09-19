@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const teamSchema = new Schema({
-  name: { type: "String", required: true }, // The teams's name
+  name: { type: "String", required: true }, // The teams's name. The only value required upon creation.
+  students: [{ type: Schema.Types.ObjectId, ref: "User", required: false }], // An array of User's assigned to the team
   preferences: [
     { type: Schema.Types.ObjectId, ref: "Project", required: false },
-  ], // Makes reference to Model definition of project.model.js
+  ], // An array of Project's included in the Team's preferences
   allocated_project: {
     type: Schema.Types.ObjectId,
     ref: "Project",

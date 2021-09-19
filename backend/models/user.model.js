@@ -19,6 +19,9 @@ const userSchema = new Schema(
     student: { type: Boolean, required: true }, // A flag to indicate if the user is a student
     industry_sponsor: { type: Boolean, required: false }, // A flag to indicate if the user is an industry sponsor
     uc_staff: { type: Boolean, required: true }, // A flag to indicate if the user is a member of UC staff
+    sponsored_projects: [
+      { type: Schema.Types.ObjectId, ref: "Project", required: false },
+    ], // Makes reference to Model definition of project.model.js - User can sponsor multiple projects
   },
   {
     timestamps: true,
