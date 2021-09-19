@@ -27,6 +27,8 @@ app.listen(SERVER_PORT, () =>
   )
 );
 
-const usersRouter = require("./routes/user");
+const usersRouter = require("./routes/user"); // Routes for Users
+const projectsRouter = require("./routes/projects"); // Routes for Projects
 
 app.use("/users", usersRouter);
+app.use("/projects", projectsRouter);

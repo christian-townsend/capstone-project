@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Python Machine Learning",
+        "active": false,
+        "description": "This is a test description",
+        "scope": "These items are in the scope: hblawerawsdflq",
+        "skills": "Python, JavaScript",
+        "size": "3-4 students",
+        "duration": "13 weeks",
+        "approved": true
+    },
+    {
+        "title": "Python Machine Learning",
+        "active": false,
+        "description": "This is a test description",
+        "scope": "These items are in the scope: hblawerawsdflq",
+        "skills": "Python, JavaScript",
+        "size": "3-4 students",
+        "duration": "13 weeks",
+        "approved": true,
+        "project_sponsor_mapping_id": "614479c53b43c2d0c4be8b1f"
+    }
+]
