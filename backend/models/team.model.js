@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 const teamSchema = new Schema({
   name: { type: "String", required: true }, // The teams's name. The only value required upon creation.
+  capstone: { type: Boolean, required: false }, //Whether group was selected for Capstone expo.
   students: [{ type: Schema.Types.ObjectId, ref: "User", required: false }], // An array of Students assigned to the team
   preferences: [
     { type: Schema.Types.ObjectId, ref: "Project", required: false },
