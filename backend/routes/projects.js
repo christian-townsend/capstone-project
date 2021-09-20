@@ -1,8 +1,9 @@
 const router = require("express").Router();
 let Project = require("../models/project.model");
+const { authUser } = require("../basicAuth");
 
 // Get the initial list of Projects
-router.route("/").get((req, res) => {
+router.all("/", authUser).get((req, res) => {
   Project.find()
     .then((projects) => res.json(projects))
     .catch((err) => res.status(400).json("Error: " + err));
@@ -17,6 +18,7 @@ router.route("/add").post((req, res) => {
   const skills = req.body.skills;
   const size = req.body.size;
   const duration = req.body.duration;
+  const project_sponsors = req.body.project_sponsors;
 
   const newProject = new Project({
     title,
@@ -26,6 +28,7 @@ router.route("/add").post((req, res) => {
     skills,
     size,
     duration,
+    project_sponsors,
   });
 
   newProject
