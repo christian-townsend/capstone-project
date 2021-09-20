@@ -1,11 +1,10 @@
 const router = require("express").Router();
 let Project = require("../models/project.model");
-const { authUser } = require("../middlewares/basicAuth");
 
 // Get the initial list of Projects
 router
   .route("/")
-  .all(authUser)
+  //.all(authUser)
   .get((req, res) => {
     Project.find()
       .then((projects) => res.json(projects))
@@ -33,6 +32,8 @@ router.route("/add").post((req, res) => {
     duration,
     project_sponsors,
   });
+
+  
 
   newProject
     .save()

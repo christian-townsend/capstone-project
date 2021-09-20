@@ -2,6 +2,7 @@ const router = require("express").Router();
 let User = require("../models/user.model");
 const msal = require("@azure/msal-node");
 const { IdToken } = require("@azure/msal-common");
+const verifySignup = require("../middlewares/verifySignup");
 
 // Before running the sample, you will need to replace the values in the config,
 // including the clientSecret
@@ -74,6 +75,9 @@ router.route("/redirect").get((req, res) => {
         student,
         uc_staff,
       });
+
+      // using callback
+      User.findOne({ username: username }, function (err, adventure) {});
 
       newUser
         .save()

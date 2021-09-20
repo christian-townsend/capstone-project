@@ -35,6 +35,7 @@ app.use("/projects", projectsRouter);
 
 const Role = require("./models/role.model");
 
+// Create roles if not already created
 function initial() {
   Role.estimatedDocumentCount((err, count) => {
     if (!err && count === 0) {
