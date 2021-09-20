@@ -1,6 +1,6 @@
 const router = require("express").Router();
 let Project = require("../models/project.model");
-const { authUser } = require("../basicAuth");
+const { authUser } = require("../middlewares/basicAuth");
 
 // Get the initial list of Projects
 router

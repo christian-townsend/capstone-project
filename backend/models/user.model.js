@@ -22,14 +22,12 @@ const userSchema = new Schema(
     sponsored_projects: [
       { type: Schema.Types.ObjectId, ref: "Project", required: false },
     ], // An array of Project objects that a User can sponsor (for industry sponsors and uc staff only)
-    role: {
-      type: String,
-      default: "basic",
-      enum: ["basic", "supervisor", "admin"],
-    },
-    accessToken: {
-      type: String,
-    },
+    roles: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Role",
+      },
+    ],
   },
   {
     timestamps: true,
