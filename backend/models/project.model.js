@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const projectSchema = new Schema(
   {
-    user: { type: String, required: false },
+    //user: { type: String, required: false },
     title: { type: String, required: true }, // The Project's title
     active: { type: Boolean, required: true }, // A flag is the Project is active
     description: { type: String, required: true }, // A description of the Project
