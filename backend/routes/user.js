@@ -88,19 +88,19 @@ router.route("/redirect").get((req, res) => {
           return;
         }
 
+        // If user already exists, re-direct them to the Dashboard page
         if (user) {
-          // If user already exists, re-direct them to the Dashboard page
-          res.status(400).send({
-            message:
-              "Failed! Username is already in use! This should route the user to the Dashboard.",
-          });
+          res.redirect("/DashboardPage");
           return;
         }
+
+        // Add the new user if they dont already exist, and re-direct them to the Dashboard page
         if (!user) {
-          newUser // add the new user if they dont already exist
+          newUser
             .save()
             .then(() => res.json("User added (they dont already exist)!"))
             .catch((err) => res.status(400).json("Error: " + err));
+          res.redirect("/DashboardPage");
         }
       });
     })
