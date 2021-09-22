@@ -2,7 +2,8 @@ const router = require("express").Router();
 let User = require("../models/user.model");
 const msal = require("@azure/msal-node");
 const { IdToken } = require("@azure/msal-common");
-const verifySignup = require("../middlewares/verifySignup");
+///const verifySignup = require("../middlewares/verifySignup");
+//let testUser = require("../models/user.model");
 
 // Before running the sample, you will need to replace the values in the config,
 // including the clientSecret
@@ -38,11 +39,13 @@ router.route("/").get((req, res) => {
     .getAuthCodeUrl(authCodeUrlParameters)
     .then((response) => {
       res.redirect(response);
+      console.log(response);
+      console.log("BLAHBALH");
     })
     .catch((error) => console.log(JSON.stringify(error)));
 });
 
-// Re-direct after attempted authentication
+// Re-direct after attempted authentication ///
 router.route("/redirect").get((req, res) => {
   const tokenRequest = {
     code: req.query.code,
@@ -60,6 +63,7 @@ router.route("/redirect").get((req, res) => {
       const [first_name, last_name] = response.account.name.split("."); // Set user's first and surname
       var student = false; // Boolean for student flag
       var uc_staff = false; // Boolean for UC staff flag
+      const userNameTest = response.account.username.split("@"); // Set user's username
 
       if (email.startsWith("u")) {
         student = true; // If email begins with "u", user is a student
@@ -76,19 +80,37 @@ router.route("/redirect").get((req, res) => {
         uc_staff,
       });
 
-      // using callback
-      User.findOne({ username: username }, function (err, adventure) {});
+      User.findOne({
+        username: userNameTest,
+      }).exec((err, user) => {
+        if (err) {
+          res.status(500).send({ message: err });
+          return;
+        }
 
-      newUser
-        .save()
-        .then(() => res.json("User added!"))
-        .catch((err) => res.status(400).json("Error: " + err));
+        if (user) {
+          // If user already exists, re-direct them to the Dashboard page
+          res.status(400).send({
+            message:
+              "Failed! Username is already in use! This should route the user to the Dashboard.",
+          });
+          return;
+        }
+        if (!user) {
+          newUser // add the new user if they dont already exist
+            .save()
+            .then(() => res.json("User added (they dont already exist)!"))
+            .catch((err) => res.status(400).json("Error: " + err));
+        }
+      });
     })
     .catch((error) => {
       console.log(error);
       res.status(500).send(error);
     });
 });
+
+////////////////////////////////////////////////
 
 router.route("/add").post((req, res) => {
   const username = req.body.username;
