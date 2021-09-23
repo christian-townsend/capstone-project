@@ -1,0 +1,401 @@
+﻿GroupNumber,GroupUnit,GroupSkill1,GroupSkill2,GroupSkill3,GroupSkill4,GroupPreference1,GroupPreference2,GroupPreference3,ProjectNumber,ProjectUnit,ProjectSkill1,ProjectSkill2,ProjectSkill3,ProjectSkill4,ProjectPreference1,ProjectPreference2,ProjectPreference3,Allocated
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+0,11522,mobile app development,python,mobile app development,writing,1,4,8,9,9786,c,rest,python,3d printing,1,36,15,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,2,9786,c,perl,database design,statistical analysis,10,6,19,1
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+1,9786,statistical analysis,c#,mysql,kotlin,2,3,2,9,9786,c,rest,python,3d printing,1,36,15,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+2,9786,mongodb,data visualization,business analytics ,node.js,2,0,3,9,9786,c,rest,python,3d printing,1,36,15,1
+3,11522,cam,android studio,electrical engineering,express,0,1,9,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+3,11522,cam,android studio,electrical engineering,express,0,1,9,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+3,11522,cam,android studio,electrical engineering,express,0,1,9,9,9786,c,rest,python,3d printing,1,36,15,0
+4,11522,cad,analysis,c++,sql server,10,1,3,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+4,11522,cad,analysis,c++,sql server,10,1,3,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+4,11522,cad,analysis,c++,sql server,10,1,3,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+4,11522,cad,analysis,c++,sql server,10,1,3,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+4,11522,cad,analysis,c++,sql server,10,1,3,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+4,11522,cad,analysis,c++,sql server,10,1,3,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+4,11522,cad,analysis,c++,sql server,10,1,3,6,11522,machine learning,kotlin,css,c++,31,7,30,1
+4,11522,cad,analysis,c++,sql server,10,1,3,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+4,11522,cad,analysis,c++,sql server,10,1,3,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+4,11522,cad,analysis,c++,sql server,10,1,3,9,9786,c,rest,python,3d printing,1,36,15,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+5,11522,machine learning,matlab,javascript,c++,8,6,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+5,11522,machine learning,matlab,javascript,c++,8,6,4,9,9786,c,rest,python,3d printing,1,36,15,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,5,10004,css,vue.js,hardware engineering,perl,17,12,32,1
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+6,10004,electrical engineering,application development ,sdn,vue.js,8,10,7,9,9786,c,rest,python,3d printing,1,36,15,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+7,11522,hardware engineering,writing,robotics,asp.net,7,4,2,9,9786,c,rest,python,3d printing,1,36,15,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+8,9785,github,c++,scripting,statistical analysis,10,2,0,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+8,9785,github,c++,scripting,statistical analysis,10,2,0,9,9786,c,rest,python,3d printing,1,36,15,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+9,9785,hardware engineering,analysis,robotics,statistical analysis,7,0,5,9,9786,c,rest,python,3d printing,1,36,15,0
+10,10004,wordpress,express,swift,express,8,0,5,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+10,10004,wordpress,express,swift,express,8,0,5,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+10,10004,wordpress,express,swift,express,8,0,5,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+10,10004,wordpress,express,swift,express,8,0,5,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+10,10004,wordpress,express,swift,express,8,0,5,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+10,10004,wordpress,express,swift,express,8,0,5,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+10,10004,wordpress,express,swift,express,8,0,5,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+10,10004,wordpress,express,swift,express,8,0,5,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+10,10004,wordpress,express,swift,express,8,0,5,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+10,10004,wordpress,express,swift,express,8,0,5,9,9786,c,rest,python,3d printing,1,36,15,0
+11,9786,c#,writing,cam,robotics,8,1,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+11,9786,c#,writing,cam,robotics,8,1,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+11,9786,c#,writing,cam,robotics,8,1,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+11,9786,c#,writing,cam,robotics,8,1,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+11,9786,c#,writing,cam,robotics,8,1,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+11,9786,c#,writing,cam,robotics,8,1,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+11,9786,c#,writing,cam,robotics,8,1,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+11,9786,c#,writing,cam,robotics,8,1,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+11,9786,c#,writing,cam,robotics,8,1,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+11,9786,c#,writing,cam,robotics,8,1,4,9,9786,c,rest,python,3d printing,1,36,15,0
+12,10005,rest,express,agile development,web development,3,9,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+12,10005,rest,express,agile development,web development,3,9,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+12,10005,rest,express,agile development,web development,3,9,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+12,10005,rest,express,agile development,web development,3,9,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,1
+12,10005,rest,express,agile development,web development,3,9,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+12,10005,rest,express,agile development,web development,3,9,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+12,10005,rest,express,agile development,web development,3,9,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+12,10005,rest,express,agile development,web development,3,9,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+12,10005,rest,express,agile development,web development,3,9,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+12,10005,rest,express,agile development,web development,3,9,4,9,9786,c,rest,python,3d printing,1,36,15,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+13,11522,android studio,software development,vue.js,web development,3,4,10,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+13,11522,android studio,software development,vue.js,web development,3,4,10,9,9786,c,rest,python,3d printing,1,36,15,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,1
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+14,10098,application development ,cloud computing solutions ,asp.net,linear algebra,7,4,6,9,9786,c,rest,python,3d printing,1,36,15,0
+15,11522,python,scripting,database administration,research,10,8,7,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+15,11522,python,scripting,database administration,research,10,8,7,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+15,11522,python,scripting,database administration,research,10,8,7,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+15,11522,python,scripting,database administration,research,10,8,7,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+15,11522,python,scripting,database administration,research,10,8,7,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+15,11522,python,scripting,database administration,research,10,8,7,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+15,11522,python,scripting,database administration,research,10,8,7,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+15,11522,python,scripting,database administration,research,10,8,7,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+15,11522,python,scripting,database administration,research,10,8,7,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+15,11522,python,scripting,database administration,research,10,8,7,9,9786,c,rest,python,3d printing,1,36,15,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+16,9786,sql server,cam,matlab,qualitative research skills,7,3,7,9,9786,c,rest,python,3d printing,1,36,15,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+17,9785,saas,asp.net,sdn,matlab,1,5,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+17,9785,saas,asp.net,sdn,matlab,1,5,4,9,9786,c,rest,python,3d printing,1,36,15,0
+18,10005,project management,cam,xml,perl,0,10,9,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+18,10005,project management,cam,xml,perl,0,10,9,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+18,10005,project management,cam,xml,perl,0,10,9,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+18,10005,project management,cam,xml,perl,0,10,9,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+18,10005,project management,cam,xml,perl,0,10,9,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+18,10005,project management,cam,xml,perl,0,10,9,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+18,10005,project management,cam,xml,perl,0,10,9,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+18,10005,project management,cam,xml,perl,0,10,9,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+18,10005,project management,cam,xml,perl,0,10,9,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+18,10005,project management,cam,xml,perl,0,10,9,9,9786,c,rest,python,3d printing,1,36,15,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+19,9786,community engagement ,writing,swift,writing,3,3,4,9,9786,c,rest,python,3d printing,1,36,15,1
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+20,10005,asp.net,electrical engineering,cam,javascript,2,3,4,9,9786,c,rest,python,3d printing,1,36,15,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,1
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+21,10004,project management ,angular,kotlin,machine learning,5,4,6,9,9786,c,rest,python,3d printing,1,36,15,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+22,11522,sdn,cloud computing solutions ,c#,database design,1,9,1,9,9786,c,rest,python,3d printing,1,36,15,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,1
+23,10005,cam,r,opensource concepts,project management ,0,10,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+23,10005,cam,r,opensource concepts,project management ,0,10,4,9,9786,c,rest,python,3d printing,1,36,15,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+24,10005,genetic algorithms,project management ,html,angular,3,5,10,9,9786,c,rest,python,3d printing,1,36,15,0
+25,10005,html,data visualization,css,node.js,10,5,8,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+25,10005,html,data visualization,css,node.js,10,5,8,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+25,10005,html,data visualization,css,node.js,10,5,8,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+25,10005,html,data visualization,css,node.js,10,5,8,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+25,10005,html,data visualization,css,node.js,10,5,8,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+25,10005,html,data visualization,css,node.js,10,5,8,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+25,10005,html,data visualization,css,node.js,10,5,8,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+25,10005,html,data visualization,css,node.js,10,5,8,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+25,10005,html,data visualization,css,node.js,10,5,8,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+25,10005,html,data visualization,css,node.js,10,5,8,9,9786,c,rest,python,3d printing,1,36,15,0
+26,10004,ui design,c#,python,mongodb,10,5,0,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+26,10004,ui design,c#,python,mongodb,10,5,0,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+26,10004,ui design,c#,python,mongodb,10,5,0,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+26,10004,ui design,c#,python,mongodb,10,5,0,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+26,10004,ui design,c#,python,mongodb,10,5,0,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+26,10004,ui design,c#,python,mongodb,10,5,0,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+26,10004,ui design,c#,python,mongodb,10,5,0,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+26,10004,ui design,c#,python,mongodb,10,5,0,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+26,10004,ui design,c#,python,mongodb,10,5,0,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+26,10004,ui design,c#,python,mongodb,10,5,0,9,9786,c,rest,python,3d printing,1,36,15,0
+27,10098,c#,node.js,data visualization,c,3,8,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+27,10098,c#,node.js,data visualization,c,3,8,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+27,10098,c#,node.js,data visualization,c,3,8,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+27,10098,c#,node.js,data visualization,c,3,8,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+27,10098,c#,node.js,data visualization,c,3,8,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+27,10098,c#,node.js,data visualization,c,3,8,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+27,10098,c#,node.js,data visualization,c,3,8,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+27,10098,c#,node.js,data visualization,c,3,8,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+27,10098,c#,node.js,data visualization,c,3,8,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+27,10098,c#,node.js,data visualization,c,3,8,4,9,9786,c,rest,python,3d printing,1,36,15,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,1
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,8,11522,perl,electrical engineering,research,scripting,24,35,29,0
+28,10004,xml,project management ,qualitative research skills,javascript,4,8,2,9,9786,c,rest,python,3d printing,1,36,15,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+29,10004,mysql,express,android studio,data visualization,10,4,9,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+29,10004,mysql,express,android studio,data visualization,10,4,9,9,9786,c,rest,python,3d printing,1,36,15,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+30,9785,perl,qualitative research skills,project management,research,3,4,7,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+30,9785,perl,qualitative research skills,project management,research,3,4,7,9,9786,c,rest,python,3d printing,1,36,15,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+31,9785,javascript,agile development,ejs,hardware engineering,6,4,1,9,9786,c,rest,python,3d printing,1,36,15,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+32,9786,kotlin,javascript,opensource concepts,robotics,9,2,4,9,9786,c,rest,python,3d printing,1,36,15,0
+33,11522,angular,data visualization,css,android studio,2,3,10,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+33,11522,angular,data visualization,css,android studio,2,3,10,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+33,11522,angular,data visualization,css,android studio,2,3,10,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+33,11522,angular,data visualization,css,android studio,2,3,10,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+33,11522,angular,data visualization,css,android studio,2,3,10,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+33,11522,angular,data visualization,css,android studio,2,3,10,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+33,11522,angular,data visualization,css,android studio,2,3,10,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+33,11522,angular,data visualization,css,android studio,2,3,10,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+33,11522,angular,data visualization,css,android studio,2,3,10,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+33,11522,angular,data visualization,css,android studio,2,3,10,9,9786,c,rest,python,3d printing,1,36,15,0
+34,10098,database design,python,web development,writing,6,10,7,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+34,10098,database design,python,web development,writing,6,10,7,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+34,10098,database design,python,web development,writing,6,10,7,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+34,10098,database design,python,web development,writing,6,10,7,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+34,10098,database design,python,web development,writing,6,10,7,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+34,10098,database design,python,web development,writing,6,10,7,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+34,10098,database design,python,web development,writing,6,10,7,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+34,10098,database design,python,web development,writing,6,10,7,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+34,10098,database design,python,web development,writing,6,10,7,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+34,10098,database design,python,web development,writing,6,10,7,9,9786,c,rest,python,3d printing,1,36,15,0
+35,11522,asp.net,xml,saas,software development,0,9,10,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+35,11522,asp.net,xml,saas,software development,0,9,10,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+35,11522,asp.net,xml,saas,software development,0,9,10,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+35,11522,asp.net,xml,saas,software development,0,9,10,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+35,11522,asp.net,xml,saas,software development,0,9,10,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+35,11522,asp.net,xml,saas,software development,0,9,10,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+35,11522,asp.net,xml,saas,software development,0,9,10,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+35,11522,asp.net,xml,saas,software development,0,9,10,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+35,11522,asp.net,xml,saas,software development,0,9,10,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+35,11522,asp.net,xml,saas,software development,0,9,10,9,9786,c,rest,python,3d printing,1,36,15,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+36,9786,vue.js,database administration,node.js,sdn,5,5,1,9,9786,c,rest,python,3d printing,1,36,15,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+37,9785,perl,mysql,matlab,database administration,2,10,3,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+37,9785,perl,mysql,matlab,database administration,2,10,3,9,9786,c,rest,python,3d printing,1,36,15,0
+38,9785,perl,data visualization,writing,writing,4,10,8,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+38,9785,perl,data visualization,writing,writing,4,10,8,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+38,9785,perl,data visualization,writing,writing,4,10,8,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+38,9785,perl,data visualization,writing,writing,4,10,8,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+38,9785,perl,data visualization,writing,writing,4,10,8,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+38,9785,perl,data visualization,writing,writing,4,10,8,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+38,9785,perl,data visualization,writing,writing,4,10,8,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+38,9785,perl,data visualization,writing,writing,4,10,8,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+38,9785,perl,data visualization,writing,writing,4,10,8,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+38,9785,perl,data visualization,writing,writing,4,10,8,9,9786,c,rest,python,3d printing,1,36,15,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,0,10098,database design,angular,application development ,genetic algorithms,34,38,35,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,1,10004,analysis,cloud computing solutions ,database design,linear algebra,0,3,7,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,2,9786,c,perl,database design,statistical analysis,10,6,19,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,3,10005,vue.js,machine learning,sdn,swift,9,40,9,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,4,10004,software development,business analytics ,cloud computing solutions ,statistical analysis,24,25,27,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,5,10004,css,vue.js,hardware engineering,perl,17,12,32,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,6,11522,machine learning,kotlin,css,c++,31,7,30,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,7,10005,ui design,machine learning,linear algebra,android studio,14,5,37,0
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,8,11522,perl,electrical engineering,research,scripting,24,35,29,1
+39,10098,application development ,scripting,hardware engineering,ui design,6,4,5,9,9786,c,rest,python,3d printing,1,36,15,0
