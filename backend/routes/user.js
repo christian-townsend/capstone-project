@@ -2,11 +2,9 @@ const router = require("express").Router();
 let User = require("../models/user.model");
 const msal = require("@azure/msal-node");
 const { IdToken } = require("@azure/msal-common");
-///const verifySignup = require("../middlewares/verifySignup");
-//let testUser = require("../models/user.model");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
-// Before running the sample, you will need to replace the values in the config,
-// including the clientSecret
 const config = {
   auth: {
     clientId: "24acc49b-bb41-4392-b792-33df1647b7bb",
@@ -40,7 +38,6 @@ router.route("/").get((req, res) => {
     .then((response) => {
       res.redirect(response);
       console.log(response);
-      console.log("BLAHBALH");
     })
     .catch((error) => console.log(JSON.stringify(error)));
 });
@@ -90,12 +87,20 @@ router.route("/redirect").get((req, res) => {
 
         // If user already exists, re-direct them to the Dashboard page
         if (user) {
+          const jwtAccessToken = jwt.sign(
+            newUser.toJSON(),
+            process.env.ACCESS_TOKEN_SECRET
+          );
           res.redirect("/DashboardPage");
           return;
         }
 
         // Add the new user if they dont already exist, and re-direct them to the Dashboard page
         if (!user) {
+          const jwtAccessToken = jwt.sign(
+            newUser.toJSON(),
+            process.env.ACCESS_TOKEN_SECRET
+          );
           newUser
             .save()
             .then(() => res.json("User added (they dont already exist)!"))

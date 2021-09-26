@@ -1,10 +1,11 @@
 const router = require("express").Router();
+const { authenticateToken } = require("../middlewares/authenticateToken");
 let Project = require("../models/project.model");
 
 // Get the initial list of Projects
 router
   .route("/")
-  //.all(authUser)
+  .all(authenticateToken)
   .get((req, res) => {
     Project.find()
       .then((projects) => res.json(projects))
@@ -32,8 +33,6 @@ router.route("/add").post((req, res) => {
     duration,
     project_sponsors,
   });
-
-  
 
   newProject
     .save()
