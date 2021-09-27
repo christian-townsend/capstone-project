@@ -4,7 +4,7 @@ export default class Login extends Component {
     render (){
         return (
             <div>
-                <p> this is the team page/component</p>
+                <h1> this is the team page/component</h1>
             </div>
         )
     }

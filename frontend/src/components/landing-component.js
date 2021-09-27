@@ -5,6 +5,9 @@ export default class Account extends Component {
     render (){
         return (
             <div class="row">
+                    <div class="row">
+                        <div class="col-lg-12 divider-section"></div>
+                    </div>
                  <div class="col-lg-12">
                      <div class="card card-main">
                         <img class="card-img-top" src="/images/uccampus.jpg" alt="UC Campus"></img>
