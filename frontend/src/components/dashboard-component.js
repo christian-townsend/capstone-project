@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
-export default class Account extends Component {
+export default class Dashboard extends Component {
     render (){
         return (
-
             <div class="row">
+                <div class="row">
+                     <div class="col-lg-12 divider-section">
+                    </div>
+                </div>
             <div class="col-sm-8">
+              <h1 className="header-title">Your Project</h1>
               <div class="card card-project">
                 <div class="card-body">
                   <h3 class="card-title">Project Title</h3>
@@ -20,6 +24,7 @@ export default class Account extends Component {
               </div>
             </div>
             <div class="col-sm-4">
+            <h1 className="header-title">Your Group</h1>
               <div class="card card-team">
                 <div class="card-body">
                   <h3 class="card-title">Group Number</h3>
@@ -33,6 +38,8 @@ export default class Account extends Component {
               </div>
             </div>
           </div>
+
+          
 
         )
     }

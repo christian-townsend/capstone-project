@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./components/navbar-component"
-import Account from "./components/account-component"
+import Dashboard from "./components/dashboard-component"
 import Landing from "./components/landing-component"
-import Teams from "./components/teams-component"
+import Login from "./components/login-component"
 
 
 function App() {
@@ -14,10 +14,10 @@ function App() {
     <Router>
       <div className="App">
       <Navbar />
-      <br/>
-      <Route path="/account" component={Account} />
-      <Route path="/teams" component={Teams} />
-      <Route path="/landing" component={Landing} />
+          <br/>
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/login" component={Login} />
+          <Route path="/landing" component={Landing} />
       </div>
     </Router>
   );

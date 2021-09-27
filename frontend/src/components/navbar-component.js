@@ -8,32 +8,23 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar navbar-dark navbar-expand-lg">
           <div className="container-fluid">
-
-                 
-
-                 
-                 <a> <Link to='/landing'><img className="capstone-logo" src="/images/capstone-logo.svg" alt="capstone logo"></img>
-                 </Link></a>
-
                 <ul className="navbar-nav">  
                     <li>
+                      <Link to='/landing'><img className="capstone-logo" src="/images/capstone-logo.svg" alt="capstone logo"></img></Link>
+                    </li>
+                    <li>
                     <a href="https://www.canberra.edu.au/content/myuc/home.html/">
-                    <img className="myUC-logo" width="129.6" height="47.2" src="/images/myUC.svg" alt="myUC logo"></img>
-                    </a>
+                      <img className="myUC-logo" width="129.6" height="47.2" src="/images/myUC.svg" alt="myUC logo"></img></a>
                     </li>
-
                     <li>
-                    <a href="https://uclearn.canberra.edu.au//">
-                    <img className="canvas" width="52" height="52" src="/images/canvas.svg" alt="canvas logo"></img>
-                    </a>
+                      <Link to='/dashboard/'> <img className="canvas" width="52" height="52" src="/images/canvas.svg" alt="canvas logo"></img></Link>
                     </li>
-                    
                     <li>
-                    <Link to="/account" className="fas fa-user-circle fa-2x"></Link>
+                      <i className="fas fa-user-circle fa-2x"></i>
                     </li>
                 </ul>
-                </div>
-            </nav>
+            </div>
+      </nav>
     );
   }
 }

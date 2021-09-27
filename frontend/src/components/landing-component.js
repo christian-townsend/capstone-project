@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Account extends Component {
     render (){
@@ -7,8 +8,8 @@ export default class Account extends Component {
                  <div class="col-lg-12">
                      <div class="card card-main">
                         <img class="card-img-top" src="/images/uccampus.jpg" alt="UC Campus"></img>
-                        <div class="card-body">
-                        <h1 className="landing-title">Welcome to the Capstone Project</h1>  
+                        <div class="card-body" >
+                        <h1 className="landing-title" >Welcome to the Capstone Project</h1>  
                         <p> What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
                         printer took a galley of type and scrambled it to make a type specimen book. It has survived 
@@ -34,7 +35,9 @@ export default class Account extends Component {
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
                             printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <a href="#" class="btn btn-primary">Login</a>
+                                <Link to="/login">
+                                    <button className="btn btn-primary">Login</button>
+                                </Link>
                         </div>
                         </div>
                     </div>
@@ -46,7 +49,9 @@ export default class Account extends Component {
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
                             printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <a href="#" class="btn btn-primary">Login</a>
+                                <Link to="/login">
+                                    <button className="btn btn-primary">Login</button>
+                                </Link>
                         </div>
                         </div>
                     </div>
@@ -66,7 +71,9 @@ export default class Account extends Component {
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
                             printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <a href="#" class="btn btn-primary">Login</a>
+                                <Link to="/login">
+                                    <button className="btn btn-primary">Login</button>
+                                </Link>
                         </div>
                         </div>
                     </div>
@@ -78,7 +85,9 @@ export default class Account extends Component {
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
                             printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <a href="#" class="btn btn-primary">View Projects</a>
+                                <Link to="/projects">
+                                    <button className="btn btn-primary">View Projects</button>
+                                </Link>
                         </div>
                         </div>
                     </div>
