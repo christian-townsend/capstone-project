@@ -1,0 +1,59 @@
+%tensorflow_version 2.x #only needed if using Google Collaboratory
+from __future__ import absolute_import, division, print_function, unicode_literals
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from IPython.display import clear_output
+from six.moves import urllib
+import tensorflow.compat.v2.feature_column as fc
+import tensorflow as tf
+
+#Define input and output columns
+CSV_COLUMN_NAMES = ['GroupNumber', 'GroupUnit', 'GroupSkill1', 'GroupSkill2', 'GroupSkill3', 'GroupSkill4', 'GroupPreference1', 
+                'GroupPreference2', 'GroupPreference3', 'ProjectNumber', 'ProjectUnit', 'ProjectSkill1', 'ProjectSkill2', 'ProjectSkill3', 'ProjectSkill4', 'ProjectPreference1', 'ProjectPreference2', 'ProjectPreference3', 'Allocated']
+ALLOCATED = [0, 1]
+
+#Read in training and testing data
+train = pd.read_csv('https://raw.githubusercontent.com/nickjackson862/machine-learning/main/trainData40_10.csv', names=CSV_COLUMN_NAMES, header=0)
+test = pd.read_csv('https://raw.githubusercontent.com/nickjackson862/machine-learning/main/testData40_10.csv', names=CSV_COLUMN_NAMES, header=0)
+
+#Drop categorical columns. Will remove once input function updated.
+train.drop(columns=['GroupSkill1', 'GroupSkill2', 'GroupSkill3', 'GroupSkill4', "ProjectSkill1", "ProjectSkill2", "ProjectSkill3", "ProjectSkill4", ], axis=1, inplace=True)
+test.drop(columns=['GroupSkill1', 'GroupSkill2', 'GroupSkill3', 'GroupSkill4', "ProjectSkill1", "ProjectSkill2", "ProjectSkill3", "ProjectSkill4", ], axis=1, inplace=True)
+
+#Pop output column
+train_y = train.pop('Allocated')
+test_y = test.pop('Allocated')
+train.head()
+
+#Build input function
+def input_fn(features, labels, training=True, batch_size=100):   
+    dataset = tf.data.Dataset.from_tensor_slices((dict(features), labels))    
+    if training:
+        dataset = dataset.shuffle(10).repeat()    
+    return dataset.batch(batch_size)
+    
+my_feature_columns = []
+for key in train.keys():
+    my_feature_columns.append(tf.feature_column.numeric_column(key=key))
+
+#Call TensorFlow estimator function and build classifier. Set hidden layers here.
+classifier = tf.estimator.DNNClassifier(
+    feature_columns=my_feature_columns,
+    hidden_units=[50, 20, 30],
+    n_classes=2)
+
+#Train classifier. Increase/decrease epochs here.
+classifier.train(
+    input_fn=lambda: input_fn(train, train_y, training=True),
+    steps=15000)
+
+clear_output()
+
+#Evaluate classifier
+eval_result = classifier.evaluate(
+    input_fn=lambda: input_fn(test, test_y, training=False))
+
+#Print accuracy
+clear_output()
+print('\nTest set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
