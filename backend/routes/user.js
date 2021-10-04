@@ -60,7 +60,6 @@ router.route("/redirect").get((req, res) => {
       const [first_name, last_name] = response.account.name.split("."); // Set user's first and surname
       var student = false; // Boolean for student flag
       var uc_staff = false; // Boolean for UC staff flag
-      const userNameTest = response.account.username.split("@"); // Set user's username
 
       if (email.startsWith("u")) {
         student = true; // If email begins with "u", user is a student
@@ -78,21 +77,27 @@ router.route("/redirect").get((req, res) => {
       });
 
       User.findOne({
-        username: userNameTest,
+        username: username,
       }).exec((err, user) => {
         if (err) {
           res.status(500).send({ message: err });
           return;
         }
-
+        const maxAge = 1 * 24 * 60 * 60;
         // If user already exists, re-direct them to the Dashboard page
         if (user) {
           const jwtAccessToken = jwt.sign(
             newUser.toJSON(),
             process.env.ACCESS_TOKEN_SECRET
           );
-          res.redirect("/DashboardPage");
-          return;
+
+          console.log(jwtAccessToken);
+
+          res.cookie("jwt", jwtAccessToken, {
+            httpOnly: true,
+            maxAge: maxAge * 1000,
+          });
+          res.status(201).json(newUser);
         }
 
         // Add the new user if they dont already exist, and re-direct them to the Dashboard page
@@ -101,11 +106,13 @@ router.route("/redirect").get((req, res) => {
             newUser.toJSON(),
             process.env.ACCESS_TOKEN_SECRET
           );
+
           newUser
             .save()
             .then(() => res.json("User added (they dont already exist)!"))
             .catch((err) => res.status(400).json("Error: " + err));
-          res.redirect("/DashboardPage");
+          console.log(req.session);
+          res.status(201).json(newUser);
         }
       });
     })

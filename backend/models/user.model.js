@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 
 const Schema = mongoose.Schema;
 
@@ -33,6 +34,7 @@ const userSchema = new Schema(
     timestamps: true,
   }
 );
+
 
 const User = mongoose.model("User", userSchema);
 
