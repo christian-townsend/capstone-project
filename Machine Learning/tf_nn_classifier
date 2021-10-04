@@ -1,4 +1,5 @@
-%tensorflow_version 2.x #only needed if using Google Collaboratory
+%tensorflow_version 2.x 
+
 from __future__ import absolute_import, division, print_function, unicode_literals
 import numpy as np
 import pandas as pd
@@ -8,52 +9,47 @@ from six.moves import urllib
 import tensorflow.compat.v2.feature_column as fc
 import tensorflow as tf
 
-#Define input and output columns
-CSV_COLUMN_NAMES = ['GroupNumber', 'GroupUnit', 'GroupSkill1', 'GroupSkill2', 'GroupSkill3', 'GroupSkill4', 'GroupPreference1', 
-                'GroupPreference2', 'GroupPreference3', 'ProjectNumber', 'ProjectUnit', 'ProjectSkill1', 'ProjectSkill2', 'ProjectSkill3', 'ProjectSkill4', 'ProjectPreference1', 'ProjectPreference2', 'ProjectPreference3', 'Allocated']
-ALLOCATED = [0, 1]
+train = pd.read_csv('https://raw.githubusercontent.com/nickjackson862/machine-learning/main/trainData40_10.csv')
+test = pd.read_csv('https://raw.githubusercontent.com/nickjackson862/machine-learning/main/testData40_10.csv')
 
-#Read in training and testing data
-train = pd.read_csv('https://raw.githubusercontent.com/nickjackson862/machine-learning/main/trainData40_10.csv', names=CSV_COLUMN_NAMES, header=0)
-test = pd.read_csv('https://raw.githubusercontent.com/nickjackson862/machine-learning/main/testData40_10.csv', names=CSV_COLUMN_NAMES, header=0)
+CATEGORICAL_COLUMNS = ['GroupSkill1', 'GroupSkill2', 'GroupSkill3', 'GroupSkill4', 'ProjectSkill1', 'ProjectSkill2', 'ProjectSkill3', 'ProjectSkill4']
 
-#Drop categorical columns. Will remove once input function updated.
-train.drop(columns=['GroupSkill1', 'GroupSkill2', 'GroupSkill3', 'GroupSkill4', "ProjectSkill1", "ProjectSkill2", "ProjectSkill3", "ProjectSkill4", ], axis=1, inplace=True)
-test.drop(columns=['GroupSkill1', 'GroupSkill2', 'GroupSkill3', 'GroupSkill4', "ProjectSkill1", "ProjectSkill2", "ProjectSkill3", "ProjectSkill4", ], axis=1, inplace=True)
+NUMERIC_COLUMNS = ['GroupNumber', 'GroupUnit', 'GroupPreference1', 'GroupPreference2', 'GroupPreference3', 'ProjectNumber', 'ProjectUnit', 'ProjectPreference1', 'ProjectPreference2', 'ProjectPreference3']
 
-#Pop output column
 train_y = train.pop('Allocated')
 test_y = test.pop('Allocated')
 train.head()
 
-#Build input function
-def input_fn(features, labels, training=True, batch_size=100):   
+def input_fn(features, labels, training=True, batch_size=256):   
     dataset = tf.data.Dataset.from_tensor_slices((dict(features), labels))    
     if training:
-        dataset = dataset.shuffle(10).repeat()    
+        dataset = dataset.shuffle(1000).repeat()    
     return dataset.batch(batch_size)
-    
-my_feature_columns = []
-for key in train.keys():
-    my_feature_columns.append(tf.feature_column.numeric_column(key=key))
 
-#Call TensorFlow estimator function and build classifier. Set hidden layers here.
+my_feature_columns = []
+for feature_name in CATEGORICAL_COLUMNS:
+  train[feature_name]=train[feature_name].astype('category')
+  train[feature_name]=train[feature_name].cat.codes
+  test[feature_name]=test[feature_name].astype('category')
+  test[feature_name]=test[feature_name].cat.codes
+
+for feature_name in NUMERIC_COLUMNS:
+  my_feature_columns.append(tf.feature_column.numeric_column(feature_name, dtype=tf.float32))
+
 classifier = tf.estimator.DNNClassifier(
     feature_columns=my_feature_columns,
-    hidden_units=[50, 20, 30],
+    hidden_units=[50, 20],
     n_classes=2)
 
-#Train classifier. Increase/decrease epochs here.
 classifier.train(
     input_fn=lambda: input_fn(train, train_y, training=True),
-    steps=15000)
+    steps=10000)
 
 clear_output()
 
-#Evaluate classifier
 eval_result = classifier.evaluate(
     input_fn=lambda: input_fn(test, test_y, training=False))
 
-#Print accuracy
 clear_output()
 print('\nTest set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
+
