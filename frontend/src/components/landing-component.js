@@ -92,7 +92,13 @@ export default class Account extends Component {
                                     <button className="btn btn-primary">View Projects</button>
                                 </Link>
                         </div>
+                        
                         </div>
+                        <div class="row">
+                     <div class="col-lg-12 divider-section">
+
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>

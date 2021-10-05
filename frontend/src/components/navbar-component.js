@@ -8,20 +8,17 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar navbar-dark navbar-expand-lg">
           <div className="container-fluid">
-                <ul className="navbar-nav">  
-                    <li>
-                      <Link to='/landing'><img className="capstone-logo" src="/images/capstone-logo.svg" alt="capstone logo"></img></Link>
-                    </li>
-                    <li>
-                    <a href="https://www.canberra.edu.au/content/myuc/home.html/">
-                      <img className="myUC-logo" width="129.6" height="47.2" src="/images/myUC.svg" alt="myUC logo"></img></a>
-                    </li>
-                    <li>
-                      <Link to='/dashboard/'> <img className="canvas" width="52" height="52" src="/images/canvas.svg" alt="canvas logo"></img></Link>
-                    </li>
-                    <li>
-                      <i className="fas fa-user-circle fa-2x"></i>
-                    </li>
+              <a><Link to='/landing'><img className="capstone-logo" src="/images/capstone-logo.svg" alt="capstone logo"></img></Link></a>     
+                <ul className="navbar-nav me-auto">  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Past Projects</a>
+                  </li> 
                 </ul>
             </div>
       </nav>
