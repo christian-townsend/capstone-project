@@ -6,8 +6,8 @@ export default class Login extends Component {
     render (){
         return (
 
-            <div class="col-lg-12 bg-image" style={{backgroundImage: 'url(/images/uccampus.jpg)'}}>
-            <div class="col-lg-4 login-form">
+            <div class="title-area col-lg-12">
+            <div class="login-form col-lg-4">
                 <form>
                 <div class="form-group">
                     <label class="login-input">Login to your Capstone Account</label>
@@ -15,7 +15,7 @@ export default class Login extends Component {
                 </div>
                 
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <br></br>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
                 </div>
                 <div class="form-check">

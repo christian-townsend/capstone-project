@@ -83,18 +83,16 @@ top: 55px;
       color: #fff;
   }
 
-.bg-image{
-    min-height: 100%;
-    min-width: 1024px;
+.title-area {
+    font-family: 'Lato', sans-serif;
+    height: 800px;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(rgba(8, 82, 51, 0.8), rgba(202, 73, 153, 0.8)), url("./images/login-background.jpeg");
     background-size: cover;
-    background-color: black;
-    opacity: 0.7;
-
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media screen and (max-width: 1024px) { 
@@ -108,16 +106,15 @@ top: 55px;
       margin-top: 10%;
       margin-left: 35%;
       margin-right: 35%;
+      
   }
   
   .login-input{
       font-size: 30px;
-      font-weight: 900px;
       color: #fff;
       font-family: 'Lato', sans-serif;
   }
 
-  
   .card-login{
     height: 250px;
   }
@@ -134,4 +131,5 @@ top: 55px;
   .card-body {
       margin-left: 10%;
       margin-right: 10%;
+      margin-top: 2%;
   }
