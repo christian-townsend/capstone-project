@@ -1,6 +1,6 @@
 .navbar{
     background-color: #00809F;
-    height: 150px;
+    height: 170px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,1);
     font-family: 'Lato', sans-serif;
     font-size: 20px;
@@ -14,32 +14,16 @@
 
 .navbar-nav {
 position: relative;
-top: 45px;
+top: 55px;
 }
 
-.myUC-logo{
-    position: relative;
-    top: 50px;
-    right:20px;
-}
 
-.fas {
-    color: #fff;
+.nav-link{
     text-decoration: none;
-    position: relative;
-    top:50px;
-    
-}
-
-.canvas {
-    position: relative;
-    top: 48px;
-    padding-bottom: 7px;
-    padding-right: 15px;
 }
 
 .capstone-logo{
-    top: 20px;
+    top: 40px;
     height: 120px;
     margin: 0 auto;
     display: block;
@@ -48,28 +32,33 @@ top: 45px;
     z-index: 100000;
     height: 65px;
 }
-.card {
+.card-header {
     font-family: 'Lato', sans-serif;
-}
-.card-main{
-    margin-left: 20%;      
-    margin-right: 20%;
-    width: auto;
-}
-
-.landing-title{
-    font-weight: bold;
-}
-
-.portal-title{
-    font-weight: bold;
-}
-
-.card-img-top{
+    height: 800px;
     width: 100%;
-    height: 23vw;
-    object-fit: cover;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(rgba(212, 196, 47, 0.8), rgba(146, 51, 165, 0.8)), url("./images/uccampus.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+.text-overlay-header{
+    padding-top: 210px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.title-logo {
+    font-weight: 800;
+    text-shadow: 1px grey;
+}
+
+.btn-info{
+    top: 50px;
 }
 
 .divider-section {
@@ -80,17 +69,6 @@ top: 45px;
     padding-top: 15px;
   }
 
-  .card-portal-1 {
-    margin-left:  20%;   
-    margin-right: 3%;   
-    width: auto;
-  }
-
-  .card-portal-2 {  
-    margin-right: 20%;
-    margin-left: 3%;
-    width: auto;
-  }
 
   .btn {
       width: 150px;
@@ -126,7 +104,6 @@ top: 45px;
     }
   }
 
-
   .login-form {
       margin-top: 10%;
       margin-left: 35%;
@@ -138,6 +115,23 @@ top: 45px;
       font-weight: 900px;
       color: #fff;
       font-family: 'Lato', sans-serif;
+  }
 
-      
+  
+  .card-login{
+    height: 250px;
+  }
+
+  .card-projects {
+    height: 250px;
+    text-align: right;
+  }
+  
+  .card-register {
+    height: 250px;
+  }
+
+  .card-body {
+      margin-left: 10%;
+      margin-right: 10%;
   }

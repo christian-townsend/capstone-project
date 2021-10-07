@@ -7,6 +7,7 @@ import Dashboard from "./components/dashboard-component";
 import Landing from "./components/landing-component";
 import Login from "./components/login-component";
 import Project from "./components/project-component";
+import About from "./components/about-us-component";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Navbar />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/landing" component={Landing} />
+            <Route path="about" component={About} />
           </div>
         </Switch>
       </Router>

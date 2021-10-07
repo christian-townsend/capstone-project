@@ -4,105 +4,51 @@ import { Link } from 'react-router-dom';
 export default class Account extends Component {
     render (){
         return (
-            <div class="row">
+            <div class="fullpage">
                     <div class="row">
-                        <div class="col-lg-12 divider-section"></div>
-                    </div>
-                 <div class="col-lg-12">
-                     <div class="card card-main">
-                        <img class="card-img-top" src="/images/uccampus.jpg" alt="UC Campus"></img>
-                        <div class="card-body" >
-                        <h1 className="landing-title" >Welcome to the Capstone Project</h1>  
-                        <p> What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived 
-                        not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    {/* main title card */}
+                 <div class="content-area col-lg-12 px-0">
+                     <div class="card border-dark card-header">
+                            <div class="text-overlay-header">
+                                    <h1 class="title-logo">Welcome to the Capstone Project</h1>
+                                    <p class="card-text">The Technology Capstone Research Project
+                                    provides the opportunity for students undertake a technology
+                                    focused research project. The project will enable
+                                    students to develop their theoretical knowledge further in
+                                    an area of interest. Through critical analysis and synthesis
+                                    of research findings, the students will be able to apply their
+                                    knowledge in a unique research context to understand how research
+                                    could improve and advance the body of knowledge related to technology. </p>
+                                    <Link to="/about">
+                                    <button className="btn btn-info">Find Out More</button>
+                                    </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
-                     <div class="col-lg-12 divider-section">
-                        <hr class="divider-blue"></hr>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card card-portal-1">
-                        <img class="card-img-top" src="/images/student-portal.jpeg" alt="Student Portal"></img>
-                        <div class="card-body text-center">
-                            <h3 class="portal-title">Student Portal</h3>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
-                            printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <Link to="/login">
-                                    <button className="btn btn-primary">Login</button>
-                                </Link>
-                        </div>
+                    {/*Login/Projects/Register Cards*/}
+                    <div class="card card-login">
+                        <div class="card-body">
+                            <h1>Login to your Account</h1>
+                            <p>to be edited</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card card-portal-2">
-                        <img class="card-img-top" src="/images/sponsor-portal.jpeg" alt="Sponsor Portal"></img>
-                        <div class="card-body text-center">
-                            <h3 class="portal-title">Sponsor Portal</h3>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
-                            printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <Link to="/login">
-                                    <button className="btn btn-primary">Login</button>
-                                </Link>
-                        </div>
+                    <div class="card card-projects bg-light">
+                        <div class="card-body">
+                            <h1>Check Out The Past Projects!</h1>
+                            <p>to be edited</p>
                         </div>
                     </div>
-                                    
-                <div class="row">
-                     <div class="col-lg-12 divider-section"></div>
-                </div>       
-                </div>
-
-
-            <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card card-portal-1">
-                        <img class="card-img-top" src="/images/staff-portal.jpeg" alt="Staff Portal"></img>
-                        <div class="card-body text-center">
-                            <h3 class="portal-title">Staff Portal</h3>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
-                            printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <Link to="/login">
-                                    <button className="btn btn-primary">Login</button>
-                                </Link>
-                        </div>
+                    <div class="card card-register">
+                        <div class="card-body">
+                            <h1>Want To Sponsor A Project?</h1>
+                            <p>to be edited</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card card-portal-2">
-                        <img class="card-img-top" src="/images/previous-projects-portal.jpeg" alt="Previous Projects"></img>
-                        <div class="card-body text-center">
-                            <h3 class="portal-title">Previous Projects</h3>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
-                            printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <Link to="/projects">
-                                    <button className="btn btn-primary">View Projects</button>
-                                </Link>
-                        </div>
-                        
-                        </div>
-                        <div class="row">
-                     <div class="col-lg-12 divider-section">
-
                     </div>
                 </div>
-                    </div>
-                </div>
-            </div>
+        
 
+       
         )
     }
 }
