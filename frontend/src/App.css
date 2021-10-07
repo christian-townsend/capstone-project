@@ -133,3 +133,7 @@ top: 55px;
       margin-right: 10%;
       margin-top: 2%;
   }
+
+  .title {
+      font-weight: 800;
+  }

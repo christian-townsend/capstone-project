@@ -5,7 +5,7 @@ import Project from "./project-component";
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-dark navbar-expand-lg">
+      <nav className="navbar navbar-dark navbar-expand-lg col-lg-12">
         <div className="container-fluid">
           <a href="/#">
             <Link to="/landing">
@@ -48,7 +48,7 @@ export default class Navbar extends Component {
               </Link>
             </li>
           </ul>
-        </div>
+          </div>
       </nav>
     );
   }
