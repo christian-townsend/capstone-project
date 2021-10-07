@@ -9,7 +9,7 @@ export default class Account extends Component {
                     {/* main title card */}
                  <div class="content-area col-lg-12 px-0">
                      <div class="card border-dark card-header">
-                            <div class="text-overlay-header">
+                            <div class=" container text-overlay-header">
                                     <h1 class="title-logo">Welcome to the Capstone Project</h1>
                                     <p class="card-text">The Technology Capstone Research Project
                                     provides the opportunity for students undertake a technology
@@ -26,12 +26,15 @@ export default class Account extends Component {
                         </div>
                     </div>
                     {/*Login/Projects/Register Cards*/}
-                    <div class="card card-login">
+                    
+                    <div class="card card-register">
+
+                        
                         <div class="card-body">
-                            <h1 class="title">Login to your Account</h1>
+                            <h1 class="title">Want To Sponsor A Project?</h1>
                             <p>to be edited</p>
-                                <Link to="/login">
-                                    <button className="btn btn-primary">Login</button>
+                            <Link to="/login">
+                                    <button className="btn btn-primary">Register</button>
                                 </Link>
                         </div>
                     </div>
@@ -44,15 +47,17 @@ export default class Account extends Component {
                                 </Link>
                         </div>
                     </div>
-                    <div class="card card-register">
+                    <div class="card card-login">
                         <div class="card-body">
-                            <h1 class="title">Want To Sponsor A Project?</h1>
+                            <h1 class="title">Login to your Account</h1>
                             <p>to be edited</p>
-                            <Link to="/login">
-                                    <button className="btn btn-primary">Register</button>
+                                <Link to="/login">
+                                    <button className="btn btn-primary">Login</button>
                                 </Link>
                         </div>
                     </div>
+                    
+                    
                     </div>
                 </div>
        

@@ -1,6 +1,7 @@
 .navbar{
+    
     background-color: #00809F;
-    height: 170px;
+    height: 100px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,1);
     font-family: 'Lato', sans-serif;
     font-size: 20px;
@@ -13,23 +14,15 @@
 }
 
 .navbar-nav {
-position: relative;
+
 top: 55px;
+
 }
-
-
-.nav-link{
-    text-decoration: none;
+.nav-logo{
+    margin: 20px;
 }
-
 .capstone-logo{
-    top: 40px;
-    height: 120px;
-    margin: 0 auto;
-    display: block;
-    position: absolute;
-    right: calc((100% - 195px) / 2);
-    z-index: 100000;
+
     height: 65px;
 }
 .card-header {
@@ -40,7 +33,7 @@ top: 55px;
     padding-top: 100px;
     color: white;
     overflow: hidden;
-    background: linear-gradient(rgba(212, 196, 47, 0.8), rgba(146, 51, 165, 0.8)), url("./images/uccampus.jpg");
+    background: linear-gradient(rgba(0, 108, 145, 0.8), rgba(0, 51, 68, 0.8)), url("./images/uccampus.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -141,5 +134,24 @@ top: 55px;
   .footer {
     padding: 17px 15px;
     border-top: 1px solid rgba(120,130,140,0.13);
-    font-size: 14px
+    font-size: 12px;
+    color: #fff;
   }
+.UC-Img{
+    height: 35px;
+}
+ 
+.nav-item{
+    text-decoration: none !important;
+    margin-right: 20px;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+   
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255,0.8) !important
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255) !important;
+}
