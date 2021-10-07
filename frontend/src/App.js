@@ -24,7 +24,7 @@ function App() {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/landing" component={Landing} />
             <Route path="about" component={About} />
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </Switch>
       </Router>
