@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
     render (){
@@ -20,7 +21,10 @@ export default class Login extends Component {
                                     <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" />
                                 </div>
                                 <div class="form-group">
+                                    {/* only added link to for testing purposes. delete after done*/}
+                                    <Link to="/dashboard">
                                     <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Login" />
+                                    </Link>
                                 </div>
                                 </form>
                             </div>

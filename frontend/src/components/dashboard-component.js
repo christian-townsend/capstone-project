@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 export default class Dashboard extends Component {
     render (){
         return (
-            <div class="row">
+            <div className="container dashboard">
+              <div class="row">
                 <div class="row">
                      <div class="col-lg-12 divider-section">
                     </div>
@@ -37,10 +38,10 @@ export default class Dashboard extends Component {
                 </div>
               </div>
             </div>
-          </div>
-
+</div>
           
 
+            </div>
         )
     }
 }
