@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
 const mongoose = require("mongoose");
-const SERVER_PORT = process.env.PORT || 3000;
+const SERVER_PORT = process.env.PORT || 5000;
 
 require("dotenv").config();
 // Create Express App and Routes

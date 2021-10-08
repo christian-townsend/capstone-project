@@ -47,7 +47,7 @@ router.route("/redirect").get((req, res) => {
   const tokenRequest = {
     code: req.query.code,
     scopes: ["user.read"],
-    redirectUri: "http://localhost:3000/users/redirect",
+    redirectUri: "http://localhost:5000/users/redirect",
   };
 
   cca
@@ -97,7 +97,8 @@ router.route("/redirect").get((req, res) => {
             httpOnly: true,
             maxAge: maxAge * 1000,
           });
-          res.status(201).json(newUser);
+
+          res.redirect("http://localhost:3000/projects");
         }
 
         // Add the new user if they dont already exist, and re-direct them to the Dashboard page
