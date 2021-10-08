@@ -5,8 +5,8 @@ export default class Account extends Component {
     render (){
         return (
             <div class="fullpage">
-                    <div class="row">
-                    {/* main title card */}
+                <row>
+                {/* main title card */}
                  <div class="content-area col-lg-12 px-0">
                      <div class="card border-dark card-header">
                             <div class=" container text-overlay-header">
@@ -26,10 +26,7 @@ export default class Account extends Component {
                         </div>
                     </div>
                     {/*Login/Projects/Register Cards*/}
-                    
                     <div class="card card-register">
-
-                        
                         <div class="card-body">
                             <h1 class="title">Want To Sponsor A Project?</h1>
                             <p>to be edited</p>
@@ -55,11 +52,9 @@ export default class Account extends Component {
                                     <button className="btn btn-primary">Login</button>
                                 </Link>
                         </div>
-                    </div>
-                    
-                    
-                    </div>
-                </div>
+                    </div>  
+                </row>
+            </div>
        
         )
     }

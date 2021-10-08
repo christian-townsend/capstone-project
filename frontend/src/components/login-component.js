@@ -1,37 +1,34 @@
 import React, { Component } from 'react';
 
-
-
 export default class Login extends Component {
     render (){
         return (
+            <div className="container-fluid">
+                <div className="login-bkg d-flex col-xs-12">
 
-            <div class="title-area col-lg-12">
-            <div class="login-form col-lg-4">
-                <form>
-                <div class="form-group">
-                    <label class="login-input">Login to your Capstone Account</label>
-                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email"></input>
-                </div>
-                
-                <div class="form-group">
-                    <br></br>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-                </div>
-                <div class="form-check">
-                    
-                    
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-                    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-
-            </div>     
+                    {/*login area form*/}
+                    <div className="container login-area">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-5 mx-auto">
+                                
+                                <h1 class="login-title">Login to your account</h1>
+                                <form class="myForm" method="post">
+                                <div class="form-group mb-3">
+                                    <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="Email Address" />
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Login" />
+                                </div>
+                                </form>
+                            </div>
+                       </div>
+                    </div>
+                </div>                 
             </div>
-            
-            
-            
+
         )
     }
 }
