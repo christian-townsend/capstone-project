@@ -24,7 +24,6 @@ export default class Navbar extends Component {
        
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
               
               <a class="nav-link" href="/about">
                 About
@@ -42,42 +41,13 @@ export default class Navbar extends Component {
               <a class="nav-link" href="/pastprojects">
                 Past Projects
               </a>
-=======
-              <Link to="/about">
-                <a class="nav-link" href="/#">
-                  About
-                </a>
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link to="/sponsors">
-                <a class="nav-link" href="/#">
-                  Current Sponsors
-                </a>
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link to="/pastprojects">
-                <a class="nav-link" href="/#">
-                  Past Projects
-                </a>
-              </Link>
->>>>>>> 007f9c22f61ebd89cd29ab9965bc946741c6f702
             </li>
           </ul>
           <ul className="navbar-nav me-auto">
             <li class="nav item">
-<<<<<<< HEAD
               <a class="nav-link" href="/login">
                 Login
               </a>
-=======
-              <Link to="/login">
-                <a class="nav-link" href="/#">
-                  Login
-                </a>
-              </Link>
->>>>>>> 007f9c22f61ebd89cd29ab9965bc946741c6f702
             </li>
           </ul>
         </div>
