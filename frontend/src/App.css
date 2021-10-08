@@ -17,6 +17,16 @@
     height: 65px;
 }
 
+.nav-header-left {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.nav-header-right {
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
 /*landing-component*/
 .card-header {
     font-family: 'Lato', sans-serif;
@@ -152,5 +162,12 @@
 .btn-lg {
     width: 100%;
     text-align: center;
+}
+
+/* dashboard-component*/
+.dash-header {
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    margin-top: 40px;
 }
 
