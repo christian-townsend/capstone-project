@@ -11,6 +11,7 @@ import Footer from "./components/footer-component";
 
 function App() {
   return (
+    
     <div className="App">
       <Router>
         <Switch>

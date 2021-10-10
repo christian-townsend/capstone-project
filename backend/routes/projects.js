@@ -5,7 +5,7 @@ let Project = require("../models/project.model");
 // Get the initial list of Projects
 router
   .route("/")
-  //.all(requireAuth)
+  .all(requireAuth)
   .get((req, res) => {
     Project.find()
       .then((projects) => res.json(projects))

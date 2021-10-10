@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "./navbar-component";
-import UploadButton from "./buttons/upload-button-component";
+// import BasicDateRangePicker from "./date-select-component";
 import axios from "axios";
 
 export default class Project extends Component {
@@ -110,18 +110,7 @@ export default class Project extends Component {
                 placeholder="Scope"
                 rows={2}
               />
-              <Form.Label>From Date</Form.Label>
-              <Form.Control
-                type="date"
-                name="fromDate"
-                placeholder="From Date"
-              />
-              <Form.Label>To Date</Form.Label>
-              <Form.Control
-                type="date"
-                name="fromDate"
-                placeholder="From Date"
-              />
+
               <DropdownButton
                 style={{ marginTop: 10 }}
                 id="dropdown-basic-button"
@@ -131,7 +120,6 @@ export default class Project extends Component {
                 <Dropdown.Item href="#/action-2">2</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">3</Dropdown.Item>
               </DropdownButton>
-              <UploadButton />
             </Form.Group>
           </Form>
           <Button

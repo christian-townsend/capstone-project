@@ -30,10 +30,12 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="container-fluid Navbar">
+        <navBarSample />
         <nav className="navbar fixed-top navbar-dark navbar-expand-sm col-sm-12 col-md-12">
           {/*Logo*/}
           <Link to="/home">
             <img
+              style={{ marginLeft: -100, marginRight: 60 }}
               className="capstone-logo"
               src="../capstone-logo.svg"
               alt="capstone logo"
@@ -72,7 +74,10 @@ export default class Navbar extends Component {
                 </li>
               </ul>
             </div>
-            <div className="nav-header-right col-xs-12 col-md-6">
+            <div
+              style={{ marginRight: -300 }}
+              className="nav-header-right col-xs-12 col-md-6"
+            >
               {/*Navbar Menu Right Hand Side*/}
               <ul class="nav navbar-nav ms-auto">
                 <li>
