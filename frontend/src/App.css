@@ -50,6 +50,15 @@ button.btn.btn-success.btn-lg {
   background-position: center;
 }
 
+.project-header {
+  background: linear-gradient(rgba(0, 108, 145, 0.8), rgba(0, 51, 68, 0.8)),
+    url("./images/projects.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
 .text-overlay-header {
   position: absolute;
   top: 30%;
