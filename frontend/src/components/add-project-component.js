@@ -49,9 +49,7 @@ export default class Project extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.setState({
-      isLoading: true,
-    });
+
     const project = {
       title: this.state.title,
       description: this.state.description,
@@ -62,7 +60,11 @@ export default class Project extends Component {
 
     axios
       .post("http://localhost:5000/projects/add", project)
-      .then((res) => res.redirect("http://localhost:3000/projects"));
+      .then((res) => res.redirect("http://localhost:3000/dashboard"));
+
+    this.setState({
+      isLoading: true,
+    });
 
     window.location = "/projects";
   }
@@ -138,7 +140,7 @@ export default class Project extends Component {
             variant="success"
             size="lg"
           >
-            {this.state.isLoading ? "Creating…" : "Create Project"}
+            {this.state.isLoading ? "Project Created!" : "Create"}
           </Button>
         </div>
       </div>

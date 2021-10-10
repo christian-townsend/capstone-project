@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class Navbar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loggedIn: false,
+    };
+  }
+
   onLogin(e) {
     e.preventDefault();
 
@@ -12,6 +20,12 @@ export default class Navbar extends Component {
 
     window.location = "http://localhost:5000/users";
   }
+
+  /* checkLogin {
+    if (res.cookie.jwt != NULL) {
+      this.state.loggedIn: true
+    }
+  } */
 
   render() {
     return (

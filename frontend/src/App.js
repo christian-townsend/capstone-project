@@ -5,10 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/navbar-component";
 import Dashboard from "./components/dashboard-component";
 import Landing from "./components/landing-component";
-import Project from "./components/project-component";
+import Project from "./components/add-project-component";
 import About from "./components/about-us-component";
 import Footer from "./components/footer-component";
-
 
 function App() {
   return (
