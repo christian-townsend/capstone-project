@@ -198,4 +198,5 @@
 .card-about {
     height: 40vh;
     position: relative;
+    width: 100vw;
 }
