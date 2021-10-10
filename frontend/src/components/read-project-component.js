@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
+
+
 const Project = (props) => (
   <tr>
     <td>{props.project.title}</td>
     <td>{props.project.active}</td>
-
     <td>{props.project.description}</td>
     <td>{props.project.scope}</td>
     <td>{props.project.skills}</td>
