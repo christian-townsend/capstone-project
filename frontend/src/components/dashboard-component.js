@@ -56,7 +56,7 @@ export default class Dashboard extends Component {
               <div class="Project Text col-md-12 mt-5">
                 <h1 class="dash-header">
                   Welcome Back, User</h1>
-                  <table style="font-color:white" className="table">
+                  <table className="table">
                     <thead>
                       <tr>
                         <th>Title</th>
