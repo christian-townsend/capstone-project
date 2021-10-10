@@ -5,7 +5,7 @@ let Project = require("../models/project.model");
 // Get the initial list of Projects
 router
   .route("/")
-  .all(requireAuth)
+  //.all(requireAuth)
   .get((req, res) => {
     Project.find()
       .then((projects) => res.json(projects))
@@ -13,35 +13,32 @@ router
   });
 
 // Add new Project
-router
-  .route("/add")
-  .all(requireAuth)
-  .post((req, res) => {
-    const title = req.body.title;
-    const active = req.body.active;
-    const description = req.body.description;
-    const scope = req.body.scope;
-    const skills = req.body.skills;
-    const size = req.body.size;
-    const duration = req.body.duration;
-    const project_sponsors = req.body.project_sponsors;
+router.route("/add").post((req, res) => {
+  const title = req.body.title;
+  const active = req.body.active;
+  const description = req.body.description;
+  const scope = req.body.scope;
+  const skills = req.body.skills;
+  const size = req.body.size;
+  const duration = req.body.duration;
+  const project_sponsors = req.body.project_sponsors;
 
-    const newProject = new Project({
-      title,
-      active,
-      description,
-      scope,
-      skills,
-      size,
-      duration,
-      project_sponsors,
-    });
-
-    newProject
-      .save()
-      .then(() => res.json("Project added!"))
-      .catch((err) => res.status(400).json("Error: " + err));
+  const newProject = new Project({
+    title,
+    active,
+    description,
+    scope,
+    skills,
+    size,
+    duration,
+    project_sponsors,
   });
+
+  newProject
+    .save()
+    .then(() => res.json("Project added!"))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
 
 // Get Project by ID
 router.route("/id").get((req, res) => {

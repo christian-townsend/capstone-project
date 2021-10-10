@@ -23,6 +23,9 @@ const userSchema = new Schema(
     sponsored_projects: [
       { type: Schema.Types.ObjectId, ref: "Project", required: false },
     ], // An array of Project objects that a User can sponsor (for industry sponsors and uc staff only)
+    assigned_skills: [
+      { type: Schema.Types.ObjectId, ref: "Skills", required: false },
+    ], // An array of Project objects that a User can sponsor (for industry sponsors and uc staff only)
     roles: [
       {
         type: mongoose.Schema.Types.ObjectId,

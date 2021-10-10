@@ -29,7 +29,7 @@ const cca = new msal.ConfidentialClientApplication(config);
 router.route("/").get((req, res) => {
   const authCodeUrlParameters = {
     scopes: ["user.read"],
-    redirectUri: "http://localhost:3000/users/redirect",
+    redirectUri: "http://localhost:5000/users/redirect",
   };
 
   // Get url to sign user in and consent to scopes needed for application
@@ -98,7 +98,7 @@ router.route("/redirect").get((req, res) => {
             maxAge: maxAge * 1000,
           });
 
-          res.redirect("http://localhost:3000/projects");
+          res.redirect("http://localhost:3000/dashboard");
         }
 
         // Add the new user if they dont already exist, and re-direct them to the Dashboard page
@@ -108,12 +108,17 @@ router.route("/redirect").get((req, res) => {
             process.env.ACCESS_TOKEN_SECRET
           );
 
+          res.cookie("jwt", jwtAccessToken, {
+            httpOnly: true,
+            maxAge: maxAge * 1000,
+          });
+
           newUser
             .save()
             .then(() => res.json("User added (they dont already exist)!"))
             .catch((err) => res.status(400).json("Error: " + err));
           console.log(req.session);
-          res.status(201).json(newUser);
+          res.redirect("http://localhost:3000/dashboard");
         }
       });
     })

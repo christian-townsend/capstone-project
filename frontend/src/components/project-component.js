@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
@@ -17,9 +17,9 @@ export default class Project extends Component {
     this.onChangeScope = this.onChangeScope.bind(this);
 
     this.state = {
-      title: "Test",
-      description: "test",
-      scope: "test",
+      title: "",
+      description: "",
+      scope: "",
     };
   }
 
@@ -44,19 +44,19 @@ export default class Project extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const projectAdd = {
+    const project = {
       title: this.state.title,
       description: this.state.description,
       scope: this.state.description,
     };
 
-    console.log(projectAdd);
+    console.log(project);
 
     axios
-      .post("http://localhost:5000/projects/add", projectAdd)
-      .then((res) => console.log(res.data));
+      .post("http://localhost:5000/projects/add", project)
+      .then((res) => res.redirect("http://localhost:3000/projects"));
 
-    window.location = "/";
+    window.location = "/projects";
   }
 
   render() {
@@ -65,10 +65,15 @@ export default class Project extends Component {
         <Navbar />
 
         <div
-          style={{ width: 650, marginLeft: 100, marginTop: 30, color: "white" }}
+          style={{
+            width: 650,
+            marginLeft: 100,
+            marginTop: 150,
+            color: "white",
+          }}
         >
           <div>
-            <h1>
+            <h1 style={{ marginBottom: 30 }}>
               <Badge bg="secondary">Create a new Project</Badge>
             </h1>
           </div>
@@ -81,11 +86,6 @@ export default class Project extends Component {
                 onChange={this.onChangeTitle}
                 placeholder="Title"
               />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
               <Form.Label>Description</Form.Label>
               <Form.Control
                 as="textarea"
@@ -94,11 +94,6 @@ export default class Project extends Component {
                 placeholder="Description"
                 rows={4}
               />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
               <Form.Label>Scope</Form.Label>
               <Form.Control
                 as="textarea"
@@ -107,38 +102,35 @@ export default class Project extends Component {
                 placeholder="Scope"
                 rows={2}
               />
-            </Form.Group>
-            <Form.Group>
               <Form.Label>From Date</Form.Label>
               <Form.Control
                 type="date"
                 name="fromDate"
                 placeholder="From Date"
               />
-            </Form.Group>
-            <Form.Group>
               <Form.Label>To Date</Form.Label>
               <Form.Control
                 type="date"
                 name="fromDate"
                 placeholder="From Date"
               />
+              <DropdownButton
+                style={{ marginTop: 10 }}
+                id="dropdown-basic-button"
+                title="Size"
+              >
+                <Dropdown.Item href="#/action-1">1</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">2</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">3</Dropdown.Item>
+              </DropdownButton>
+              <UploadButton />
             </Form.Group>
-            <DropdownButton
-              style={{ marginTop: 10 }}
-              id="dropdown-basic-button"
-              title="Size"
-            >
-              <Dropdown.Item href="#/action-1">1</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">2</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">3</Dropdown.Item>
-            </DropdownButton>
           </Form>
-          <UploadButton />
           <Button
             style={{ marginTop: 10 }}
             onClick={(e) => this.onSubmit(e)}
             variant="success"
+            size="lg"
           >
             Create
           </Button>{" "}

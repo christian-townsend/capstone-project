@@ -6,6 +6,7 @@ export default class UploadButton extends Component {
       <div className="input-group">
         <div className="custom-file">
           <input
+            style={{ marginTop: 10 }}
             type="file"
             className="custom-file-input"
             id="inputGroupFile01"
