@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -7,133 +7,92 @@ import Navbar from "./navbar-component";
 // import BasicDateRangePicker from "./date-select-component";
 import axios from "axios";
 
-export default class Project extends Component {
-  constructor(props) {
-    super(props);
+function Project(props) {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [scope, setScope] = useState("");
 
-    this.onChangeTitle = this.onChangeTitle.bind(this);
-    this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.onChangeScope = this.onChangeScope.bind(this);
+  const onSubmit = () => {
+    //preventDefault();
 
-    this.state = {
-      title: "",
-      description: "",
-      scope: "",
-      isLoading: false,
-    };
-  }
-
-  onChangeLoading(e) {
-    this.setState({
-      isLoading: true,
-    });
-  }
-
-  onChangeTitle(e) {
-    this.setState({
-      title: e.target.value,
-    });
-  }
-
-  onChangeDescription(e) {
-    this.setState({
-      description: e.target.value,
-    });
-  }
-
-  onChangeScope(e) {
-    this.setState({
-      scope: e.target.value,
-    });
-  }
-
-  onSubmit(e) {
-    e.preventDefault();
+    setTitle(title);
+    setDescription(description);
+    setScope(scope);
 
     const project = {
-      title: this.state.title,
-      description: this.state.description,
-      scope: this.state.description,
+      title: title,
+      description: description,
+      scope: scope,
     };
-
-    console.log(project);
 
     axios
       .post("http://localhost:5000/projects/add", project)
-      .then((res) => res.redirect("http://localhost:3000/dashboard"));
-
-    this.setState({
-      isLoading: true,
-    });
+      .then((res) => console.log(res.data));
 
     window.location = "/projects";
-  }
+  };
 
-  render() {
-    return (
-      <div>
-        <Navbar />
+  return (
+    <div className="project-header">
+      <Navbar />
 
-        <div
-          style={{
-            width: 650,
-            marginLeft: 100,
-            marginTop: 150,
-            color: "white",
-          }}
-        >
-          <div>
-            <h1 style={{ marginBottom: 30 }}>Create a new Project</h1>
-          </div>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Title</Form.Label>
-              <Form.Control
-                type="text"
-                value={this.state.title}
-                onChange={this.onChangeTitle}
-                placeholder="Title"
-              />
-              <Form.Label>Description</Form.Label>
-              <Form.Control
-                as="textarea"
-                value={this.state.description}
-                onChange={this.onChangeDescription}
-                placeholder="Description"
-                rows={4}
-              />
-              <Form.Label>Scope</Form.Label>
-              <Form.Control
-                as="textarea"
-                value={this.state.scope}
-                onChange={this.onChangeScope}
-                placeholder="Scope"
-                rows={2}
-              />
-
-              <DropdownButton
-                style={{ marginTop: 10 }}
-                id="dropdown-basic-button"
-                title="Size"
-              >
-                <Dropdown.Item href="#/action-1">1</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">2</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">3</Dropdown.Item>
-              </DropdownButton>
-            </Form.Group>
-          </Form>
-          <Button
-            style={{ marginTop: 10 }}
-            onClick={(e) => this.onSubmit(e)}
-            variant="success"
-            size="lg"
-          >
-            {this.state.isLoading ? "Project Created!" : "Create"}
-          </Button>
+      <div
+        style={{
+          width: 650,
+          marginLeft: 100,
+          marginTop: 150,
+          color: "white",
+        }}
+      >
+        <div>
+          <h1 style={{ marginBottom: 30 }}>Create a new Project</h1>
         </div>
+        <Form>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Title</Form.Label>
+            <Form.Control
+              type="text"
+              value={title}
+              onChange={(event) => setTitle(event.target.value)}
+              placeholder="Title"
+            />
+            <Form.Label>Description</Form.Label>
+            <Form.Control
+              as="textarea"
+              value={description}
+              onChange={(event) => setDescription(event.target.value)}
+              placeholder="Description"
+              rows={4}
+            />
+            <Form.Label>Scope</Form.Label>
+            <Form.Control
+              as="textarea"
+              value={scope}
+              onChange={(event) => setScope(event.target.value)}
+              placeholder="Scope"
+              rows={2}
+            />
+
+            <DropdownButton
+              style={{ marginTop: 10 }}
+              id="dropdown-basic-button"
+              title="Size"
+            >
+              <Dropdown.Item href="#/action-1">1</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">2</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">3</Dropdown.Item>
+            </DropdownButton>
+          </Form.Group>
+        </Form>
+        <Button
+          style={{ marginTop: 10 }}
+          onClick={(event) => onSubmit()}
+          variant="success"
+          size="lg"
+        ></Button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-/* <LoadingButton onClick={(e) => this.onSubmit(e)}></LoadingButton>{" "} */
+export default Project;
