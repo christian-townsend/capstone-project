@@ -19,8 +19,8 @@ export default class About extends Component {
                         </div>
                 </div>
             </div>
-            <div className="info-text col-12">
-                <div class="card card-about">
+            <div className="info-text">
+                <div class="card card-about col-xs-12 col-lg-12">
 
                 </div>
             </div>

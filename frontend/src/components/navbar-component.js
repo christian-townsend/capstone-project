@@ -1,9 +1,20 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Project from "./project-component";
+import axios from "axios";
 
 
 export default class Navbar extends Component {
+
+  onClick(e) {
+    e.preventDefault();
+
+    axios
+      .post("http://localhost:5000/")
+      .then((res) => console.log(res.data));
+
+    window.location = "http://localhost:5000/users/";
+  }
   render() {
     return (
       <div className="container-fluid Navbar">
@@ -27,7 +38,7 @@ export default class Navbar extends Component {
                 <div className="nav-header-right col-xs-12 col-md-6">
                     {/*Navbar Menu Right Hand Side*/}
                     <ul class="nav navbar-nav ms-auto">
-                      <li><a class="nav-link" href="/login">Login</a></li>
+                      <li><a class="nav-link" onClick={(e) => this.onClick(e)}>Login</a></li>
                     </ul>
               </div>
             </div>
