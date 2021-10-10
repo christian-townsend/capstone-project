@@ -81,11 +81,6 @@ export default class Project extends Component {
                 onChange={this.onChangeTitle}
                 placeholder="Title"
               />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
               <Form.Label>Description</Form.Label>
               <Form.Control
                 as="textarea"
@@ -95,6 +90,7 @@ export default class Project extends Component {
                 rows={4}
               />
             </Form.Group>
+
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
