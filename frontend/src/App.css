@@ -41,7 +41,8 @@
 }
 
 .text-overlay-header{
-    padding-top: 300px;
+    position: absolute; 
+    top: 30%;
 }
 
 .card-text {
@@ -51,11 +52,9 @@
     text-align: left;
 }
 
-.title-logo {
+.banner-title {
     font-weight: 900;
-    text-shadow: 2px 2px 2px black;;
-
-    
+    text-shadow: 2px 2px 2px black;; 
 }
 
 .btn-info{
@@ -89,7 +88,6 @@
     display: block;
     text-align: center;
 }
-
 
 
 /*dashboard-component*/
@@ -142,6 +140,10 @@
 /*login-component*/
 .login-bkg {
     height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
     background: linear-gradient(rgba(22, 128, 155, 0.774), rgba(23, 37, 99, 0.774)), url("./images/login-background.jpeg");
     background-size: cover;
 }
@@ -171,3 +173,29 @@
     margin-top: 40px;
 }
 
+/* about-us-component*/
+
+.Banner-Top {
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    background: linear-gradient(rgba(22, 128, 155, 0.774), rgba(23, 37, 99, 0.774));
+}
+
+.About-Banner {
+    color: #fff;
+    margin-left: 170px;
+    margin-right: 400px;
+
+}
+#banner-header{
+    text-shadow: 3px 3px 3px black;
+    margin-top: 100px;
+}
+
+.card-about {
+    height: 40vh;
+    position: relative;
+}

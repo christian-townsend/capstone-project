@@ -23,7 +23,7 @@ function App() {
             <Navbar />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/home" component={Landing} />
-            <Route path="about" component={About} />
+            <Route path="/about" component={About} />
             <Footer />
           </div>
         </Switch>
