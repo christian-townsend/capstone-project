@@ -4,20 +4,16 @@ import Button from "react-bootstrap/Button";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "./navbar-component";
-// import BasicDateRangePicker from "./date-select-component";
+import BasicDateRangePicker from "./date-select-component";
 import axios from "axios";
 
-function Project(props) {
+export default function Project(props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [scope, setScope] = useState("");
 
   const onSubmit = () => {
     //preventDefault();
-
-    setTitle(title);
-    setDescription(description);
-    setScope(scope);
 
     const project = {
       title: title,
@@ -72,11 +68,11 @@ function Project(props) {
               placeholder="Scope"
               rows={2}
             />
-
+            <BasicDateRangePicker />
             <DropdownButton
               style={{ marginTop: 10 }}
               id="dropdown-basic-button"
-              title="Size"
+              title="Group Size"
             >
               <Dropdown.Item href="#/action-1">1</Dropdown.Item>
               <Dropdown.Item href="#/action-2">2</Dropdown.Item>
@@ -89,10 +85,10 @@ function Project(props) {
           onClick={(event) => onSubmit()}
           variant="success"
           size="lg"
-        ></Button>
+        >
+          Create
+        </Button>
       </div>
     </div>
   );
 }
-
-export default Project;
