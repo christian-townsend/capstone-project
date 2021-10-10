@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "./navbar-component";
@@ -20,7 +19,14 @@ export default class Project extends Component {
       title: "",
       description: "",
       scope: "",
+      isLoading: false,
     };
+  }
+
+  onChangeLoading(e) {
+    this.setState({
+      isLoading: true,
+    });
   }
 
   onChangeTitle(e) {
@@ -43,7 +49,9 @@ export default class Project extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
+    this.setState({
+      isLoading: true,
+    });
     const project = {
       title: this.state.title,
       description: this.state.description,
@@ -73,9 +81,7 @@ export default class Project extends Component {
           }}
         >
           <div>
-            <h1 style={{ marginBottom: 30 }}>
-              <Badge bg="secondary">Create a new Project</Badge>
-            </h1>
+            <h1 style={{ marginBottom: 30 }}>Create a new Project</h1>
           </div>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -132,10 +138,12 @@ export default class Project extends Component {
             variant="success"
             size="lg"
           >
-            Create
-          </Button>{" "}
+            {this.state.isLoading ? "Creating…" : "Create Project"}
+          </Button>
         </div>
       </div>
     );
   }
 }
+
+/* <LoadingButton onClick={(e) => this.onSubmit(e)}></LoadingButton>{" "} */
