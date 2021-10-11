@@ -19,9 +19,6 @@ function App() {
           <Route path="/addProject" component={Project} />
           <Route path="/Project" component={ReadProject} />
 
-          <Route path="/projects" component={Project} />
-          <Route path="/project" component={GetProject} />
-
           <div>
             <Navbar />
             <Route path="/dashboard" component={Dashboard} />
