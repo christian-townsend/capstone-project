@@ -8,6 +8,7 @@ import Landing from "./components/landing-component";
 import Project from "./components/add-project-component";
 import About from "./components/about-us-component";
 import Footer from "./components/footer-component";
+import GetProject from "./components/read-project-component"
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/projects" component={Project} />
+          <Route path="/project" component={GetProject} />
+          
 
           <div>
             <Navbar />
