@@ -11,10 +11,12 @@ export default function Project(props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [scope, setScope] = useState("");
+  const [save, setSave] = useState(false);
 
   const onSubmit = () => {
     //preventDefault();
 
+    setSave(true);
     const project = {
       title: title,
       description: description,
@@ -86,7 +88,7 @@ export default function Project(props) {
           variant="success"
           size="lg"
         >
-          Create
+          {save ? "Creating…" : "Create Project"}
         </Button>
       </div>
     </div>

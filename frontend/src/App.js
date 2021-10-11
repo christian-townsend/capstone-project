@@ -8,14 +8,15 @@ import Landing from "./components/landing-component";
 import Project from "./components/add-project-component";
 import About from "./components/about-us-component";
 import Footer from "./components/footer-component";
+import ReadProject from "./components/read-project-component";
 
 function App() {
   return (
-    
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/projects" component={Project} />
+          <Route path="/addProject" component={Project} />
+          <Route path="/Project" component={ReadProject} />
 
           <div>
             <Navbar />
