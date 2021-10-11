@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Navbar from "./navbar-component";
+import Badge from "react-bootstrap/Badge";
 
 export default function ReadProjectComponent(props) {
   const [projects, setProjects] = useState([]);
@@ -30,14 +31,15 @@ export default function ReadProjectComponent(props) {
 
       <TableContainer
         component={Paper}
-        style={{ marginTop: 50, marginLeft: 50, paddingRight: -50 }}
+        style={{ marginTop: 50, marginLeft: 30, maxWidth: 1500 }}
       >
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: 500 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell style={{ fontWeight: 100 }}>Title</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Scope</TableCell>
+              <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -46,6 +48,11 @@ export default function ReadProjectComponent(props) {
                 <TableCell>{project.title}</TableCell>
                 <TableCell>{project.description}</TableCell>
                 <TableCell>{project.scope}</TableCell>
+                <TableCell>
+                  <Badge bg="success">Activate</Badge>{" "}
+                  <Badge bg="primary">Update</Badge>{" "}
+                  <Badge bg="danger">Delete</Badge>{" "}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
