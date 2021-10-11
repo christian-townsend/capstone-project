@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
-//import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -24,11 +23,19 @@ export default function ReadProjectComponent(props) {
   return (
     <div>
       <Navbar />
-      <TableContainer component={Paper} style={{ marginTop: 100 }}>
+
+      <h1 style={{ marginTop: 150, marginLeft: 100, color: "white" }}>
+        All Projects
+      </h1>
+
+      <TableContainer
+        component={Paper}
+        style={{ marginTop: 50, marginLeft: 50, paddingRight: -50 }}
+      >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Title</TableCell>
+              <TableCell style={{ fontWeight: 100 }}>Title</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Scope</TableCell>
             </TableRow>

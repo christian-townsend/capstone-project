@@ -4,7 +4,8 @@
 
 h1,
 label.form-label,
-button.btn.btn-success.btn-lg {
+button.btn.btn-success.btn-lg,
+form {
   font-family: "Arvo", serif;
 }
 
@@ -221,4 +222,3 @@ button.btn.btn-success.btn-lg {
   position: relative;
   width: 100vw;
 }
-

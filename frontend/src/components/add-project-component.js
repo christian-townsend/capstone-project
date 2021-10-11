@@ -64,6 +64,7 @@ export default function Project(props) {
             />
             <Form.Label>Scope</Form.Label>
             <Form.Control
+              style={{ marginBottom: 15 }}
               as="textarea"
               value={scope}
               onChange={(event) => setScope(event.target.value)}
@@ -72,7 +73,7 @@ export default function Project(props) {
             />
             <BasicDateRangePicker />
             <DropdownButton
-              style={{ marginTop: 10 }}
+              style={{ marginTop: 15 }}
               id="dropdown-basic-button"
               title="Group Size"
             >

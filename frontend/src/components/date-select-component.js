@@ -11,6 +11,7 @@ export default function BasicDateRangePicker() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DateRangePicker
+        style={{ color: "white" }}
         startText="Check-in"
         endText="Check-out"
         value={value}
@@ -18,7 +19,7 @@ export default function BasicDateRangePicker() {
           setValue(newValue);
         }}
         renderInput={(startProps, endProps) => (
-          <React.Fragment>
+          <React.Fragment style={{ color: "white" }}>
             <TextField {...startProps} />
             <Box sx={{ mx: 2 }}> to </Box>
             <TextField {...endProps} />
