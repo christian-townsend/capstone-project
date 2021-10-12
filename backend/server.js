@@ -6,13 +6,26 @@ const session = require("express-session");
 const mongoose = require("mongoose");
 const SERVER_PORT = process.env.PORT || 5000;
 
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
 require("dotenv").config();
 // Create Express App and Routes
 const app = express();
-
-app.use(cors());
+app.use(cors(corsOptions)); // Use this after the variable declaration
 app.use(express.json());
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 // Cookie parser middleware
 app.use(cookieParser());
 

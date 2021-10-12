@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 
 const requireAuth = (req, res, next) => {
   const token = req.cookies.jwt;
+  console.log("test token:" + token);
 
   // check json web token exists & is verified
   if (token) {
@@ -15,6 +16,7 @@ const requireAuth = (req, res, next) => {
       }
     });
   } else {
+    console.log("test");
     res.redirect("http://localhost:3000/home");
   }
 };

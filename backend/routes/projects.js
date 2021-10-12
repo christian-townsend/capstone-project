@@ -9,6 +9,7 @@ router
   .get((req, res) => {
     Project.find()
       .then((projects) => res.json(projects))
+      .then(console.log("test"))
       .catch((err) => res.status(400).json("Error: " + err));
   });
 
