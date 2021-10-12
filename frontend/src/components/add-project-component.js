@@ -24,7 +24,9 @@ export default function Project(props) {
     };
 
     axios
-      .post("http://localhost:5000/projects/add", project)
+      .post("http://localhost:5000/projects/add", project, {
+        withCredentials: true,
+      })
       .then((res) => console.log(res.data));
 
     window.location = "/projects";

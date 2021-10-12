@@ -15,7 +15,9 @@ export default function ReadProjectComponent(props) {
 
   useEffect(() => {
     (async () => {
-      const result = await axios("http://localhost:5000/projects");
+      const result = await axios("http://localhost:5000/projects", {
+        withCredentials: true,
+      });
       setProjects(result.data);
       console.log(result.data);
     })();

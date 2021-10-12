@@ -8,14 +8,14 @@ const requireAuth = (req, res, next) => {
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decodedToken) => {
       if (err) {
         console.log(err.message);
-        res.redirect("/login");
+        res.redirect("http://localhost:3000/home");
       } else {
         console.log(decodedToken);
         next();
       }
     });
   } else {
-    res.redirect("/login");
+    res.redirect("http://localhost:3000/home");
   }
 };
 
