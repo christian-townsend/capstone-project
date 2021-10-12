@@ -23,7 +23,7 @@ export default function PastProjectsFunction(props) {
 
     return (
 
-        <div>
+      <div className="container-fluid Projects">
           {projects.map((project) => 
             <div class="card card-register">
                         <div class= "card-body">
