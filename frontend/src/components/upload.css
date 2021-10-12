@@ -1,0 +1,30 @@
+.files {
+    outline: 2px dashed #92b0b3;
+    padding: 5%;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+
+.files{ position:relative}
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.color input{ background-color:#f1f1f1;}
+.btn-primary{
+    margin:auto;
+    background-color:#E9ECEF;
+    color: black;
+}
