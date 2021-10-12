@@ -43,11 +43,13 @@ export default class Account extends Component {
                     </div>
                     {/*Login/Projects/Register Cards*/}
                     <div class="card card-register">
-                        <div class="card-body">
+                        <div class= "card-body">
                             <h1 class="title">Want To Sponsor A Project?</h1>
-                            <p>to be edited</p>
+                            <p>The University of Canberra welcomes ideas from industry for technology projects that could be completed, by our students, as part of the Capstone Project.
+
+                            </p>
                             <Link to="/login">
-                                    <button className="btn btn-primary">Register</button>
+                                    <button className="btn btn-primary">Submit a Project</button>
                                 </Link>
                         </div>
                     </div>
