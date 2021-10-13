@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-import Navbar from "./navbar-component";
+import Navbar from "../static/navbar-component";
 import BasicDateRangePicker from "./date-select-component";
 import axios from "axios";
 
