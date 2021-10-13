@@ -22,18 +22,28 @@ export default function PastProjectsFunction(props) {
       }, []);
 
     return (
-
-      <div className="container-fluid Projects">
-          {projects.map((project) => 
-            <div class="card card-register">
-                        <div class= "card-body">
-                            <h1 class="title">{project.title}</h1>
-                            <p>{project.description}</p>
-                            
+      <div className="container-fluid">
+          {/*Banner Logo*/}
+          <div class="Banner-Top col-xs col-sm col-md ml-0 mr-0">
+                    <div class="row mt-5">
+                        <div className="About-Banner col-lg col-md">
+                            <h1 id="banner-header">Explore our Past Projects</h1>
+                            <p id="banner-text"></p>
                         </div>
-                    </div>
-        )}
-        </div>
+                </div>
+            </div>
+        {/*Body*/}
+        <row>
+            {projects.map((project) => 
+              <div class="card card-register">
+                  <div class="card-body">
+                      <h1 class="title">{project.title}</h1>
+                      <p>{project.description}</p>
+                  </div>
+              </div>
+            )}
+        </row>
+      </div>
     )}
 
          {/*  <div class="row">

@@ -198,38 +198,6 @@ word-wrap: break-word;
   color: rgba(255, 255, 255) !important;
 }
 
-/*login-component*/
-.login-bkg {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  margin-left: -50vw;
-  left: 50%;
-  background: linear-gradient(
-      rgba(22, 128, 155, 0.774),
-      rgba(23, 37, 99, 0.774)
-    ),
-    url("./images/login-background.jpeg");
-  background-size: cover;
-}
-
-.login-area {
-  margin-top: 150px;
-}
-
-.login-title {
-  text-align: center;
-  color: #fff;
-  padding-bottom: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 2px black;
-}
-
-.btn-lg {
-  width: 100%;
-  text-align: center;
-}
 
 /* dashboard-component*/
 .dash-header {
@@ -238,7 +206,7 @@ word-wrap: break-word;
   margin-top: 40px;
 }
 
-/* about-us-component*/
+/* About us/Sponsors/Past Projects component*/
 
 .Banner-Top {
   height: 40vh;
@@ -265,5 +233,5 @@ word-wrap: break-word;
 .card-about {
   height: 40vh;
   position: relative;
-  width: 100vw;
+  width: 100vh;
 }
