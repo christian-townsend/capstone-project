@@ -5,8 +5,19 @@ import Container from 'react-bootstrap/Container'
 import Accordion from 'react-bootstrap/Accordion'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import axios
+ from "axios";
 export default class Account extends Component {
+  onLogin(e) {
+    e.preventDefault();
+
+    axios
+      .request("http://localhost:5000/users")
+      .then((res) => console.log(res.data));
+
+    window.location = "http://localhost:5000/users";
+  }
+
 
   render() {
 
