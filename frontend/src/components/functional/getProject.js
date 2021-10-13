@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 import Navbar from "../static/navbar-component";
 import Badge from "react-bootstrap/Badge";
 
-export default function ReadProjectComponent(props) {
+export default function GetProject(props) {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {

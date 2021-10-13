@@ -4,10 +4,10 @@ import Button from "react-bootstrap/Button";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "../static/navbar-component";
-import BasicDateRangePicker from "./date-select-component";
+import BasicDateRangePicker from "./basicDateRangePicker";
 import axios from "axios";
 
-export default function Project(props) {
+export default function AddProject(props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [scope, setScope] = useState("");
@@ -31,7 +31,7 @@ export default function Project(props) {
   };
 
   return (
-    <div className="project-header">
+    <div className="addProject-header">
       <Navbar />
 
       <div
@@ -84,12 +84,12 @@ export default function Project(props) {
           </Form.Group>
         </Form>
         <Button
-          style={{ marginTop: 10 }}
+          style={{ marginTop: 10, width: 650 }}
           onClick={(event) => onSubmit()}
           variant="success"
           size="lg"
         >
-          {save ? "Creating…" : "Create Project"}
+          {save ? "Creating Project..." : "Create Project"}
         </Button>
       </div>
     </div>

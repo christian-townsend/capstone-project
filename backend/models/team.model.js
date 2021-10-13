@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const teamSchema = new Schema({
-  name: { type: "String", required: true }, // The teams's name. The only value required upon creation.
+const groupSchema = new Schema({
+  name: { type: "String", required: false }, // The teams's name. The only value required upon creation.
   capstone: { type: Boolean, required: false }, //Whether group was selected for Capstone expo.
-  students: [{ type: Schema.Types.ObjectId, ref: "User", required: false }], // An array of Students assigned to the team
+  students: [{ type: Schema.Types.ObjectId, ref: "User", required: false }], // An array of Students assigned to the group
   preferences: [
     { type: Schema.Types.ObjectId, ref: "Project", required: false },
-  ], // An array of Project's included in the Team's preferences
+  ], // An array of Project's included in the Groups's preferences
   allocated_project: {
     type: Schema.Types.ObjectId,
     ref: "Project",
@@ -17,6 +17,6 @@ const teamSchema = new Schema({
   timestamps: true,
 });
 
-const Team = mongoose.model("Team", teamSchema);
+const Group = mongoose.model("Group", teamSchema);
 
-module.exports = Team;
+module.exports = Group;

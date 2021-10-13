@@ -5,21 +5,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/static/navbar-component";
 import Dashboard from "./components/static/dashboard-component";
 import Landing from "./components/static/landing-component";
-import Project from "./components/functional/add-project-component";
+import addProject from "./components/functional/addProject";
 import About from "./components/static/about-us-component";
 import Footer from "./components/static/footer-component";
 import PastProject from "./components/static/past-projects-component";
 import UploadFile from "./components/functional/FileUpload";
 import Sponsor from "./components/static/sponsor-component";
-
-import ReadProject from "./components/functional/read-project-component";
+import addGroup from "./components/functional/addGroup";
+import ReadProject from "./components/functional/getProject";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/addProject" component={Project} />
+          <Route path="/addProject" component={addProject} />
+          <Route path="/addGroup" component={addGroup} />
           <Route path="/Project" component={ReadProject} />
 
           <div>
