@@ -17,7 +17,7 @@ export default class Account extends Component {
           <div class="content-area col-xs-12 col-md-12 px-0">
             <div class="card border-dark card-header">
               <div class="text-overlay-header col-xs-12 col-md-12">
-                <h1 class="banner-title">Welcome to the Capstone Project</h1>
+                <h1 class="banner-tl">Welcome to the Capstone Project</h1>
                 <div class="banner-text col-xs-12 col-sm-12 col-md-12">
                   <p class="card-text">
                     The Technology Capstone Research Project provides the
@@ -49,7 +49,7 @@ export default class Account extends Component {
                   technology projects that could be completed, by our students, as
                   part of the Capstone Project.</div>
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
                   <Link to="/login">
                     <Button variant="outlined">Submit a Project</Button>
                   </Link>
@@ -64,7 +64,7 @@ export default class Account extends Component {
                 <div class="row-content">Our students participate in projects with real industry value. 
                 Check out some of the work that's already been done!</div>
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
                   <Link to="/login">
                     <Button variant="outlined">View Projects</Button>
                   </Link>
@@ -78,7 +78,7 @@ export default class Account extends Component {
                 <div>
                 <div class="row-content">Already have an account? Login here.</div>
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
                   <Link to="/login">
                     <Button variant="outlined">Login</Button>
                   </Link>
