@@ -7,7 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import Navbar from "./navbar-component";
+import Navbar from "../static/navbar-component";
 import Badge from "react-bootstrap/Badge";
 
 export default function ReadProjectComponent(props) {

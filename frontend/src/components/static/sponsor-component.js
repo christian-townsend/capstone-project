@@ -8,92 +8,73 @@ import Col from 'react-bootstrap/Col'
 import axios from "axios";
 
 
-export default class Account extends Component {
-  onLogin(e) {
-    e.preventDefault();
-
-    axios
-      .request("http://localhost:5000/users")
-      .then((res) => console.log(res.data));
-
-    window.location = "http://localhost:5000/users";
-  }
-
-
-  render() {
-
-    return (
-      <div class="fullpage">
+export default function SponsorFunction(props) {
+    
+    return(
+        <div class="fullpage">
         <row>
           {/* main title card */}
           <div class="content-area col-xs-12 col-md-12 px-0">
-            <div class="card border-dark card-header">
+            <div class="card border-dark sponsor-card-header">
               <div class="text-overlay-header col-xs-12 col-md-12">
-                <h1 class="banner-tl">Welcome to the Capstone Project</h1>
+                <h1 class="banner-tl">Project Sponsorship</h1>
                 <div class="banner-text col-xs-12 col-sm-12 col-md-12">
                   <p class="card-text">
-                    The Technology Capstone Research Project provides the
-                    opportunity for students undertake a technology focused
-                    research project. The project will enable students to
-                    develop their theoretical knowledge further in an area of
-                    interest, and provide genuine business value in the processs.
+                    Sponsoring your project through the University of Canberra IT Capstone units provides a wide range of benefits.
                   </p>
-                  <Link to="/about">
-                  <Button variant="contained" >Find Out More</Button>
-                  </Link>
+                  <div style={{padding:"30px"}}>
+                  <img className="UC-Img"  src="../uoc.svg" alt="University of Canberra Link"></img>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           {/*Login/Projects/Register Cards*/}
           <Container fluid style={{ backgroundColor: "white" }}>
-            <Row>
+            <Row style={{height:"300px"}}>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
-                <div class ="row-header">Want to sponsor a project?</div>
+                <div class ="row-header">Academic Excellence</div>
                 </div>
                 <div>
-                <div class="row-content">The University of Canberra welcomes ideas from industry for
-                  technology projects that could be completed, by our students, as
-                  part of the Capstone Project.</div>
+                <div class="row-content">Our final year students are eager to put their skills to the test, in pursuit of a place in the Capstone Project Expo.</div>
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
-                  <Link to="/addProject">
-                    <Button variant="contained">Submit a Project</Button>
-                  </Link>
-                  </div>
+                  <div></div>
+
                 
               </Col>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
-              <div class ="row-header">Check out past projects</div>
+              <div class ="row-header">Talent Scouting</div>
                 </div>
                 <div>
-                <div class="row-content">Our students participate in projects with real industry value. 
-                Check out some of the work that's already been done!</div>
+                <div class="row-content">The University of Canberra prides itself on ensuring our graduates are job-ready. Could your next star be starting their Capstone Project journey?</div>
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
-                  <Link to="/pastprojects">
-                    <Button variant="contained">View Projects</Button>
-                  </Link>
-                  </div>
+
                 
               </Col>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
-              <div class ="row-header">Login to your account</div>
+              <div class ="row-header">Technical Expertise</div>
                 </div>
                 <div>
-                <div class="row-content">Already have an account? Login here.</div>
+                <div class="row-content">Our students posess a wide range of technical expertise, from artificial intelligence to robotics. 
+                Whatever your project, we'll likely have the right person for you!</div>
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
-                  <Link to="/login">
-                    <Button variant="contained">Login</Button>
-                  </Link>
-                  </div>
+
                 
               </Col>
-              
+              <Col >
+              <div style={{ padding:"10px 30px 10px 30px"}}>
+                <div class ="row-header">A rich history</div>
+                </div>
+                <div>
+                <div class="row-content">The University of Canberra currently ranks at 170th place in the Times Higher Education (THE) World University Rankings for 2022. Our students 
+                are keen to further establish a strong reputation for our institution.</div>
+                  </div>
+
+                
+              </Col>
             </Row>
           </Container>
 
@@ -134,4 +115,3 @@ export default class Account extends Component {
       </div>
     );
   }
-}
