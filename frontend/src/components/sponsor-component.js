@@ -2,5 +2,7 @@ import React from 'react'
 
 export default function SponsorFunction(props) {
     
-    return(null);
+    return(
+        <h1 class="banner-tl">Welcome to the Capstone Project</h1>
+    );
 }

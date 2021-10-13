@@ -5,8 +5,9 @@ import Container from 'react-bootstrap/Container'
 import Accordion from 'react-bootstrap/Accordion'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import axios
- from "axios";
+import axios from "axios";
+
+
 export default class Account extends Component {
   onLogin(e) {
     e.preventDefault();
@@ -39,7 +40,7 @@ export default class Account extends Component {
                     research findings, the students will be able to apply their
                     knowledge in a unique research context to understand how
                     research could improve and advance the body of knowledge
-                    related to technology. Test.
+                    related to technology. 
                   </p>
                   <Link to="/about">
                   <Button variant="contained">Find Out More</Button>
@@ -101,8 +102,8 @@ export default class Account extends Component {
           </Container>
 
 
-          {/* 
-          <Accordion>
+           
+         {/*  <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header><h3 style={{ fontFamily: "garamond" }}>Want To Sponsor A Project?</h3></Accordion.Header>
               <Accordion.Body>
@@ -132,7 +133,7 @@ export default class Account extends Component {
                 </Link>
               </Accordion.Body>
             </Accordion.Item>
-          </Accordion> */}
+          </Accordion>  */}
         </row>
       </div>
     );
