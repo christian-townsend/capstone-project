@@ -27,7 +27,7 @@ export default function Project(props) {
       .post("http://localhost:5000/projects/add", project)
       .then((res) => console.log(res.data));
 
-    window.location = "/projects";
+    window.location = "/project";
   };
 
   return (
@@ -71,7 +71,7 @@ export default function Project(props) {
               placeholder="Scope"
               rows={2}
             />
-            <BasicDateRangePicker/>
+            <BasicDateRangePicker />
             <DropdownButton
               style={{ marginTop: 15 }}
               id="dropdown-basic-button"
