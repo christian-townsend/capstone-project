@@ -8,7 +8,7 @@ export default class Footer extends Component {
         <img className="UC-Img"  src="../uoc.svg" alt="University of Canberra Link"></img>
     </div>
     <row>
-    <div className="Footer Text col sm-6"></div>
+    <div className="Footer Text "></div>
     <div class="row mt-4"> 
         <div class="col-12 align-self-center">
             University of Canberra, ACT 2601 Australia, Switchboard +61 2 6201 5111, ©2017 University of Canberra. 

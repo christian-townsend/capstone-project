@@ -4,8 +4,7 @@
     -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
     transition: outline-offset .15s ease-in-out, background-color .15s linear;
     text-align: center !important;
-    margin: 0;
-    width: 100% !important;
+    width: 50% !important;
 }
 
 .files{ position:relative}
