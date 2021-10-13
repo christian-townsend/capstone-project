@@ -14,7 +14,7 @@ form {
 }
 
 .navbar {
-  background-color: rgb(51, 136, 185);
+  background-color: rgba(51, 136, 185,0.5);
   height: 100px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1);
   font-family: "Arvo", serif;
