@@ -41,6 +41,9 @@ export default class Account extends Component {
                   <Link to="/about">
                   <Button variant="contained" >Find Out More</Button>
                   </Link>
+                  <div style={{padding:"30px"}}>
+                  <img className="UC-Img"  src="../uoc.svg" alt="University of Canberra Link"></img>
+                  </div>
                 </div>
               </div>
             </div>

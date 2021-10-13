@@ -22,6 +22,9 @@ export default function SponsorFunction(props) {
                   <p class="card-text">
                     Sponsoring your project through the University of Canberra IT Capstone units provides a wide range of benefits.
                   </p>
+                  <div style={{padding:"30px"}}>
+                  <img className="UC-Img"  src="../uoc.svg" alt="University of Canberra Link"></img>
+                  </div>
                 </div>
               </div>
             </div>
