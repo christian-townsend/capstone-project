@@ -1,6 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
+import Container from 'react-bootstrap/Container'
+import Accordion from 'react-bootstrap/Accordion'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import axios from "axios";
 
-export default class About extends Component {
+export default function AboutFunction(props) {
+    
+    return(
+        <div class="fullpage">
+        <row>
+          {/* main title card */}
+          <div class="content-area col-xs-12 col-md-12 px-0">
+            <div class="card border-dark about-card-header">
+              <div class="text-overlay-header col-xs-12 col-md-12">
+                <h1 class="banner-tl">About the Capstone Project</h1>
+                <div class="banner-text col-xs-12 col-sm-12 col-md-12">
+                  <p class="card-text">
+                    Culmination of the academic curriculum, where students demonstrate their talents and intellecutal experience to solve real-life engineering or IT problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </row>
+          </div>
+    );
+}
+
+/*</row>export default class About extends Component {
     render (){
         return (
             <div className="container-fluid">
@@ -23,4 +53,4 @@ export default class About extends Component {
         </div>
         )
     }
-}
+}*/
