@@ -63,7 +63,7 @@ export default class Navbar extends Component {
                 </li>
                 <br></br>
                 <li>
-                  <a class="nav-link" href="/sponsors">
+                  <a class="nav-link" href="/sponsor">
                     Sponsors
                   </a>
                 </li>

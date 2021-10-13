@@ -10,6 +10,7 @@ import About from "./components/about-us-component";
 import Footer from "./components/footer-component";
 import PastProject from "./components/past-projects-component";
 import UploadFile from "./components/FileUpload";
+import Sponsor from "./components/sponsor-component";
 
 import ReadProject from "./components/read-project-component";
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/home" component={Landing} />
             <Route path="/about" component={About} />
+            <Route path="/sponsor" component={Sponsor} />
             <Route path="/pastprojects" component={PastProject} />
             <Route path="/UploadFile" component={UploadFile} />
             <Footer />
