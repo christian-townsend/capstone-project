@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default class Account extends Component {
+    onLogin(e) {
+        e.preventDefault();
+    
+        axios
+          .request("http://localhost:5000/users")
+          .then((res) => console.log(res.data));
+    
+        window.location = "http://localhost:5000/users";
+      }
+    
     render (){
         return (
             <div class="fullpage">
@@ -27,23 +38,22 @@ export default class Account extends Component {
                             </div>
                         </div>
                     </div>
+
                     {/*Login/Projects/Register Cards*/}
                     <div class="card card-register">
                         <div class= "card-body">
                             <h1 class="title">Want To Sponsor A Project?</h1>
-                            <p>The University of Canberra welcomes ideas from industry for technology projects that could be completed, by our students, as part of the Capstone Project.
-
-                            </p>
+                            <p>The University of Canberra welcomes ideas from industry for technology projects that could be completed, by our students, as part of the Capstone Project.</p>
                             <Link to="/login">
                                     <button className="btn btn-primary">Submit a Project</button>
-                                </Link>
+                            </Link>
                         </div>
                     </div>
                     <div class="card card-projects bg-light">
                         <div class="card-body">
                             <h1 class="title">Check Out The Past Projects!</h1>
                             <p>to be edited</p>
-                            <Link to="/login">
+                            <Link to="/pastprojects">
                                     <button className="btn btn-primary">View Projects</button>
                                 </Link>
                         </div>
@@ -52,9 +62,7 @@ export default class Account extends Component {
                         <div class="card-body">
                             <h1 class="title">Login to your Account</h1>
                             <p>to be edited</p>
-                                <Link to="/login">
-                                    <button className="btn btn-primary">Login</button>
-                                </Link>
+                                    <button className="btn btn-primary" onClick={(e) => this.onLogin(e)}>Login</button>
                         </div>
                     </div>  
                 </row>
