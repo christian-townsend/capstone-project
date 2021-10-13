@@ -71,7 +71,7 @@ export default function Project(props) {
               placeholder="Scope"
               rows={2}
             />
-            <BasicDateRangePicker />
+            <BasicDateRangePicker/>
             <DropdownButton
               style={{ marginTop: 15 }}
               id="dropdown-basic-button"
