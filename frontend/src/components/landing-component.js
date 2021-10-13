@@ -39,7 +39,7 @@ export default class Account extends Component {
                     research findings, the students will be able to apply their
                     knowledge in a unique research context to understand how
                     research could improve and advance the body of knowledge
-                    related to technology.
+                    related to technology. Test.
                   </p>
                   <Link to="/about">
                   <Button variant="contained">Find Out More</Button>
