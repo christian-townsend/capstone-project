@@ -36,14 +36,10 @@ export default class Account extends Component {
                     opportunity for students undertake a technology focused
                     research project. The project will enable students to
                     develop their theoretical knowledge further in an area of
-                    interest. Through critical analysis and synthesis of
-                    research findings, the students will be able to apply their
-                    knowledge in a unique research context to understand how
-                    research could improve and advance the body of knowledge
-                    related to technology. 
+                    interest, and provide genuine business value in the processs.
                   </p>
                   <Link to="/about">
-                  <Button variant="contained">Find Out More</Button>
+                  <Button variant="contained" >Find Out More</Button>
                   </Link>
                 </div>
               </div>
