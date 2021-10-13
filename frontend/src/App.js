@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/static/navbar-component";
 import Dashboard from "./components/static/dashboard-component";
@@ -19,6 +19,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route exact path="/" render={() => {return( <Redirect to="/home"/>)}} />
           <Route path="/addProject" component={Project} />
           <Route path="/Project" component={ReadProject} />
 
