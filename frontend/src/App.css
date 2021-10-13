@@ -73,6 +73,49 @@ form {
   text-align: center;
 }
 
+.row-header {
+  color: rgb(74, 74, 74);
+display: block;
+font-family: proxima-nova;
+font-size: 22px;
+font-style: normal;
+font-weight: normal;
+height: 26px;
+letter-spacing: 2px;
+line-height: 26.399999618530273px;
+margin-block-end: 11px;
+margin-block-start: 0px;
+margin-bottom: 11px;
+margin-inline-end: 0px;
+margin-inline-start: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+text-align: center;
+text-rendering: optimizeLegibility;
+text-transform: uppercase;
+
+}
+
+.row-content {
+  color: rgba(26, 26, 26, 0.7);
+display: block;
+padding:"10px 30px 10px 30px";
+font-family: adobe-garamond-pro;
+font-size: 18px;
+font-style: normal;
+font-weight: normal;
+height: 56px;
+letter-spacing: normal;
+line-height: 28.799999237060547px;
+margin-block-end: 18px;
+margin-block-start: 18px;
+margin-inline-end: 0px;
+margin-inline-start: 0px;
+text-align: center;
+
+word-wrap: break-word;
+}
 .banner-title {
 
   font-weight: 900;

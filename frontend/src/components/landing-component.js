@@ -53,12 +53,12 @@ export default class Account extends Component {
             <Row>
               <Col >
               <div style={{ padding:"10px 10px 10px 10px"}}>
-                <h3 style={{ textAlign: "center" }}>Want to sponsor a project?</h3>
+                <div class ="row-header">Want to sponsor a project?</div>
                 </div>
                 <div>
-                <p style={{ textAlign: "center", padding:"10px 30px 10px 30px"}}>The University of Canberra welcomes ideas from industry for
+                <div class="row-content">The University of Canberra welcomes ideas from industry for
                   technology projects that could be completed, by our students, as
-                  part of the Capstone Project.</p>
+                  part of the Capstone Project.</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
                   <Link to="/projects">
@@ -69,11 +69,11 @@ export default class Account extends Component {
               </Col>
               <Col >
               <div style={{ padding:"10px 10px 10px 10px"}}>
-                <h3 style={{ textAlign: "center" }}>Check out past projects</h3>
+              <div class ="row-header">Check out past projects</div>
                 </div>
                 <div>
-                <p style={{ textAlign: "center", padding:"10px 30px 10px 30px"}}>Our students participate in projects with real industry value. 
-                Check out some of the work that's already been done!</p>
+                <div class="row-content">Our students participate in projects with real industry value. 
+                Check out some of the work that's already been done!</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
                   <Link to="/pastprojects">
@@ -84,10 +84,10 @@ export default class Account extends Component {
               </Col>
               <Col >
               <div style={{ padding:"10px 10px 10px 10px"}}>
-                <h3 style={{ textAlign: "center" }}>Login to your account</h3>
+              <div class ="row-header">Login to your account</div>
                 </div>
                 <div>
-                <p style={{ textAlign: "center", padding:"10px 30px 10px 30px"}}>Already have an account? Login here.</p>
+                <div class="row-content">Already have an account? Login here.</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>        
                     <Button variant="outlined"  onClick={(e) => this.onLogin(e)}>Login</Button>
