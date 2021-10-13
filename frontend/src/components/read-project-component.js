@@ -15,9 +15,10 @@ export default function ReadProjectComponent(props) {
 
   useEffect(() => {
     (async () => {
-      const result = await axios("http://localhost:5000/projects");
+      const result = await axios("http://localhost:5000/projects", {
+        withCredentials: true,
+      });
       setProjects(result.data);
-      console.log(result.data);
     })();
   }, []);
 
@@ -31,12 +32,17 @@ export default function ReadProjectComponent(props) {
 
       <TableContainer
         component={Paper}
-        style={{ marginTop: 50, marginLeft: 30, maxWidth: 1500 }}
+        style={{
+          marginTop: 50,
+          marginLeft: 100,
+          maxWidth: 1600,
+          backgroundColor: "#00809f",
+        }}
       >
         <Table sx={{ minWidth: 500 }} aria-label="simple table">
-          <TableHead>
+          <TableHead style={{ backgroundColor: "white" }}>
             <TableRow>
-              <TableCell style={{ fontWeight: 100 }}>Title</TableCell>
+              <TableCell>Title</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Scope</TableCell>
               <TableCell>Actions</TableCell>
@@ -58,6 +64,8 @@ export default function ReadProjectComponent(props) {
           </TableBody>
         </Table>
       </TableContainer>
+
+      <Table striped bordered hover variant="dark"></Table>
     </div>
   );
 }
