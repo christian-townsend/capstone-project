@@ -42,7 +42,7 @@ export default class Account extends Component {
                     related to technology.
                   </p>
                   <Link to="/about">
-                    <button className="btn btn-primary">Find Out More</button>
+                  <Button variant="contained">Find Out More</Button>
                   </Link>
                 </div>
               </div>
@@ -61,8 +61,8 @@ export default class Account extends Component {
                   part of the Capstone Project.</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
-                  <Link to="/login">
-                    <Button variant="outlined">Submit a Project</Button>
+                  <Link to="/addProject">
+                    <Button variant="contained">Submit a Project</Button>
                   </Link>
                   </div>
                 
@@ -76,8 +76,8 @@ export default class Account extends Component {
                 Check out some of the work that's already been done!</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
-                  <Link to="/login">
-                    <Button variant="outlined">View Projects</Button>
+                  <Link to="/pastprojects">
+                    <Button variant="contained">View Projects</Button>
                   </Link>
                   </div>
                 
@@ -91,7 +91,7 @@ export default class Account extends Component {
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
                   <Link to="/login">
-                    <Button variant="outlined">Login</Button>
+                    <Button variant="contained">Login</Button>
                   </Link>
                   </div>
                 
