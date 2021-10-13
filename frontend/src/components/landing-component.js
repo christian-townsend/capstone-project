@@ -53,7 +53,7 @@ export default class Account extends Component {
           <Container fluid style={{ backgroundColor: "white" }}>
             <Row>
               <Col >
-              <div style={{ padding:"10px 10px 10px 10px"}}>
+              <div style={{ padding:"10px 30px 10px 30px"}}>
                 <div class ="row-header">Want to sponsor a project?</div>
                 </div>
                 <div>
@@ -69,7 +69,7 @@ export default class Account extends Component {
                 
               </Col>
               <Col >
-              <div style={{ padding:"10px 10px 10px 10px"}}>
+              <div style={{ padding:"10px 30px 10px 30px"}}>
               <div class ="row-header">Check out past projects</div>
                 </div>
                 <div>
@@ -84,7 +84,7 @@ export default class Account extends Component {
                 
               </Col>
               <Col >
-              <div style={{ padding:"10px 10px 10px 10px"}}>
+              <div style={{ padding:"10px 30px 10px 30px"}}>
               <div class ="row-header">Login to your account</div>
                 </div>
                 <div>
