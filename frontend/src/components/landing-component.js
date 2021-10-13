@@ -5,8 +5,19 @@ import Container from 'react-bootstrap/Container'
 import Accordion from 'react-bootstrap/Accordion'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import axios
+ from "axios";
 export default class Account extends Component {
+  onLogin(e) {
+    e.preventDefault();
+
+    axios
+      .request("http://localhost:5000/users")
+      .then((res) => console.log(res.data));
+
+    window.location = "http://localhost:5000/users";
+  }
+
 
   render() {
 
@@ -50,7 +61,7 @@ export default class Account extends Component {
                   part of the Capstone Project.</p>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
-                  <Link to="/login">
+                  <Link to="/projects">
                     <Button variant="outlined">Submit a Project</Button>
                   </Link>
                   </div>
@@ -65,7 +76,7 @@ export default class Account extends Component {
                 Check out some of the work that's already been done!</p>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
-                  <Link to="/login">
+                  <Link to="/pastprojects">
                     <Button variant="outlined">View Projects</Button>
                   </Link>
                   </div>
@@ -78,10 +89,8 @@ export default class Account extends Component {
                 <div>
                 <p style={{ textAlign: "center", padding:"10px 30px 10px 30px"}}>Already have an account? Login here.</p>
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
-                  <Link to="/login">
-                    <Button variant="outlined">Login</Button>
-                  </Link>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>        
+                    <Button variant="outlined"  onClick={(e) => this.onLogin(e)}>Login</Button>
                   </div>
                 
               </Col>
