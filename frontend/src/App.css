@@ -40,13 +40,14 @@ form {
 /*landing-component*/
 .card-header {
   font-family: "Lato", sans-serif;
-  height: 100vh;
+  height: 75vh;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 2px black;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 108, 145, 0.8), rgba(0, 51, 68, 0.8)),
-    url("./images/uccampus.jpg");
+/*   background: linear-gradient(rgba(0, 108, 145, 0.8), rgba(0, 51, 68, 0.8)),
+    url("./images/network.jpg"); */
+  background: url("./images/network.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -69,12 +70,13 @@ form {
   font-size: 20px;
   margin-left: 200px;
   margin-right: 200px;
-  text-align: left;
+  text-align: center;
 }
 
 .banner-title {
+
   font-weight: 900;
-  text-shadow: 2px 2px 2px black;
+  /* text-shadow: 2px 2px 2px black; */
 }
 
 .btn-info {

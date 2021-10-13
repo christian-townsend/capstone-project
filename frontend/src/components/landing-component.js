@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
+import Container from 'react-bootstrap/Container'
+import Accordion from 'react-bootstrap/Accordion'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 export default class Account extends Component {
+
   render() {
+
     return (
       <div class="fullpage">
         <row>
@@ -24,44 +31,97 @@ export default class Account extends Component {
                     related to technology.
                   </p>
                   <Link to="/about">
-                    <button className="btn btn-info">Find Out More</button>
+                    <button className="btn btn-primary">Find Out More</button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
           {/*Login/Projects/Register Cards*/}
-          <div class="card card-register">
-            <div class="card-body">
-              <h1 class="title">Want To Sponsor A Project?</h1>
-              <p>
+          <Container fluid style={{ backgroundColor: "white" }}>
+            <Row>
+              <Col >
+              <div style={{ padding:"10px 10px 10px 10px"}}>
+                <h3 style={{ textAlign: "center" }}>Want to sponsor a project?</h3>
+                </div>
+                <div>
+                <p style={{ textAlign: "center", padding:"10px 30px 10px 30px"}}>The University of Canberra welcomes ideas from industry for
+                  technology projects that could be completed, by our students, as
+                  part of the Capstone Project.</p>
+                  </div>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
+                  <Link to="/login">
+                    <Button variant="outlined">Submit a Project</Button>
+                  </Link>
+                  </div>
+                
+              </Col>
+              <Col >
+              <div style={{ padding:"10px 10px 10px 10px"}}>
+                <h3 style={{ textAlign: "center" }}>Check out past projects</h3>
+                </div>
+                <div>
+                <p style={{ textAlign: "center", padding:"10px 30px 10px 30px"}}>Our students participate in projects with real industry value. 
+                Check out some of the work that's already been done!</p>
+                  </div>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
+                  <Link to="/login">
+                    <Button variant="outlined">View Projects</Button>
+                  </Link>
+                  </div>
+                
+              </Col>
+              <Col >
+              <div style={{ padding:"10px 10px 10px 10px"}}>
+                <h3 style={{ textAlign: "center" }}>Login to your account</h3>
+                </div>
+                <div>
+                <p style={{ textAlign: "center", padding:"10px 30px 10px 30px"}}>Already have an account? Login here.</p>
+                  </div>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"10px 10px 10px 10px"}}>
+                  <Link to="/login">
+                    <Button variant="outlined">Login</Button>
+                  </Link>
+                  </div>
+                
+              </Col>
+              
+            </Row>
+          </Container>
+
+
+          {/* 
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header><h3 style={{ fontFamily: "garamond" }}>Want To Sponsor A Project?</h3></Accordion.Header>
+              <Accordion.Body>
                 The University of Canberra welcomes ideas from industry for
                 technology projects that could be completed, by our students, as
                 part of the Capstone Project.
-              </p>
-              <Link to="/login">
-                <button className="btn btn-primary">Submit a Project</button>
-              </Link>
-            </div>
-          </div>
-          <div class="card card-projects bg-light">
-            <div class="card-body">
-              <h1 class="title">Check Out The Past Projects!</h1>
-              <p>to be edited</p>
-              <Link to="/login">
-                <button className="btn btn-primary">View Projects</button>
-              </Link>
-            </div>
-          </div>
-          <div class="card card-login">
-            <div class="card-body">
-              <h1 class="title">Login to your Account</h1>
-              <p>to be edited</p>
-              <Link to="/login">
-                <button className="btn btn-primary">Login</button>
-              </Link>
-            </div>
-          </div>
+                <Link to="/login">
+                  <Button variant="outlined">Submit a Project</Button>
+                </Link>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header><h3 style={{ fontFamily: "garamond" }}>Check Out The Past Projects!</h3></Accordion.Header>
+              <Accordion.Body>
+                Our students participate in projects with real industry value. Check out some of the work that's already been done!
+                <Link to="/login">
+                  <Button variant="outlined">View Projects</Button>
+                </Link>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header><h3 style={{ fontFamily: "garamond" }}>Login to your Account</h3></Accordion.Header>
+              <Accordion.Body>
+                Already have an account? Login here.
+                <Link to="/login">
+                  <Button variant="outlined">Login</Button>
+                </Link>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion> */}
         </row>
       </div>
     );
