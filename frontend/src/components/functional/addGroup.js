@@ -15,7 +15,6 @@ export default function AddGroup(props) {
   const handleSelect = (e) => {
     console.log(e);
     setValue(e);
-    setPercent(100);
   };
 
   const onSubmit = () => {
@@ -41,39 +40,40 @@ export default function AddGroup(props) {
         </div>
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>How many groups would you like to create?</Form.Label>
+            <h5>How many groups would you like to create?</h5>
             <Form.Control
               type="number"
               onChange={(event) => setPercent(33)}
               placeholder="Enter Number of Groups"
             />
-            <Form.Label style={{ marginTop: 15 }}>
-              How many slots would you like per group?
-            </Form.Label>
-            <h4 style={{ marginTop: 15 }}>{value}</h4>
+            <h5 style={{ marginTop: 15 }}>
+              Select the amount of slots per Group.
+            </h5>
+
             <DropdownButton
               alignRight
               title="Slots"
               id="dropdown-menu-align-right"
               onSelect={handleSelect}
+              onChange={(event) => setPercent(66)}
             >
-              {" "}
-              <Dropdown.Item eventKey="1 slot will be created for the group">
+              <Dropdown.Item eventKey="1 slot will be created for the Group.">
                 1
               </Dropdown.Item>
-              <Dropdown.Item eventKey="2 slots will be created per group">
+              <Dropdown.Item eventKey="2 slots will be created per Group.">
                 2
               </Dropdown.Item>
-              <Dropdown.Item eventKey="3 slots will be created per group">
+              <Dropdown.Item eventKey="3 slots will be created per Group.">
                 3
               </Dropdown.Item>
-              <Dropdown.Item eventKey="5 slots will be created per group">
+              <Dropdown.Item eventKey="5 slots will be created per Group.">
                 4
               </Dropdown.Item>
-              <Dropdown.Item eventKey="5 slots will be created per group">
+              <Dropdown.Item eventKey="5 slots will be created per Group.">
                 5
               </Dropdown.Item>
             </DropdownButton>
+            <h4 style={{ marginTop: 15, alignRight: true }}>{value}</h4>
           </Form.Group>
         </Form>
         <Button
