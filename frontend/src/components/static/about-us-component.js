@@ -27,7 +27,7 @@ export default function AboutFunction(props) {
           </div>
           </row>
           <Container fluid style={{ backgroundColor: "white" }}>
-            <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", backgroundColor:"#f5f5f5"}}>
+            <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", backgroundColor:"#f5f5f5", height:"200px"}}>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
                 <div class ="row-header">Software</div>
@@ -42,7 +42,7 @@ export default function AboutFunction(props) {
               <Col>
               </Col>
               </Row>
-              <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6"}}>
+              <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", height:"200px"}}>
               <Col>
               </Col>
               <Col >
@@ -54,7 +54,7 @@ export default function AboutFunction(props) {
                   </div>                
               </Col>
               </Row>
-              <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", backgroundColor:"#f5f5f5"}}>
+              <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", backgroundColor:"#f5f5f5", height:"200px"}}>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
                 <div class ="row-header">Research</div>
