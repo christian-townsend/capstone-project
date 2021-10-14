@@ -24,6 +24,14 @@ export default function GetProject(props) {
   }, []);
 
   const deleteProject = (id) => {
+    axios.delete("http://localhost:5000/projects/" + id).then((response) => {
+      console.log(response.data);
+    });
+
+    window.location = "/project";
+  };
+
+  const updateProject = (id) => {
     console.log("made it here");
     axios.delete("http://localhost:5000/projects/" + id).then((response) => {
       console.log(response.data);
@@ -54,8 +62,8 @@ export default function GetProject(props) {
             className="project__header__row"
             style={{ backgroundColor: "white" }}
           >
-            <TableRow>
-              <TableCell>Title</TableCell>
+            <TableRow className="table__row">
+              <TableCell className="table__row">Title</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Scope</TableCell>
               <TableCell>Actions</TableCell>
@@ -68,11 +76,14 @@ export default function GetProject(props) {
                 <TableCell>{project.description}</TableCell>
                 <TableCell>{project.scope}</TableCell>
                 <TableCell>
-                  <Button variant="success">Activate</Button>{" "}
-                  <Button className="test" variant="primary">
+                  <Button className="btn" variant="success">
+                    Activate
+                  </Button>{" "}
+                  <Button className="btn" variant="primary">
                     Update
                   </Button>{" "}
                   <Button
+                    className="btn"
                     variant="danger"
                     onClick={(event) => deleteProject(project._id)}
                   >

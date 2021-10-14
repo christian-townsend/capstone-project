@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -67,10 +68,19 @@ export default class Navbar extends Component {
                     Sponsors
                   </a>
                 </li>
+
                 <li>
-                  <a class="nav-link" href="/pastprojects">
-                    Past Projects
-                  </a>
+                  <NavDropdown title="Projects" id="nav-dropdown">
+                    <NavDropdown.Item eventKey="4.1" href="/project">
+                      Current Projects
+                    </NavDropdown.Item>
+                    <NavDropdown.Item eventKey="4.2" href="/pastprojects">
+                      Past Projects
+                    </NavDropdown.Item>
+                    <NavDropdown.Item eventKey="4.2" href="/addProject">
+                      New Project
+                    </NavDropdown.Item>
+                  </NavDropdown>
                 </li>
               </ul>
             </div>
@@ -92,30 +102,4 @@ export default class Navbar extends Component {
       </div>
     );
   }
-}
-
-{
-  /*}
-              {/*Logo*
-              <div class="row">
-                <div className="nav-header-logo col-xs-12 col-md-2">
-                    <Link to="/home">
-                        <img className="capstone-logo" src="../capstone-logo.svg" alt="capstone logo"></img>
-                    </Link>
-                </div>
-              </div>
-              <div className="nav-header-left col-xs-12 col-md-6">
-                  {/*Navbar Menu Left Hand Side*
-                  <ul class="nav navbar-nav me-auto">
-                    <li><a class="nav-link" href="/about">About</a></li><br></br>
-                    <li><a class="nav-link" href="/sponsors">Sponsors</a></li>
-                    <li><a class="nav-link" href="/pastprojects">Past Projects</a></li>
-                  </ul>
-              </div>
-              <div className="nav-header-right col-xs-12 col-md-6">
-                  {/*Navbar Menu Right Hand Side*
-                  <ul class="nav navbar-nav ms-auto">
-                    <li><a class="nav-link" href="/login">Login</a></li>
-                  </ul>
-                  </div>*/
 }

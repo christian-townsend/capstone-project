@@ -36,9 +36,15 @@
   margin: auto;
   background-color: #e9ecef;
   color: black;
-  font-family: "Arvo", serif;
 }
 
 .project__header__row {
   font-family: "Arvo", serif;
+}
+.btn {
+  margin-top: 5px;
+}
+
+.table__row {
+  text-align: center;
 }
