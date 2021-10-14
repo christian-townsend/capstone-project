@@ -95,6 +95,15 @@ export default class Navbar extends Component {
                     Login
                   </a>
                 </li>
+                <li>
+                  <a class="nav-link">/</a>
+                </li>
+
+                <li>
+                  <a class="nav-link" onClick={(e) => this.onLogin(e)}>
+                    Profile
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
