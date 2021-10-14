@@ -50,7 +50,7 @@ export default class Account extends Component {
           </div>
           {/*Login/Projects/Register Cards*/}
           <Container fluid style={{ backgroundColor: "white" }}>
-            <Row>
+            <Row style={{paddingBottom:"30px", borderTop:"2px solid #B3C5D7", borderBottom:"2px solid #B3C5D7"}}>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
                 <div class ="row-header">Want to sponsor a project?</div>

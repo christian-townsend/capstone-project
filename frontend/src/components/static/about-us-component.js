@@ -26,6 +26,28 @@ export default function AboutFunction(props) {
             </div>
           </div>
           </row>
+          <Container fluid style={{ backgroundColor: "white" }}>
+            <Row style={{paddingBottom:"30px", borderTop:"2px solid #B3C5D7", borderBottom:"2px solid #B3C5D7"}}>
+              <Col >
+              <div style={{ padding:"10px 30px 10px 30px"}}>
+                <div class ="row-header">Want to sponsor a project?</div>
+                </div>
+                <div>
+                <div class="row-content">The University of Canberra welcomes ideas from industry for
+                  technology projects that could be completed, by our students, as
+                  part of the Capstone Project.</div>
+                  </div>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
+                  <Link to="/addProject">
+                    <Button variant="contained">Submit a Project</Button>
+                  </Link>
+                  </div>
+                
+              </Col>
+              <Col>
+              </Col>
+              </Row>
+              </Container>
           </div>
     );
 }
