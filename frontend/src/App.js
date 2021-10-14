@@ -14,7 +14,7 @@ import addProject from "./components/functional/addProject";
 import About from "./components/static/about-us-component";
 import Footer from "./components/static/footer-component";
 import PastProject from "./components/static/past-projects-component";
-import UploadFile from "./components/functional/FileUpload";
+import UploadFile from "./components/buttons/FileUpload";
 import Sponsor from "./components/static/sponsor-component";
 import addGroup from "./components/functional/addGroup";
 import ReadProject from "./components/functional/getProject";
