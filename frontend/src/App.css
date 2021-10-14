@@ -14,7 +14,7 @@ form {
 }
 
 .navbar {
-  background-color: rgba(51, 136, 185,0.75);
+  background-color: rgba(51, 136, 185, 0.75);
   height: 100px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1);
   font-family: "Arvo", serif;
@@ -138,19 +138,18 @@ form {
 
 .banner-tl {
   color: rgb(61, 171, 235);
-display: block;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 50px;
-font-style: normal;
-font-weight: bold;
-height: 100px;
-letter-spacing: 4px;
-line-height: 68px;
-text-align: center;
-text-rendering: optimizeLegibility;
-text-transform: none;
-white-space: pre-wrap;
-
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: bold;
+  height: 100px;
+  letter-spacing: 4px;
+  line-height: 68px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  white-space: pre-wrap;
 }
 .banner-title {
   font-weight: 900;
@@ -272,13 +271,18 @@ white-space: pre-wrap;
 
 /* About Component */
 .about-card-header {
-    font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
   height: 75vh;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 2px black;
   overflow: hidden;
-background: linear-gradient(rgba(41, 1, 78, 0.8), rgba(18, 19, 19, 0.8)), url("./images/login-background.jpeg");
-background-size: cover;
-background-position: center;
+  background: linear-gradient(rgba(41, 1, 78, 0.8), rgba(18, 19, 19, 0.8)),
+    url("./images/login-background.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.test {
+  background-color: blue;
 }

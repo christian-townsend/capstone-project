@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -8,7 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Navbar from "../static/navbar-component";
-import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
 
 export default function GetProject(props) {
   const [projects, setProjects] = useState([]);
@@ -19,8 +19,18 @@ export default function GetProject(props) {
         withCredentials: true,
       });
       setProjects(result.data);
+      console.log(result.data);
     })();
   }, []);
+
+  const deleteProject = (id) => {
+    console.log("made it here");
+    axios.delete("http://localhost:5000/projects/" + id).then((response) => {
+      console.log(response.data);
+    });
+
+    window.location = "/project";
+  };
 
   return (
     <div>
@@ -40,7 +50,10 @@ export default function GetProject(props) {
         }}
       >
         <Table sx={{ minWidth: 500 }} aria-label="simple table">
-          <TableHead style={{ backgroundColor: "white" }}>
+          <TableHead
+            className="project__header__row"
+            style={{ backgroundColor: "white" }}
+          >
             <TableRow>
               <TableCell>Title</TableCell>
               <TableCell>Description</TableCell>
@@ -55,9 +68,16 @@ export default function GetProject(props) {
                 <TableCell>{project.description}</TableCell>
                 <TableCell>{project.scope}</TableCell>
                 <TableCell>
-                  <Badge bg="success">Activate</Badge>{" "}
-                  <Badge bg="primary">Update</Badge>{" "}
-                  <Badge bg="danger">Delete</Badge>{" "}
+                  <Button variant="success">Activate</Button>{" "}
+                  <Button className="test" variant="primary">
+                    Update
+                  </Button>{" "}
+                  <Button
+                    variant="danger"
+                    onClick={(event) => deleteProject(project._id)}
+                  >
+                    Delete
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}

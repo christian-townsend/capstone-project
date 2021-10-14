@@ -9,7 +9,6 @@ router
   .get((req, res) => {
     Project.find()
       .then((projects) => res.json(projects))
-      .then(console.log("test"))
       .catch((err) => res.status(400).json("Error: " + err));
   });
 
@@ -59,6 +58,13 @@ router.route("/update/:id").post((req, res) => {
     project.size = req.body.size;
     project.duration = req.body.duration;
   });
+});
+
+router.route("/:id").delete((req, res) => {
+  console.log("made it here");
+  Project.findByIdAndDelete(req.params.id)
+    .then(() => res.json("Project deleted."))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 module.exports = router;

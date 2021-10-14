@@ -2,6 +2,7 @@ const router = require("express").Router();
 let User = require("../models/user.model");
 const msal = require("@azure/msal-node");
 const { IdToken } = require("@azure/msal-common");
+const { requireAuth } = require("../middlewares/authMiddleware");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
@@ -137,6 +138,12 @@ router.route("/add").post((req, res) => {
   newUser
     .save()
     .then(() => res.json("User added!"))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
+router.route("/getUser").get((req, res) => {
+  User.find()
+    .then((users) => res.json(users))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 

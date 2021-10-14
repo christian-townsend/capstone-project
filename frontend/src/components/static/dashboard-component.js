@@ -2,11 +2,11 @@ import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 
 export default function Dashboard(props) {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState("User");
 
   useEffect(() => {
     (async () => {
-      const result = await axios("http://localhost:5000/users", {
+      const result = await axios("http://localhost:5000/users/getUser", {
         withCredentials: true,
       });
       setUser(result.data);
@@ -24,3 +24,11 @@ export default function Dashboard(props) {
     </div>
   );
 }
+/*
+<div class="Project Text col-md-12 mt-5">
+          {project.map((projects) => (
+            <h1 class="dash-header">Welcome Back, Christian</h1>
+          ))}
+        </div>
+
+*/
