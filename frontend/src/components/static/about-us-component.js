@@ -16,7 +16,7 @@ export default function AboutFunction(props) {
           <div class="content-area col-xs-12 col-md-12 px-0">
             <div class="card border-dark about-card-header">
               <div class="text-overlay-header col-xs-12 col-md-12">
-                <h1 class="banner-tl">About the Capstone Project</h1>
+                <h1 class="banner-tl" style={{color:"white"}}>About the Capstone Project</h1>
                 <div class="banner-text col-xs-12 col-sm-12 col-md-12">
                   <p class="card-text">
                     Culmination of the academic curriculum, where students demonstrate their talents and intellecutal experience to solve real-life engineering or IT problems.
@@ -27,20 +27,42 @@ export default function AboutFunction(props) {
           </div>
           </row>
           <Container fluid style={{ backgroundColor: "white" }}>
-            <Row style={{paddingBottom:"30px", borderTop:"2px solid #B3C5D7", borderBottom:"2px solid #B3C5D7"}}>
+            <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", backgroundColor:"#f5f5f5", height:"200px"}}>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
-                <div class ="row-header">Want to sponsor a project?</div>
+                <div class ="row-header">Software</div>
                 </div>
                 <div>
-                <div class="row-content">The University of Canberra welcomes ideas from industry for
-                  technology projects that could be completed, by our students, as
-                  part of the Capstone Project.</div>
+                <div class="row-content">Our Information Technology and Software Engineering students are highly skilled in a wide range of technical areas. From web design to artificial intelligence, we've got it covered.</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
-                  <Link to="/addProject">
-                    <Button variant="contained">Submit a Project</Button>
-                  </Link>
+                  </div>
+                
+              </Col>
+              <Col>
+              </Col>
+              </Row>
+              <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", height:"200px"}}>
+              <Col>
+              </Col>
+              <Col >
+              <div style={{ padding:"10px 30px 10px 30px"}}>
+                <div class ="row-header">Robotics</div>
+                </div>
+                <div>
+                <div class="row-content">Students can access our dedicated robotics lab for a wide range of projects, such as robotic process automation.</div>
+                  </div>                
+              </Col>
+              </Row>
+              <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", backgroundColor:"#f5f5f5", height:"200px"}}>
+              <Col >
+              <div style={{ padding:"10px 30px 10px 30px"}}>
+                <div class ="row-header">Research</div>
+                </div>
+                <div>
+                <div class="row-content">Not every project submission needs to be a technical undertaking. Each semester we have a new cohort of eager researchers, ready to work on your topic.</div>
+                  </div>
+                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
                   </div>
                 
               </Col>

@@ -6,6 +6,7 @@ import Accordion from 'react-bootstrap/Accordion'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import axios from "axios";
+import uclogo from '../../images/university-of-canberra.svg'
 
 
 export default class Account extends Component {
@@ -38,11 +39,8 @@ export default class Account extends Component {
                     develop their theoretical knowledge further in an area of
                     interest, and provide genuine business value in the processs.
                   </p>
-                  <Link to="/about">
-                  <Button variant="outlined" style={{fontWeight:"bold"}}>Find Out More</Button>
-                  </Link>
                   <div style={{padding:"30px"}}>
-                  <img className="UC-Img"  src="../uoc.svg" alt="University of Canberra Link"></img>
+                  <img className="UC-Img"  src={uclogo} style={{height: "100px", width:"150px"}} alt="University of Canberra Link"></img>
                   </div>
                 </div>
               </div>
