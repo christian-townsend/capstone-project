@@ -1,5 +1,5 @@
 /*navbar-component CSS*/
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
 h1,
@@ -14,7 +14,7 @@ form {
 }
 
 .navbar {
-  background-color: rgba(51, 136, 185, 0.75);
+  background-color: rgba(51, 136, 185);
   height: 100px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1);
   font-family: "Arvo", serif;
@@ -51,6 +51,20 @@ form {
   overflow: hidden;
   background: linear-gradient(rgba(56, 56, 56, 0.8), rgba(18, 19, 19, 0.8)),
     url("./images/network.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.past-project-header {
+  font-family: "Lato", sans-serif;
+  height: 75vh;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+  overflow: hidden;
+  background: linear-gradient(rgba(56, 56, 56, 0.3), rgba(18, 19, 19, 0.3)),
+    url("./images/tech-BG.jpg");
 
   background-size: cover;
   background-position: center;
@@ -136,10 +150,12 @@ form {
   word-wrap: break-word;
 }
 
+
+
 .banner-tl {
   color: rgb(61, 171, 235);
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 50px;
   font-style: normal;
   font-weight: bold;
