@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Button from '@mui/material/Button';
-import Container from 'react-bootstrap/Container'
-import Accordion from 'react-bootstrap/Accordion'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Button from "@mui/material/Button";
+import Container from "react-bootstrap/Container";
+import Accordion from "react-bootstrap/Accordion";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import axios from "axios";
-import uclogo from '../../images/university-of-canberra.svg'
-
+import uclogo from "../../images/university-of-canberra.svg";
 
 export default class Account extends Component {
   onLogin(e) {
@@ -20,9 +19,7 @@ export default class Account extends Component {
     window.location = "http://localhost:5000/users";
   }
 
-
   render() {
-
     return (
       <div class="fullpage">
         <row>
@@ -37,10 +34,16 @@ export default class Account extends Component {
                     opportunity for students undertake a technology focused
                     research project. The project will enable students to
                     develop their theoretical knowledge further in an area of
-                    interest, and provide genuine business value in the processs.
+                    interest, and provide genuine business value in the
+                    processs.
                   </p>
-                  <div style={{padding:"30px"}}>
-                  <img className="UC-Img"  src={uclogo} style={{height: "100px", width:"150px"}} alt="University of Canberra Link"></img>
+                  <div style={{ padding: "30px" }}>
+                    <img
+                      className="UC-Img"
+                      src={uclogo}
+                      style={{ height: "100px", width: "150px" }}
+                      alt="University of Canberra Link"
+                    ></img>
                   </div>
                 </div>
               </div>
@@ -48,59 +51,86 @@ export default class Account extends Component {
           </div>
           {/*Login/Projects/Register Cards*/}
           <Container fluid style={{ backgroundColor: "white" }}>
-            <Row style={{paddingBottom:"30px", borderTop:"2px solid #B3C5D7", borderBottom:"2px solid #B3C5D7"}}>
-              <Col >
-              <div style={{ padding:"10px 30px 10px 30px"}}>
-                <div class ="row-header">Want to sponsor a project?</div>
+            <Row
+              style={{
+                paddingBottom: "30px",
+                borderTop: "2px solid #B3C5D7",
+                borderBottom: "2px solid #B3C5D7",
+              }}
+            >
+              <Col>
+                <div style={{ padding: "10px 30px 10px 30px" }}>
+                  <div class="row-header">Want to sponsor a project?</div>
                 </div>
                 <div>
-                <div class="row-content">The University of Canberra welcomes ideas from industry for
-                  technology projects that could be completed, by our students, as
-                  part of the Capstone Project.</div>
+                  <div class="row-content">
+                    The University of Canberra welcomes ideas from industry for
+                    technology projects that could be completed, by our
+                    students, as part of the Capstone Project.
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "20px 10px 10px 10px",
+                  }}
+                >
                   <Link to="/addProject">
                     <Button variant="contained">Submit a Project</Button>
                   </Link>
-                  </div>
-                
+                </div>
               </Col>
-              <Col >
-              <div style={{ padding:"10px 30px 10px 30px"}}>
-              <div class ="row-header">Check out past projects</div>
+              <Col>
+                <div style={{ padding: "10px 30px 10px 30px" }}>
+                  <div class="row-header">Check out past projects</div>
                 </div>
                 <div>
-                <div class="row-content">Our students participate in projects with real industry value. 
-                Check out some of the work that's already been done!</div>
+                  <div class="row-content">
+                    Our students participate in projects with real industry
+                    value. Check out some of the work that's already been done!
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "20px 10px 10px 10px",
+                  }}
+                >
                   <Link to="/pastprojects">
                     <Button variant="contained">View Projects</Button>
                   </Link>
-                  </div>
-                
+                </div>
               </Col>
-              <Col >
-              <div style={{ padding:"10px 30px 10px 30px"}}>
-              <div class ="row-header">Login to your account</div>
+              <Col>
+                <div style={{ padding: "10px 30px 10px 30px" }}>
+                  <div class="row-header">Login to your account</div>
                 </div>
                 <div>
-                <div class="row-content">Already have an account? Login here.</div>
+                  <div class="row-content">
+                    Already have an account? Login here.
                   </div>
-                  <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "20px 10px 10px 10px",
+                  }}
+                >
                   <Link to="/login">
                     <Button variant="contained">Login</Button>
                   </Link>
-                  </div>
-                
+                </div>
               </Col>
-              
             </Row>
           </Container>
 
-
-           
-         {/*  <Accordion>
+          {/*  <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header><h3 style={{ fontFamily: "garamond" }}>Want To Sponsor A Project?</h3></Accordion.Header>
               <Accordion.Body>

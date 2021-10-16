@@ -13,6 +13,7 @@ import Button from "react-bootstrap/Button";
 export default function GetProject(props) {
   const [projects, setProjects] = useState([]);
 
+  // Retrieve the latest Project data
   useEffect(() => {
     (async () => {
       const result = await axios("http://localhost:5000/projects", {
@@ -23,16 +24,8 @@ export default function GetProject(props) {
     })();
   }, []);
 
+  // Delete a project
   const deleteProject = (id) => {
-    axios.delete("http://localhost:5000/projects/" + id).then((response) => {
-      console.log(response.data);
-    });
-
-    window.location = "/project";
-  };
-
-  const updateProject = (id) => {
-    console.log("made it here");
     axios.delete("http://localhost:5000/projects/" + id).then((response) => {
       console.log(response.data);
     });
@@ -77,7 +70,7 @@ export default function GetProject(props) {
                 <TableCell>{project.scope}</TableCell>
                 <TableCell>
                   <Button className="btn" variant="success">
-                    Activate
+                    Approve
                   </Button>{" "}
                   <Button className="btn" variant="primary">
                     Update

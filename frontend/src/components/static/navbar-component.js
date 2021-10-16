@@ -31,7 +31,6 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="container-fluid Navbar">
-        <navBarSample />
         <nav className="navbar fixed-top navbar-dark navbar-expand-sm col-sm-12 col-md-12">
           {/*Logo*/}
           <Link to="/home">
@@ -72,7 +71,7 @@ export default class Navbar extends Component {
                 <li>
                   <NavDropdown title="Projects" id="nav-dropdown">
                     <NavDropdown.Item eventKey="4.1" href="/project">
-                      Current Projects
+                      Submitted Projects
                     </NavDropdown.Item>
                     <NavDropdown.Item eventKey="4.2" href="/pastprojects">
                       Past Projects
