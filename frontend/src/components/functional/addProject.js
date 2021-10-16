@@ -6,6 +6,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "../static/navbar-component";
 import BasicDateRangePicker from "./basicDateRangePicker";
 import Accordion from "react-bootstrap/Accordion";
+import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 
 export default function AddProject(props) {
@@ -37,16 +38,24 @@ export default function AddProject(props) {
 
       <div
         style={{
-          width: 650,
-          marginLeft: 100,
-          marginTop: 120,
+          width: 900,
+          marginLeft: 60,
+          marginTop: 140,
           color: "white",
         }}
       >
         <div>
-          <h1 style={{ marginBottom: 30 }}>Create a new Project</h1>
+          <h1 style={{ marginBottom: 20 }}>Submit a new Project</h1>
+          <Alert variant="success">
+            <Alert.Heading>Submitting a new Project.</Alert.Heading>
+            <p>
+              When submitting a new Project, please complete all forms. Upon
+              submission, your entry will be forwarded to the University of
+              Canberra for further assessment.
+            </p>
+          </Alert>
         </div>
-        <Accordion>
+        <Accordion style={{ marginTop: 10 }}>
           <Accordion.Item eventKey="0">
             <Accordion.Header>Project Brief</Accordion.Header>
             <Accordion.Body>
@@ -153,12 +162,12 @@ export default function AddProject(props) {
         </Accordion>
 
         <Button
-          style={{ marginTop: 10, width: 650 }}
+          style={{ marginTop: 15, width: 900 }}
           onClick={(event) => onSubmit()}
           variant="success"
           size="lg"
         >
-          {save ? "Creating Project..." : "Create Project"}
+          {save ? "Submitting Project..." : "Submit Project"}
         </Button>
       </div>
     </div>
