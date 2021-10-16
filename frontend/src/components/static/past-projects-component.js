@@ -44,7 +44,9 @@ export default function PastProjectsFunction(props) {
           {/*Banner Logo*/}
 
         {/*Body*/}
-        {projects.map((project) =>
+        {projects.map((project) => {
+        if(project.year==2021) {
+          return(
         <Container fluid>
           <Row style={{backgroundColor:"white", borderBottom:"1px solid grey", padding:"10px 5px 10px 10px"}}>
             <Col xs={8}>
@@ -56,8 +58,8 @@ export default function PastProjectsFunction(props) {
             
             </Col>
           </Row>
-          </Container>
-          )}
+          </Container>)
+}})}
       
       </row>
       </div>
