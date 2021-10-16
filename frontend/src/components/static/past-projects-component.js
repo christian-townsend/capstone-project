@@ -10,54 +10,58 @@ import Paper from "@mui/material/Paper";
 import Navbar from "./navbar-component";
 import Badge from "react-bootstrap/Badge";
 import { render } from "react-dom";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default function PastProjectsFunction(props) {
-    const [projects, setProjects] = useState([]);
-    useEffect(() => {
-        (async () => {
-          const result = await axios("http://localhost:5000/projects");
-          setProjects(result.data);
-          console.log(result.data);
-        })();
-      }, []);
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const result = await axios("http://localhost:5000/projects", {
+        withCredentials: true,
+      });
+      setProjects(result.data);
+      console.log(result.data);
+    })();
+  }, []);
 
     return (
-      <div className="container-fluid">
-          {/*Banner Logo*/}
-          <div class="Banner-Top col-xs col-sm col-md ml-0 mr-0">
-                    <div class="row mt-5">
-                        <div className="About-Banner col-lg col-md">
-                            <h1 id="banner-header">Explore our Past Projects</h1>
-                            <p id="banner-text"></p>
-                        </div>
-                </div>
-            </div>
-        {/*Body*/}
+      <div class="fullpage">
         <row>
-            {projects.map((project) => 
-              <div class="card card-register">
-                  <div class="card-body">
-                      <h1 class="title">{project.title}</h1>
-                      <p>{project.description}</p>
-                  </div>
+        <div class="content-area col-xs-12 col-md-12 px-0">
+            <div class="card border-dark past-project-header">
+              <div class="text-overlay-header col-xs-12 col-md-12">
+                <h1 class="banner-tl" style={{color:"white"}}>Explore our Past Projects</h1>
+                <div class="banner-text col-xs-12 col-sm-12 col-md-12">
+
+                </div>
               </div>
-            )}
-        </row>
+            </div>
+          </div>
+      
+          {/*Banner Logo*/}
+
+        {/*Body*/}
+        {projects.map((project) => {
+        if(project.year==2021) {
+          return(
+        <Container fluid>
+          <Row style={{backgroundColor:"white", borderBottom:"1px solid grey", padding:"10px 5px 10px 10px"}}>
+            <Col xs={8}>
+            <h3 class="title" style={{color:"grey", fontFamily:"Nunito"}}>{project.title}</h3>
+            <p style={{fontFamily:"Nunito"}}>{project.description}</p>
+            </Col>
+            {/* image goes here */}
+            <Col>
+            
+            </Col>
+          </Row>
+          </Container>)
+}})}
+      
+      </row>
       </div>
     )}
-
-         {/*  <div class="row">
-            {projects.map((project) => (
-            <div class="card card-register">
-                        <div class= "card-body">
-                            <h1 class="title">{project.title}</h1>
-                            <p>{project.description}
-
-                          </p>
-                        </div>
-                    </div>
-                    
-            ))}
-            </div>
- */}
        
