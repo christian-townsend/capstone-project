@@ -11,18 +11,17 @@ export default function BasicDateRangePicker() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DateRangePicker
-        style={{ color: "white" }}
-        startText="Check-in"
-        endText="Check-out"
+        startText="Start Date"
+        endText="End Date"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);
         }}
         renderInput={(startProps, endProps) => (
-          <React.Fragment style={{ color: "white" }}>
-            <TextField {...startProps} />
+          <React.Fragment>
+            <TextField style={{ backgroundColor: "white" }} {...startProps} />
             <Box sx={{ mx: 2 }}> to </Box>
-            <TextField {...endProps} />
+            <TextField style={{ backgroundColor: "white" }} {...endProps} />
           </React.Fragment>
         )}
       />

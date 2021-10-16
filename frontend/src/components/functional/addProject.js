@@ -5,6 +5,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "../static/navbar-component";
 import BasicDateRangePicker from "./basicDateRangePicker";
+import Accordion from "react-bootstrap/Accordion";
 import axios from "axios";
 
 export default function AddProject(props) {
@@ -38,51 +39,119 @@ export default function AddProject(props) {
         style={{
           width: 650,
           marginLeft: 100,
-          marginTop: 150,
+          marginTop: 120,
           color: "white",
         }}
       >
         <div>
           <h1 style={{ marginBottom: 30 }}>Create a new Project</h1>
         </div>
-        <Form>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Title</Form.Label>
-            <Form.Control
-              type="text"
-              value={title}
-              onChange={(event) => setTitle(event.target.value)}
-              placeholder="Title"
-            />
-            <Form.Label>Description</Form.Label>
-            <Form.Control
-              as="textarea"
-              value={description}
-              onChange={(event) => setDescription(event.target.value)}
-              placeholder="Description"
-              rows={4}
-            />
-            <Form.Label>Scope</Form.Label>
-            <Form.Control
-              style={{ marginBottom: 15 }}
-              as="textarea"
-              value={scope}
-              onChange={(event) => setScope(event.target.value)}
-              placeholder="Scope"
-              rows={2}
-            />
-            <BasicDateRangePicker />
-            <DropdownButton
-              style={{ marginTop: 15 }}
-              id="dropdown-basic-button"
-              title="Group Size"
-            >
-              <Dropdown.Item href="#/action-1">1</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">2</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">3</Dropdown.Item>
-            </DropdownButton>
-          </Form.Group>
-        </Form>
+        <Accordion>
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Project Brief</Accordion.Header>
+            <Accordion.Body>
+              <Form.Control
+                style={{ marginBottom: 15 }}
+                type="text"
+                value={title}
+                onChange={(event) => setTitle(event.target.value)}
+                placeholder="Title"
+              />
+
+              <Form.Control
+                as="textarea"
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
+                placeholder="Description"
+                rows={4}
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Relevant Skills</Accordion.Header>
+            <Accordion.Body>
+              <Form.Control
+                style={{ marginBottom: 15 }}
+                as="textarea"
+                value={scope}
+                onChange={(event) => setScope(event.target.value)}
+                placeholder="In Scope"
+                rows={2}
+              />
+              <Form.Control
+                style={{ marginBottom: 15 }}
+                as="textarea"
+                value={scope}
+                onChange={(event) => setScope(event.target.value)}
+                placeholder="Out of Scope"
+                rows={2}
+              />
+
+              <Form.Select style={{ marginBottom: 15 }}>
+                <option>Default select</option>
+              </Form.Select>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Supporting Documentation</Accordion.Header>
+            <Accordion.Body></Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>Contact Details</Accordion.Header>
+            <Accordion.Body>
+              <Form.Control
+                style={{ marginBottom: 10 }}
+                type="text"
+                placeholder="Title"
+              />
+              <Form.Control
+                style={{ marginBottom: 10 }}
+                type="text"
+                placeholder="First Name"
+              />
+              <Form.Control
+                style={{ marginBottom: 10 }}
+                type="text"
+                placeholder="Surname"
+              />
+              <Form.Control
+                style={{ marginBottom: 10 }}
+                type="email"
+                placeholder="Email"
+              />
+              <Form.Control
+                style={{ marginBottom: 10 }}
+                type="phone"
+                placeholder="Phone"
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="4">
+            <Accordion.Header>Dates</Accordion.Header>
+            <Accordion.Body>
+              <Form>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <BasicDateRangePicker />
+                  <DropdownButton
+                    style={{ marginTop: 15 }}
+                    id="dropdown-basic-button"
+                    title="Group Size"
+                  >
+                    <Dropdown.Item>1</Dropdown.Item>
+                    <Dropdown.Item>2</Dropdown.Item>
+                    <Dropdown.Item>3</Dropdown.Item>
+                    <Dropdown.Item>4</Dropdown.Item>
+                    <Dropdown.Item>5</Dropdown.Item>
+                  </DropdownButton>
+                </Form.Group>
+              </Form>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+
         <Button
           style={{ marginTop: 10, width: 650 }}
           onClick={(event) => onSubmit()}
