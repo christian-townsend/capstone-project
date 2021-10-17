@@ -37,7 +37,7 @@ export default function GetProject(props) {
     <div>
       <Navbar />
 
-      <h1 style={{ marginTop: 150, marginLeft: 100, color: "white" }}>
+      <h1 style={{ marginTop: 50, marginLeft: 10, color: "white" }}>
         All Projects
       </h1>
 
@@ -45,7 +45,7 @@ export default function GetProject(props) {
         component={Paper}
         style={{
           marginTop: 50,
-          marginLeft: 100,
+          marginLeft: 10,
           maxWidth: 1600,
           backgroundColor: "#00809f",
         }}
@@ -62,7 +62,7 @@ export default function GetProject(props) {
               <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody style={{backgroundColor:"white"}}>
             {projects.map((project) => (
               <TableRow>
                 <TableCell>{project.title}</TableCell>
