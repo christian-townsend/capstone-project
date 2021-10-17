@@ -4,6 +4,12 @@ import Button from "@mui/material/Button";
 import Carousel from "react-bootstrap/Carousel";
 import axios from "axios";
 import uclogo from "../../images/university-of-canberra.svg";
+import Image from "react-bootstrap/Image";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import loginIcon from "../../images/login.png";
+import projectIcon from "../../images/project-carousel.jpg";
 
 export default function Landing(props) {
   const [index, setIndex] = useState(0);
@@ -14,10 +20,10 @@ export default function Landing(props) {
 
   return (
     <div class="fullpage">
-      <row>
+      <Row>
         {/* main title card */}
         <div class="content-area col-xs-12 col-md-12 px-0">
-          <div style={{ height: 500 }} class="card border-dark card-header">
+          <div style={{ height: 450 }} class="card border-dark card-header">
             <div class="text-overlay-header col-xs-12 col-md-12">
               <h1 class="banner-tl">Welcome to the Capstone Project</h1>
               <div class="banner-text col-xs-12 col-sm-12 col-md-12">
@@ -31,49 +37,56 @@ export default function Landing(props) {
               </div>
             </div>
           </div>
+
           <Carousel
-            style={{ backgroundColor: "white", height: 200 }}
+            style={{ height: 350 }}
             activeIndex={index}
             onSelect={handleSelect}
           >
-            <Carousel.Item>
+            <Carousel.Item style={{ height: "40vh" }}>
               <img
                 className="d-block w-100"
-                src="holder.js/800x400?text=First slide&bg=373940"
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>Already have an account? Login here.</h3>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="frontend/src/images/login.png"
-                alt="Second slide"
-              />
-              <Carousel.Caption>
-                <h3 style={{ color: "white" }}>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="holder.js/800x400?text=Third slide&bg=20232a"
+                src={loginIcon}
                 alt="Third slide"
+                style={{ height: "auto", width: "auto" }}
               />
               <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p style={{ backgroundColor: "white", color: "black" }}>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
+                <Button style={{ marginBottom: 250 }} variant="primary">
+                  View Past Projects.
+                </Button>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item style={{ height: "40vh" }}>
+              <img
+                className="d-block w-100"
+                src={projectIcon}
+                alt="Third slide"
+                style={{ height: "auto", width: "auto" }}
+              />
+              <Carousel.Caption>
+                <Button style={{ marginBottom: 250 }} variant="primary">
+                  View Past Projects.
+                </Button>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item style={{ height: "40vh" }}>
+              <img
+                className="d-block w-100"
+                src={projectIcon}
+                alt="Third slide"
+                style={{ height: "auto", width: "auto" }}
+              />
+              <Carousel.Caption>
+                <Button style={{ marginBottom: 250 }} variant="primary">
+                  Login In.
+                </Button>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </div>
-      </row>
+      </Row>
     </div>
   );
 }

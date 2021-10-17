@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
 
+.carousel-inner > .item {
+  height: 400px;
+}
+
 h1,
 label.form-label,
 button.btn.btn-success.btn-lg,
