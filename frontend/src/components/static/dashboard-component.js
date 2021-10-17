@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Accordion from "react-bootstrap/Accordion";
-import Badge from "react-bootstrap/Badge";
+import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
 import ProjectList from "../functional/getProject";
 import axios from "axios";
@@ -45,13 +45,17 @@ export default function Dashboard() {
           <h1 style={{ marginBottom: 20 }} class="dash-header">
             Welcome Back, {firstName}.
           </h1>
+          <Alert variant="success">
+            <Alert.Heading>The Capstone Project Dashboard.</Alert.Heading>
+            <p>
+              Welcome to the dashboard. Using the accordions below, you can view
+              your contact information, projects you have submitted, projects
+              you are sponsoring, and group details.
+            </p>
+          </Alert>
           <Accordion>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>
-                <h5>
-                  <Badge bg="primary">User Details</Badge>
-                </h5>
-              </Accordion.Header>
+              <Accordion.Header>User Details</Accordion.Header>
               <Accordion.Body>
                 <Form.Group className="mb-3">
                   <Form.Label htmlFor="disabledTextInput">
@@ -71,11 +75,7 @@ export default function Dashboard() {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              <Accordion.Header>
-                <h5>
-                  <Badge bg="success">Project Details</Badge>
-                </h5>
-              </Accordion.Header>
+              <Accordion.Header>Project Details</Accordion.Header>
               <Accordion.Body>
                 <Form.Group className="mb-3">
                   <Form.Label htmlFor="disabledTextInput">
@@ -85,11 +85,7 @@ export default function Dashboard() {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
-              <Accordion.Header>
-                <h5>
-                  <Badge bg="info">Group Details</Badge>
-                </h5>
-              </Accordion.Header>
+              <Accordion.Header>Group Details</Accordion.Header>
               <Accordion.Body>
                 <Form.Group className="mb-3">
                   <Form.Label htmlFor="disabledTextInput">
