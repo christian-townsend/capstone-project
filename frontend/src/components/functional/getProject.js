@@ -62,7 +62,7 @@ export default function GetProject(props) {
               <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody style={{backgroundColor:"white"}}>
+          <TableBody style={{ backgroundColor: "white" }}>
             {projects.map((project) => (
               <TableRow>
                 <TableCell>{project.title}</TableCell>

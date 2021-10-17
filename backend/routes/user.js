@@ -4,7 +4,8 @@ const msal = require("@azure/msal-node");
 const { IdToken } = require("@azure/msal-common");
 // const { requireAuth } = require("../middlewares/authMiddleware");
 const jwt = require("jsonwebtoken");
-const store = require("store");
+const LocalStorage = require("node-localstorage").LocalStorage;
+localStorage = new LocalStorage("./localStorage");
 require("dotenv").config();
 
 const config = {
@@ -100,7 +101,7 @@ router.route("/redirect").get((req, res) => {
             maxAge: maxAge * 1000,
           });
 
-          store.set("user", { name: username });
+          localStorage.setItem("username", username);
 
           res.redirect("http://localhost:3000/dashboard");
         }
@@ -144,10 +145,14 @@ router.route("/add").post((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
+/// Get user information
 router.route("/getUser").get((req, res) => {
-  User.find()
-    .then((users) => res.json(users))
-    .catch((err) => res.status(400).json("Error: " + err));
+  console.log("looking for user");
+  const userid = localStorage.getItem("username");
+  User.findOne({ username: userid }).then((doc) => {
+    console.log(doc);
+    res.json(doc);
+  });
 });
 
 module.exports = router;
