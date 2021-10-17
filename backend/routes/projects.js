@@ -41,7 +41,7 @@ router.route("/add").post((req, res) => {
 });
 
 // Get Project by ID
-router.route("/id").get((req, res) => {
+router.route("/:id").get((req, res) => {
   Project.findById(req.params.id)
     .then((project) => res.json(project))
     .catch((err) => res.status(400).json("Error: " + err));
@@ -61,7 +61,6 @@ router.route("/update/:id").post((req, res) => {
 });
 
 router.route("/:id").delete((req, res) => {
-  console.log("made it here");
   Project.findByIdAndDelete(req.params.id)
     .then(() => res.json("Project deleted."))
     .catch((err) => res.status(400).json("Error: " + err));

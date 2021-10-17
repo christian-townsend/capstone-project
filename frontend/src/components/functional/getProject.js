@@ -26,6 +26,7 @@ export default function GetProject(props) {
 
   // Delete a project
   const deleteProject = (id) => {
+    console.log(id);
     axios.delete("http://localhost:5000/projects/" + id).then((response) => {
       console.log(response.data);
     });
