@@ -22,7 +22,7 @@ export default function Dashboard(props) {
     <div className="container dashboard">
       <div class="row mt-5">
         <div class="Project Text col-md-12 mt-5">
-          <h1 class="dash-header">Welcome Back, User</h1>
+          <h1 class="dash-header">Welcome Back</h1>
         </div>
         <Container>
           <Row>
@@ -32,7 +32,8 @@ export default function Dashboard(props) {
         <Col xs={1} />
         <Col><h1 style={{ marginTop: 50, marginLeft: 10, color: "white" }}>
         Groups
-      </h1></Col>
+      </h1>
+      </Col>
         </Row>
         </Container>
       </div>

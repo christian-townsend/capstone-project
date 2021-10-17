@@ -45,7 +45,7 @@ export default function PastProjectsFunction(props) {
 
         {/*Body*/}
         {projects.map((project) => {
-        if(project.year==2021) {
+        if(project.expo) {
           return(
         <Container fluid>
           <Row style={{backgroundColor:"white", borderBottom:"1px solid grey", padding:"10px 5px 10px 10px"}}>
