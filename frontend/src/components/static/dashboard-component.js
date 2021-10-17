@@ -4,11 +4,9 @@ import Tab from "react-bootstrap/Tab";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
-import axios from "axios";
-import ProjectList from "../functional/getProject";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import ProjectList from "../functional/getProject";
+const store = require("store");
 
 export default function Dashboard(props) {
   const [user, setUser] = useState("User");
