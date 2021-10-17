@@ -19,9 +19,12 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "handy-storage": "^2.1.6",
     "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.4"
+    "mongoose": "^6.0.4",
+    "node-localstorage": "^2.2.1",
+    "store": "^2.0.12"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"

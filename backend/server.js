@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const session = require("express-session");
 
 const mongoose = require("mongoose");
 const SERVER_PORT = process.env.PORT || 5000;

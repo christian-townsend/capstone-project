@@ -8,6 +8,7 @@ import BasicDateRangePicker from "./basicDateRangePicker";
 import Accordion from "react-bootstrap/Accordion";
 import Alert from "react-bootstrap/Alert";
 import axios from "axios";
+import FileUpload from "../buttons/FileUpload";
 
 export default function AddProject(props) {
   const [title, setTitle] = useState("");
@@ -103,7 +104,9 @@ export default function AddProject(props) {
           </Accordion.Item>
           <Accordion.Item eventKey="2">
             <Accordion.Header>Supporting Documentation</Accordion.Header>
-            <Accordion.Body></Accordion.Body>
+            <Accordion.Body>
+              <FileUpload />
+            </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
             <Accordion.Header>Contact Details</Accordion.Header>

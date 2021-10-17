@@ -2,8 +2,9 @@ const router = require("express").Router();
 let User = require("../models/user.model");
 const msal = require("@azure/msal-node");
 const { IdToken } = require("@azure/msal-common");
-const { requireAuth } = require("../middlewares/authMiddleware");
+// const { requireAuth } = require("../middlewares/authMiddleware");
 const jwt = require("jsonwebtoken");
+const store = require("store");
 require("dotenv").config();
 
 const config = {
@@ -98,6 +99,8 @@ router.route("/redirect").get((req, res) => {
             httpOnly: true,
             maxAge: maxAge * 1000,
           });
+
+          store.set("user", { name: username });
 
           res.redirect("http://localhost:3000/dashboard");
         }
