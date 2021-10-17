@@ -5,7 +5,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import axios from "axios";
-const store = require("store");
+import ProjectList from "../functional/getProject";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function Dashboard(props) {
   const [user, setUser] = useState("User");
@@ -21,29 +24,21 @@ export default function Dashboard(props) {
     <div className="container dashboard">
       <div class="row mt-5">
         <div class="Project Text col-md-12 mt-5">
-          <h1 class="dash-header">Welcome Back, {user}</h1>
+          <h1 class="dash-header">Welcome Back</h1>
         </div>
-
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <Container>
           <Row>
-            <Col sm={3}>
-              <Nav variant="pills" className="flex-column">
-                <Nav.Item>
-                  <Nav.Link eventKey="first">Profile</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second">Projects</Nav.Link>
-                </Nav.Item>
-              </Nav>
+            <Col xs={8}>
+              <ProjectList />
             </Col>
-            <Col sm={9}>
-              <Tab.Content>
-                <Tab.Pane eventKey="first"></Tab.Pane>
-                <Tab.Pane eventKey="second"></Tab.Pane>
-              </Tab.Content>
+            <Col xs={1} />
+            <Col>
+              <h1 style={{ marginTop: 50, marginLeft: 10, color: "white" }}>
+                Groups
+              </h1>
             </Col>
           </Row>
-        </Tab.Container>
+        </Container>
       </div>
     </div>
   );

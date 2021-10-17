@@ -12,6 +12,7 @@ const projectSchema = new Schema(
     size: { type: String, required: false }, // The size of the Project. E.g. (3-4 students)
     duration: { type: String, required: false }, // The estimated duration of the Project.
     approved: { type: Boolean, required: false }, // A flag to indicate if a submitted project has been approved by an admin
+    expo: {type: Boolean, required: false }, // A flag to indicate if a project was selected for the Capstone Expo
     project_sponsors: [
       { type: Schema.Types.ObjectId, ref: "User", required: false },
     ], // An array of Team's assigned to the Project
