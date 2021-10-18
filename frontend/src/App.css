@@ -302,3 +302,19 @@ form {
   background-size: cover;
   background-position: center;
 }
+
+/* Past Projects Component */
+.accordion-title{
+  font-size: 25px;
+  font-weight:900;
+  margin-top: 10px;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.subtext {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 2%;
+  margin-top: 10px;
+}
