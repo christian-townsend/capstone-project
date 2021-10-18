@@ -227,7 +227,8 @@ form {
 
 /* footer component */
 .footer {
-  padding: 50px 15px;
+  padding-top: 50px;
+  padding-left: 15px;
   border-top: 1px solid rgba(120, 130, 140, 0.13);
   font-size: 12px;
   color: #fff;
@@ -239,7 +240,7 @@ form {
 
 .nav-item {
   text-decoration: none !important;
-  margin-right: 20px;
+
   display: flex;
   align-content: space-around;
   flex-wrap: wrap;

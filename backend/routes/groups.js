@@ -1,16 +1,16 @@
 const router = require("express").Router();
-let Team = require("../models/user.model");
+let Group = require("../models/group.model");
 
 // Route for getting all teams
 router.route("/").get((req, res) => {
-  Team.find()
+  Group.find()
     .then((team) => res.json(team))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
 // Route for displaying unique team (show students in team etc.)
 router.route("/:id").get((req, res) => {
-  Team.findById(req.params.id)
+  Group.findById(req.params.id)
     .then((team) => res.json(team))
     .catch((err) => res.status(400).json("Error: " + err));
 });
@@ -19,11 +19,11 @@ router.route("/:id").get((req, res) => {
 router.route("/add").post((req, res) => {
   const name = req.body.name;
 
-  const newTeam = new Team({
+  const newGroup = new Group({
     name,
   });
 
-  newTeam
+  newGroup
     .save()
     .then(() => res.json("Team added!"))
     .catch((err) => res.status(400).json("Error: " + err));
@@ -31,3 +31,4 @@ router.route("/add").post((req, res) => {
 // Need a Route for deleting teams
 
 // Need a Route for updating teams (e.g. join the team, leave the team)
+module.exports = router;

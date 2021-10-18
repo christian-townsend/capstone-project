@@ -33,7 +33,8 @@ export default function Landing(props) {
               </div>
             </div>
           </div>
-
+          </div>
+          <div style={{position:"relative"}}>
           <Carousel
             style={{ height: 350 }}
             activeIndex={index}
@@ -80,6 +81,7 @@ export default function Landing(props) {
             </Carousel.Item>
           </Carousel>
         </div>
+        
       </Row>
     </div>
   );

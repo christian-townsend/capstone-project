@@ -69,17 +69,31 @@ export default class Navbar extends Component {
                 </li>
 
                 <li>
-                  <NavDropdown title="Projects" id="nav-dropdown">
-                    <NavDropdown.Item eventKey="4.1" href="/project">
-                      Submitted Projects
-                    </NavDropdown.Item>
-                    <NavDropdown.Item eventKey="4.2" href="/pastprojects">
-                      Past Projects
-                    </NavDropdown.Item>
-                    <NavDropdown.Item eventKey="4.2" href="/addProject">
-                      New Project
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                  <a>
+                    <NavDropdown title="Groups" id="nav-dropdown">
+                      <NavDropdown.Item eventKey="4.1" href="/project">
+                        Join Group
+                      </NavDropdown.Item>
+                      <NavDropdown.Item eventKey="4.2" href="/addGroup">
+                        Create Group
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <NavDropdown title="Projects" id="nav-dropdown">
+                      <NavDropdown.Item eventKey="4.1" href="/project">
+                        Submitted Projects
+                      </NavDropdown.Item>
+                      <NavDropdown.Item eventKey="4.2" href="/pastprojects">
+                        Past Projects
+                      </NavDropdown.Item>
+                      <NavDropdown.Item eventKey="4.2" href="/addProject">
+                        New Project
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  </a>
                 </li>
               </ul>
             </div>
