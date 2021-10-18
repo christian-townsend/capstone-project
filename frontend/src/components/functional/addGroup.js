@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import ProgressBar from "react-bootstrap/ProgressBar";
-import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "../static/navbar-component";
 import axios from "axios";
+import Accordion from "react-bootstrap/Accordion";
+import Alert from "react-bootstrap/Alert";
+import Footer from "../static/footer-component";
 
 export default function AddGroup(props) {
-  const [value, setValue] = useState("");
-  const [percent, setPercent] = useState(0);
+  const [slots, setSlots] = useState("");
+  const [percent, setValue] = useState(0);
   const [save, setSave] = useState(false);
 
   const handleSelect = (e) => {
@@ -19,80 +20,96 @@ export default function AddGroup(props) {
 
   const onSubmit = () => {
     setSave(true);
-    setPercent(100);
-    window.location = "/addGroup";
+    const project = {
+      slots: slots,
+    };
+
+    axios
+      .post("http://localhost:5000/projects/add", project)
+      .then((res) => console.log(res.data));
+
+    window.location = "/project";
   };
 
   return (
-    <div className="addGroup-header">
+    <div>
       <Navbar />
 
       <div
         style={{
-          width: 650,
-          marginLeft: 100,
-          marginTop: 150,
+          marginLeft: 50,
+          marginRight: 50,
+          marginTop: 140,
+          marginBottom: 200,
           color: "white",
         }}
       >
-        <div>
-          <h1 style={{ marginBottom: 30 }}>Create Project Groups</h1>
-        </div>
-        <Form>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <h5>How many groups would you like to create?</h5>
-            <Form.Control
-              type="number"
-              onChange={(event) => setPercent(33)}
-              placeholder="Enter Number of Groups"
-            />
-            <h5 style={{ marginTop: 15 }}>
-              Select the amount of slots per Group.
-            </h5>
+        <Container>
+          <div>
+            <Alert variant="success">
+              <Alert.Heading>Creating a new Group.</Alert.Heading>
+              <p>
+                Before you can express interest in a Project, you must form a
+                group. One member from each group should perform this process,
+                enabling their group members to join. After a Group has been
+                created, the creator will automatically be assigned to that
+                group. They can then forward on the invite to the remaining
+                group members.
+              </p>
+              <br></br>
+              If you haven't already formed a group, we recommend creating one
+              here. You can detail the technologies you're interested in using,
+              or would like to use more of. This will allow others with similar
+              interests to easily gauge what Project you might pursue.
+            </Alert>
+          </div>
+          <Accordion style={{ marginTop: 10 }}>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Project Brief</Accordion.Header>
+              <Accordion.Body>
+                <Form.Control
+                  style={{ marginBottom: 15 }}
+                  type="text"
+                  value={slots}
+                  onChange={(event) => setSlots(event.target.value)}
+                  placeholder="Title"
+                />
+              </Accordion.Body>
+            </Accordion.Item>
 
-            <DropdownButton
-              alignRight
-              title="Slots"
-              id="dropdown-menu-align-right"
-              onSelect={handleSelect}
-              onChange={(event) => setPercent(66)}
-            >
-              <Dropdown.Item eventKey="1 slot will be created for the Group.">
-                1
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="2 slots will be created per Group.">
-                2
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="3 slots will be created per Group.">
-                3
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="5 slots will be created per Group.">
-                4
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="5 slots will be created per Group.">
-                5
-              </Dropdown.Item>
-            </DropdownButton>
-            <h4 style={{ marginTop: 15, alignRight: true }}>{value}</h4>
-          </Form.Group>
-        </Form>
-        <Button
-          style={{ marginTop: 10, width: 650 }}
-          onClick={(event) => onSubmit()}
-          variant="success"
-          size="lg"
-        >
-          {save ? "Creating Groups…" : "Create Groups"}
-        </Button>
-        <div>
-          <ProgressBar
-            striped
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>Contact Details</Accordion.Header>
+              <Accordion.Body>
+                <Form.Control
+                  style={{ marginBottom: 10 }}
+                  type="text"
+                  placeholder="Mobile"
+                />
+                <Form.Control
+                  style={{ marginBottom: 10 }}
+                  type="text"
+                  placeholder="Discord Server"
+                />
+                <Form.Control
+                  style={{ marginBottom: 10 }}
+                  type="text"
+                  placeholder="Facebook"
+                />
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+
+          <Button
+            style={{ marginTop: 15, width: 1294 }}
+            onClick={(event) => onSubmit()}
             variant="success"
-            style={{ marginTop: 20 }}
-            now={percent}
-          />
-        </div>
+            size="lg"
+          >
+            {save ? "Creating Group..." : "Create Group"}
+          </Button>
+        </Container>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -239,7 +239,7 @@ form {
 
 .nav-item {
   text-decoration: none !important;
-  margin-right: 20px;
+
   display: flex;
   align-content: space-around;
   flex-wrap: wrap;
