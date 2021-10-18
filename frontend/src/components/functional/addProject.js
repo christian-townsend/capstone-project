@@ -147,17 +147,6 @@ export default function AddProject(props) {
                   controlId="exampleForm.ControlInput1"
                 >
                   <BasicDateRangePicker />
-                  <DropdownButton
-                    style={{ marginTop: 15 }}
-                    id="dropdown-basic-button"
-                    title="Group Size"
-                  >
-                    <Dropdown.Item>1</Dropdown.Item>
-                    <Dropdown.Item>2</Dropdown.Item>
-                    <Dropdown.Item>3</Dropdown.Item>
-                    <Dropdown.Item>4</Dropdown.Item>
-                    <Dropdown.Item>5</Dropdown.Item>
-                  </DropdownButton>
                 </Form.Group>
               </Form>
             </Accordion.Body>

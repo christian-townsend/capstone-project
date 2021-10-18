@@ -2,12 +2,8 @@ import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Carousel from "react-bootstrap/Carousel";
-import axios from "axios";
 import uclogo from "../../images/university-of-canberra.svg";
-import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import loginIcon from "../../images/login.png";
 import projectIcon from "../../images/project-carousel.jpg";
 
@@ -56,7 +52,6 @@ export default function Landing(props) {
                 </Button>
               </Carousel.Caption>
             </Carousel.Item>
-
             <Carousel.Item style={{ height: "40vh" }}>
               <img
                 className="d-block w-100"
@@ -70,7 +65,6 @@ export default function Landing(props) {
                 </Button>
               </Carousel.Caption>
             </Carousel.Item>
-
             <Carousel.Item style={{ height: "40vh" }}>
               <img
                 className="d-block w-100"

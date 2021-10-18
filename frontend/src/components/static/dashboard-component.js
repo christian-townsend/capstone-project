@@ -38,73 +38,47 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="container dashboard" style={{ marginLeft: 50, width: 900 }}>
-      <Navbar />
-      <div class="row mt-5">
-        <div class="Project Text col-md-12 mt-5">
-          <h1 style={{ marginBottom: 20 }} class="dash-header">
-            Welcome Back, {firstName}.
-          </h1>
-          <Alert variant="success">
-            <Alert.Heading>The Capstone Project Dashboard.</Alert.Heading>
-            <p>
-              Welcome to the dashboard. Using the accordions below, you can view
-              your contact information, projects you have submitted, projects
-              you are sponsoring, and group details.
-            </p>
-          </Alert>
-          <Accordion>
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>User Details</Accordion.Header>
-              <Accordion.Body>
-                <Form.Group className="mb-3">
-                  <Form.Label htmlFor="disabledTextInput">
-                    ID: {username}
-                  </Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label htmlFor="disabledTextInput">
-                    Name: {firstName} {lastName}
-                  </Form.Label>
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label htmlFor="disabledTextInput">
-                    Email: {email}
-                  </Form.Label>
-                </Form.Group>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>Project Details</Accordion.Header>
-              <Accordion.Body>
-                <Form.Group className="mb-3">
-                  <Form.Label htmlFor="disabledTextInput">
-                    Assigned Project: {projectTitle}
-                  </Form.Label>
-                </Form.Group>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="2">
-              <Accordion.Header>Group Details</Accordion.Header>
-              <Accordion.Body>
-                <Form.Group className="mb-3">
-                  <Form.Label htmlFor="disabledTextInput">
-                    Group Members:
-                  </Form.Label>
-                </Form.Group>
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-        </div>
-        <Container>
+    <div className="container dashboard" style={{ width: 1200 }}>
+      <div>
+        <Alert style={{ marginTop: 150 }} variant="success">
+          <Alert.Heading>Welcome back, {firstName}</Alert.Heading>
+          <p>
+            Welcome to the dashboard. Using the accordions below, you can view
+            your contact information, projects you have submitted, projects you
+            are sponsoring, and group details.
+          </p>
+        </Alert>
+
+        <Container style={{ marginTop: 50, marginBottom: 200 }}>
           <Row>
-            <Col xs={8}></Col>
-            <Col xs={1} />
-            <Col></Col>
             <Col>
-              <h1 style={{ marginTop: 50, marginLeft: 10, color: "white" }}>
-                Groups
-              </h1>
+              <h3 style={{ color: "white" }}>Student</h3>
+              <Form.Group style={{ color: "white" }} className="mb-3">
+                <Form.Label htmlFor="disabledTextInput">
+                  ID: {username}
+                </Form.Label>
+              </Form.Group>
+              <Form.Group style={{ color: "white" }} className="mb-3">
+                <Form.Label htmlFor="disabledTextInput">
+                  Name: {firstName} {lastName}
+                </Form.Label>
+              </Form.Group>
+              <Form.Group style={{ color: "white" }} className="mb-3">
+                <Form.Label htmlFor="disabledTextInput">
+                  Email: {email}
+                </Form.Label>
+              </Form.Group>
+            </Col>
+            <Col>
+              <h3 style={{ color: "white" }}>Group Members</h3>
+            </Col>
+            <Col>
+              <h3 style={{ color: "white" }}>Assigned Project</h3>
+              <Form.Group style={{ color: "white" }} className="mb-3">
+                <Form.Label htmlFor="disabledTextInput">
+                  {projectTitle}
+                </Form.Label>
+              </Form.Group>
             </Col>
           </Row>
         </Container>
