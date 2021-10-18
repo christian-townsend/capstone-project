@@ -48,9 +48,11 @@ app.listen(SERVER_PORT, () =>
 // Define Routes
 const usersRouter = require("./routes/user"); // Routes for Users
 const projectsRouter = require("./routes/projects"); // Routes for Projects
+const groupsRouter = require("./routes/groups"); // Routes for Projects
 // Use Routes
 app.use("/users", usersRouter);
 app.use("/projects", projectsRouter);
+app.use("/groups", projectsRouter);
 
 const Role = require("./models/role.model");
 // Create Access roles if not already created upon server start

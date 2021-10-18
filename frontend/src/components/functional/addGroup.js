@@ -9,19 +9,13 @@ import Alert from "react-bootstrap/Alert";
 import Footer from "../static/footer-component";
 
 export default function AddGroup(props) {
-  const [slots, setSlots] = useState("");
-  const [percent, setValue] = useState(0);
+  const [name, setName] = useState("");
   const [save, setSave] = useState(false);
-
-  const handleSelect = (e) => {
-    console.log(e);
-    setValue(e);
-  };
 
   const onSubmit = () => {
     setSave(true);
     const project = {
-      slots: slots,
+      name: name,
     };
 
     axios
@@ -56,7 +50,7 @@ export default function AddGroup(props) {
                 group. They can then forward on the invite to the remaining
                 group members.
               </p>
-              <br></br>
+              <hr />
               If you haven't already formed a group, we recommend creating one
               here. You can detail the technologies you're interested in using,
               or would like to use more of. This will allow others with similar
@@ -70,8 +64,8 @@ export default function AddGroup(props) {
                 <Form.Control
                   style={{ marginBottom: 15 }}
                   type="text"
-                  value={slots}
-                  onChange={(event) => setSlots(event.target.value)}
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
                   placeholder="Title"
                 />
               </Accordion.Body>

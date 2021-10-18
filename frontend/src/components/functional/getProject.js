@@ -9,6 +9,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Navbar from "../static/navbar-component";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
 
 export default function GetProject(props) {
   const [projects, setProjects] = useState([]);
@@ -42,54 +44,71 @@ export default function GetProject(props) {
         All Projects
       </h1>
 
-      <TableContainer
-        component={Paper}
+      <div
         style={{
+          marginLeft: 50,
+          marginRight: 50,
           marginTop: 50,
-          marginLeft: 10,
-          maxWidth: 1600,
-          backgroundColor: "#00809f",
+          marginBottom: 200,
+          color: "white",
         }}
       >
-        <Table sx={{ minWidth: 500 }} aria-label="simple table">
-          <TableHead
-            className="project__header__row"
-            style={{ backgroundColor: "white" }}
+        <Container>
+          <Alert variant="success">
+            <Alert.Heading>The Submitted Project List</Alert.Heading>
+            <p>
+              This is where the platform Administrator can approve or disapprove
+              Projects. When a Project is approved, Groups can then expres
+              interest in that Project.
+            </p>
+            <hr />
+          </Alert>
+          <TableContainer
+            component={Paper}
+            style={{
+              backgroundColor: "#00809f",
+            }}
           >
-            <TableRow className="table__row">
-              <TableCell className="table__row">Title</TableCell>
-              <TableCell>Description</TableCell>
-              <TableCell>Scope</TableCell>
-              <TableCell>Actions</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody style={{ backgroundColor: "white" }}>
-            {projects.map((project) => (
-              <TableRow>
-                <TableCell>{project.title}</TableCell>
-                <TableCell>{project.description}</TableCell>
-                <TableCell>{project.scope}</TableCell>
-                <TableCell>
-                  <Button className="btn" variant="success">
-                    Approve
-                  </Button>{" "}
-                  <Button className="btn" variant="primary">
-                    Update
-                  </Button>{" "}
-                  <Button
-                    className="btn"
-                    variant="danger"
-                    onClick={(event) => deleteProject(project._id)}
-                  >
-                    Delete
-                  </Button>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-
+            <Table aria-label="simple table">
+              <TableHead
+                className="project__header__row"
+                style={{ backgroundColor: "white" }}
+              >
+                <TableRow className="table__row">
+                  <TableCell className="table__row">Title</TableCell>
+                  <TableCell>Description</TableCell>
+                  <TableCell>Scope</TableCell>
+                  <TableCell>Actions</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody style={{ backgroundColor: "white" }}>
+                {projects.map((project) => (
+                  <TableRow>
+                    <TableCell>{project.title}</TableCell>
+                    <TableCell>{project.description}</TableCell>
+                    <TableCell>{project.scope}</TableCell>
+                    <TableCell>
+                      <Button className="btn" variant="success">
+                        Approve
+                      </Button>{" "}
+                      <Button className="btn" variant="primary">
+                        View
+                      </Button>{" "}
+                      <Button
+                        className="btn"
+                        variant="danger"
+                        onClick={(event) => deleteProject(project._id)}
+                      >
+                        Disapprove
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Container>
+      </div>
       <Table striped bordered hover variant="dark"></Table>
     </div>
   );

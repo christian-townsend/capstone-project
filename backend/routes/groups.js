@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let Team = require("../models/user.model");
+let Team = require("../models/group.model");
 
 // Route for getting all teams
 router.route("/").get((req, res) => {
