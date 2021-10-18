@@ -45,6 +45,9 @@ export default function AddProject(props) {
           color: "white",
         }}
       >
+        <h1 style={{ textAlign: "center", marginBottom: 30 }}>
+          Create a Project
+        </h1>
         <Container>
           <Row>
             <div>

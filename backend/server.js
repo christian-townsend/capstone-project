@@ -7,7 +7,7 @@ const SERVER_PORT = process.env.PORT || 5000;
 
 const corsOptions = {
   origin: "*",
-  credentials: true, //access-control-allow-credentials:true
+  credentials: true, // Access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
 
@@ -17,15 +17,17 @@ const app = express();
 app.use(cors(corsOptions)); // Use this after the variable declaration
 app.use(express.json());
 
+// Allows us to return responses to the front-end when requests to the APIs are made
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // Update to match the domain you will make the request from
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
   next();
 });
-// Cookie parser middleware
+
+// Cookie parser middleware so that we can use JWT Tokens
 app.use(cookieParser());
 
 // Parse Mongoose URI to connection method
@@ -49,10 +51,8 @@ app.listen(SERVER_PORT, () =>
 const usersRouter = require("./routes/user"); // Routes for Users
 const projectsRouter = require("./routes/projects"); // Routes for Projects
 const groupsRouter = require("./routes/groups"); // Routes for Projects
+
 // Use Routes
 app.use("/users", usersRouter);
 app.use("/projects", projectsRouter);
-app.use("/groups", projectsRouter);
-
-const Role = require("./models/role.model");
-// Create Access roles if not already created upon server start
+app.use("/groups", groupsRouter);

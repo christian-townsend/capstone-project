@@ -14,15 +14,15 @@ export default function AddGroup(props) {
 
   const onSubmit = () => {
     setSave(true);
-    const project = {
+    const group = {
       name: name,
     };
 
     axios
-      .post("http://localhost:5000/projects/add", project)
+      .post("http://localhost:5000/groups/add", group)
       .then((res) => console.log(res.data));
 
-    window.location = "/project";
+    window.location = "/addGroup";
   };
 
   return (
@@ -34,10 +34,13 @@ export default function AddGroup(props) {
           marginLeft: 50,
           marginRight: 50,
           marginTop: 140,
-          marginBottom: 200,
+          marginBottom: 100,
           color: "white",
         }}
       >
+        <h1 style={{ textAlign: "center", marginBottom: 30 }}>
+          Create a Group
+        </h1>
         <Container>
           <div>
             <Alert variant="success">
