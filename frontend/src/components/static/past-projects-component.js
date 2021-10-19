@@ -144,8 +144,44 @@ export default function PastProjectsFunction(props) {
                         </h2>
                         {/*Dropdown Subheading 4 Text*/}
                         <div id="collapseSubFour" class="accordion-collapse collapse" aria-labelledby="subtextFour" data-bs-parent="#collapseSubFour">
-                          <p>These are the past projects of Semester 2 2020</p>
                           {/*INSERT TABLE HERE*/}
+                          <div class="past-projects-table">
+                          <table class=" table table-striped table-hover">
+                              <thead class="thead thead-dark">
+                                <tr>
+                                  <th scope="col"style={{ width: "20vh"}}>Project ID</th>
+                                  <th scope="col"style={{ width: "30vh"}}>Project Name</th>
+                                  <th scope="col">Brief Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row-table-body">20S2-1</th>
+                                  <td>Self health check and Treatment suggestion</td>
+                                  <td>This project offers students the opportunity to be involved in the development ocutting-edge prototype health application. 
+                                    Selected students will work in a teamunder supervision and support to develop one or more features of the prototype 
+                                    As an illustration, a simple use case of the prototype can be as follows: Patient enter/select symptoms in application and 
+                                    as per the symptoms entered applicat will suggest some home care treatment and some laboratory test, 
+                                    If symptoms entered are serious then user will be asked to book appointment with relevant doctor and visit doctor for further consultation.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row-table-body">20S2-2</th>
+                                  <td>eResearch Hub</td>
+                                  <td>This project will involve in designing and developing a hub for eResearchinfrastructure and services at UC. 
+                                    This hub will be a platform to integrate andconnect the various eResearch services (on premise or on the cloud) and hence will be a 
+                                    single portal for accessing such services.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row-table-body">20S2-3</th>
+                                  <td>Digital Lab Notebook</td>
+                                  <td>This project will involve in designing and developing a digital Lab Notebook. Thnotebook will be used by the researchers to manage 
+                                    notes throughout the lifecyof the data. The main features are to import data (directly from lab devices and users), edit/revise notes, 
+                                    collaborate/share notebooks and publish notebooks. Tcan be a multi-purpose tool to manage a diverse set of notes and data including
+                                    the non-lab and non-research based data/notes. This tool can be then integratewith the other services in eResearch Hub.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>

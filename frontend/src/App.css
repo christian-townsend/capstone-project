@@ -319,3 +319,20 @@ form {
   margin-left: 2%;
   margin-top: 10px;
 }
+
+.past-projects-table{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top:-110px;
+}
+
+.thead-dark {
+  font-size: 23px;
+}
+
+tr {
+  line-height: 25px;
+  min-height: 25px;
+  height: 200px;
+}
