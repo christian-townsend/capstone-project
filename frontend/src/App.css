@@ -20,15 +20,11 @@ form {
 
 .navbar {
   background-color: rgba(51, 136, 185);
-  height: 100px;
+  height: 70px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1);
-  font-family: "Nunito", sans-serif;
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 18px;
   margin: 0;
   border: 0;
-  width: 100%;
-  padding: 0 150px;
   margin: 0 auto;
 }
 
@@ -305,9 +301,9 @@ form {
 }
 
 /* Past Projects Component */
-.accordion-title{
+.accordion-title {
   font-size: 25px;
-  font-weight:900;
+  font-weight: 900;
   margin-top: 10px;
   margin-left: 40%;
   margin-right: 40%;
@@ -320,11 +316,11 @@ form {
   margin-top: 10px;
 }
 
-.past-projects-table{
+.past-projects-table {
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
-  margin-top:-110px;
+  margin-top: -110px;
 }
 
 .thead-dark {

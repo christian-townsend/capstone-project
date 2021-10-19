@@ -40,8 +40,8 @@ export default function AddProject(props) {
         style={{
           marginLeft: 50,
           marginRight: 50,
-          marginTop: 140,
-          marginBottom: 100,
+          marginTop: 60,
+          marginBottom: 60,
           color: "white",
         }}
       >
