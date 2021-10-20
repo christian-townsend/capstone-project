@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Carousel from "react-bootstrap/Carousel";
-import Container from "react-bootstrap/Container";
 import uclogo from "../../images/university-of-canberra.svg";
 import Row from "react-bootstrap/Row";
 import loginIcon from "../../images/login.png";
 import projectIcon from "../../images/project-carousel.jpg";
 import sponsorIcon from "../../images/become_a_sponsor.png";
-import Navbar from "../static/navbar-component";
 
 export default function Landing() {
   const [index, setIndex] = useState(0);
@@ -43,9 +41,15 @@ export default function Landing() {
                 <h1
                   style={{ marginTop: 40, color: "white", textAlign: "center" }}
                 >
-                  Already have an account?
+                  View our past Projects.
                 </h1>
-                <Button variant="primary">Sign in.</Button>
+                <h1
+                  style={{ marginTop: 40, color: "white", textAlign: "center" }}
+                >
+                  <Button variant="primary" size="lg">
+                    Sign up here.
+                  </Button>
+                </h1>
               </Carousel.Item>
               <Carousel.Item style={{ height: "30vh" }}>
                 <h1
