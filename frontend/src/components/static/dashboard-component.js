@@ -16,34 +16,59 @@ export default function Dashboard() {
   const [lastName, setLastName] = useState();
   const [skills, setSkills] = useState();
   const [projectTitle, setProjectTitle] = useState([]);
+  const [groups, setGroups] = useState([]);
+  const [groupMembers, setGroupMembers] = useState([]);
 
+  // Get unique user information to display on dashboard
   useEffect(() => {
+    console.log(groupMembers);
     axios.get("http://localhost:5000/users/getUser").then((response) => {
       setUser(response.data.username);
       setEmail(response.data.email);
       setFirstName(response.data.first_name);
       setLastName(response.data.last_name);
-
       getUniqueProjects(response.data.sponsored_projects);
+      getGroupMembers(response.data.group);
     });
   }, []);
 
+  // Get project information for unique user
   const getUniqueProjects = (id) => {
-    console.log("Entered Request");
     axios.get("http://localhost:5000/projects/" + id).then((response) => {
       setProjectTitle(response.data.title);
-
-      console.log(response.data);
     });
+  };
+
+  // Display group members for unique user
+  const getGroupMembers = (id) => {
+    axios.get("http://localhost:5000/groups/" + id).then((response) => {
+      console.log(response);
+      setGroups(response.data.students);
+      console.log("hello # 1");
+    });
+    console.log(groups);
+    setGroupMembersList();
+  };
+
+  const setGroupMembersList = () => {
+    setGroupMembers([]);
+    groups.map((group) =>
+      axios.get("http://localhost:5000/users/" + group).then((response) => {
+        setGroupMembers((groupMembers) => [...groupMembers, response.data]);
+        console.log(response.data.username);
+        console.log(groupMembers);
+        console.log("hello # 2");
+      })
+    );
   };
 
   return (
     <div className="container dashboard" style={{ width: 1200 }}>
       <div>
-        <Alert style={{ marginTop: 150 }} variant="success">
+        <Alert style={{ marginTop: 40 }} variant="success">
           <Alert.Heading>Welcome back, {firstName}</Alert.Heading>
           <p>
-            Welcome to the dashboard. Using the accordions below, you can view
+            Welcome to the dashboard. Usin the accordions below, you can view
             your contact information, projects you have submitted, projects you
             are sponsoring, and group details.
           </p>
@@ -71,6 +96,16 @@ export default function Dashboard() {
             </Col>
             <Col>
               <h3 style={{ color: "white" }}>Group Members</h3>
+              {groupMembers.map((members) => (
+                <Form.Group style={{ color: "white" }} className="mb-3">
+                  <Form.Label htmlFor="disabledTextInput">
+                    {members.first_name} {members.last_name}
+                  </Form.Label>
+                  <Form.Label htmlFor="disabledTextInput">
+                    , {members.username}
+                  </Form.Label>
+                </Form.Group>
+              ))}
             </Col>
             <Col>
               <h3 style={{ color: "white" }}>Assigned Project</h3>

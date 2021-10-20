@@ -17,8 +17,8 @@ import PastProject from "./components/static/past-projects-component";
 import UploadFile from "./components/buttons/FileUpload";
 import Sponsor from "./components/static/sponsor-component";
 import addGroup from "./components/functional/addGroup";
+import getGroup from "./components/functional/getGroup";
 import ReadProject from "./components/functional/getProject";
-
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/addProject" component={addProject} />
-          <Route path="/addGroup" component={addGroup} />
+
           <Route
             exact
             path="/"
@@ -39,14 +39,15 @@ function App() {
 
           <div>
             <Navbar />
-
+            <Route path="/addGroup" component={addGroup} />
+            <Route path="/getGroup" component={getGroup} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/home" component={Landing} />
             <Route path="/about" component={About} />
             <Route path="/sponsor" component={Sponsor} />
             <Route path="/pastprojects" component={PastProject} />
             <Route path="/UploadFile" component={UploadFile} />
-            
+
             <Footer />
           </div>
         </Switch>

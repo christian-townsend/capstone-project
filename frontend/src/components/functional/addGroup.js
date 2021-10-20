@@ -27,13 +27,11 @@ export default function AddGroup(props) {
 
   return (
     <div>
-      <Navbar />
-
       <div
         style={{
           marginLeft: 50,
           marginRight: 50,
-          marginTop: 140,
+          marginTop: 40,
           marginBottom: 100,
           color: "white",
         }}
@@ -106,7 +104,6 @@ export default function AddGroup(props) {
           </Button>
         </Container>
       </div>
-      <Footer />
     </div>
   );
 }
