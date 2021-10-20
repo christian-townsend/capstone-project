@@ -21,7 +21,7 @@ export default function NavbarComponent() {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/sponsor">Sponsors</Nav.Link>
             <NavDropdown title="Groups" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Join Group</NavDropdown.Item>
+              <NavDropdown.Item href="/getGroup">Join Group</NavDropdown.Item>
               <NavDropdown.Item href="/addGroup">Create Group</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Projects" id="collasible-nav-dropdown">
@@ -32,7 +32,7 @@ export default function NavbarComponent() {
                 New Project
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/pastProjects">
+              <NavDropdown.Item href="/pastprojects">
                 Past Projects
               </NavDropdown.Item>
             </NavDropdown>

@@ -22,7 +22,6 @@ export default function GetProject(props) {
         withCredentials: true,
       });
       setProjects(result.data);
-      console.log(result.data);
     })();
   }, []);
 

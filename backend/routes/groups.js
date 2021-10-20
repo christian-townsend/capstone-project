@@ -4,7 +4,7 @@ let Group = require("../models/group.model");
 // Route for getting all teams
 router.route("/").get((req, res) => {
   Group.find()
-    .then((team) => res.json(team))
+    .then((group) => res.json(group))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
