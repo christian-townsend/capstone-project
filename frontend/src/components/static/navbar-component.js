@@ -8,7 +8,7 @@ export default function NavbarComponent() {
       .request("http://localhost:5000/users")
       .then((res) => console.log(res.data));
 
-    window.location = "/dashboard";
+    window.location = "http://localhost:5000/users";
   };
 
   return (
@@ -22,12 +22,10 @@ export default function NavbarComponent() {
             <Nav.Link href="/sponsor">Sponsors</Nav.Link>
             <NavDropdown title="Groups" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Join Group</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Create Group
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/addGroup">Create Group</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Projects" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/getProject">
+              <NavDropdown.Item href="/project">
                 Submitted Projects
               </NavDropdown.Item>
               <NavDropdown.Item href="/addProject">

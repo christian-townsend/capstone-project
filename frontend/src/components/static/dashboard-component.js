@@ -40,7 +40,7 @@ export default function Dashboard() {
   return (
     <div className="container dashboard" style={{ width: 1200 }}>
       <div>
-        <Alert style={{ marginTop: 150 }} variant="success">
+        <Alert style={{ marginTop: 40 }} variant="success">
           <Alert.Heading>Welcome back, {firstName}</Alert.Heading>
           <p>
             Welcome to the dashboard. Using the accordions below, you can view

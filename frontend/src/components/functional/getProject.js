@@ -40,35 +40,27 @@ export default function GetProject(props) {
     <div>
       <Navbar />
 
-      <h1 style={{ marginTop: 50, marginLeft: 10, color: "white" }}>
-        All Projects
-      </h1>
-
       <div
         style={{
           marginLeft: 50,
           marginRight: 50,
-          marginTop: 50,
+          marginTop: 40,
           marginBottom: 200,
           color: "white",
         }}
       >
+        <h1 style={{ textAlign: "center", marginBottom: 30 }}>All Projects</h1>
         <Container>
           <Alert variant="success">
             <Alert.Heading>The Submitted Project List</Alert.Heading>
             <p>
               This is where the platform Administrator can approve or disapprove
-              Projects. When a Project is approved, Groups can then expres
+              Projects. When a Project is approved, Groups can then express
               interest in that Project.
             </p>
             <hr />
           </Alert>
-          <TableContainer
-            component={Paper}
-            style={{
-              backgroundColor: "#00809f",
-            }}
-          >
+          <TableContainer component={Paper}>
             <Table aria-label="simple table">
               <TableHead
                 className="project__header__row"
@@ -77,7 +69,6 @@ export default function GetProject(props) {
                 <TableRow className="table__row">
                   <TableCell className="table__row">Title</TableCell>
                   <TableCell>Description</TableCell>
-                  <TableCell>Scope</TableCell>
                   <TableCell>Actions</TableCell>
                 </TableRow>
               </TableHead>
@@ -86,7 +77,7 @@ export default function GetProject(props) {
                   <TableRow>
                     <TableCell>{project.title}</TableCell>
                     <TableCell>{project.description}</TableCell>
-                    <TableCell>{project.scope}</TableCell>
+
                     <TableCell>
                       <Button className="btn" variant="success">
                         Approve

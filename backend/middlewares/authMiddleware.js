@@ -15,7 +15,6 @@ const requireAuth = (req, res, next) => {
       }
     });
   } else {
-    console.log("test");
     res.redirect("http://localhost:3000/home");
   }
 };
