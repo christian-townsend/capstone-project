@@ -33,11 +33,12 @@ form {
 }
 
 .capstone-logo {
-  height: 65px;
+  height: 100px;
+  left: 100px;
 }
 
 .nav-header-left {
-  margin-left: 20px;
+  margin-left: -50px;
   margin-top: 10px;
 }
 

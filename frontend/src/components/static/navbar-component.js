@@ -35,9 +35,9 @@ export default class Navbar extends Component {
           {/*Logo*/}
           <Link to="/home">
             <img
-              style={{ marginLeft: -100, marginRight: 60 }}
+              style={{ marginLeft: -70, marginRight: 60 }}
               className="capstone-logo"
-              src="../capstone-logo.svg"
+              src="../capstone_logo.png"
               alt="capstone logo"
             ></img>
           </Link>
