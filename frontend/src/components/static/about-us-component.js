@@ -22,14 +22,14 @@ export default function AboutFunction(props) {
             </div>
           </div>
           </row>
-          <Container fluid style={{ backgroundColor: "white" }}>
+          <Container fluid style={{ backgroundColor: "white"}}>
             <Row style={{paddingBottom:"5px", borderBottom:"1px solid #e6e6e6", backgroundColor:"#f5f5f5", height:"200px"}}>
               <Col >
               <div style={{ padding:"10px 30px 10px 30px"}}>
                 <div class ="row-header">Software</div>
                 </div>
                 <div>
-                <div class="row-content">Our Information Technology and Software Engineering students are highly skilled in a wide range of technical areas. From web design to artificial intelligence, we've got it covered.</div>
+                <div class="row-content" style={{paddingLeft:"30px"}}>Our Information Technology and Software Engineering students are highly skilled in a wide range of technical areas. From web design to artificial intelligence, we've got it covered.</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
                   </div>
@@ -56,7 +56,7 @@ export default function AboutFunction(props) {
                 <div class ="row-header">Research</div>
                 </div>
                 <div>
-                <div class="row-content">Not every project submission needs to be a technical undertaking. Each semester we have a new cohort of eager researchers, ready to work on your topic.</div>
+                <div class="row-content" style={{paddingLeft:"30px"}}>Not every project submission needs to be a technical undertaking. Each semester we have a new cohort of eager researchers, ready to work on your topic.</div>
                   </div>
                   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding:"20px 10px 10px 10px"}}>
                   </div>
