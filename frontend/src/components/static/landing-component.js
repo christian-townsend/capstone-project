@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import loginIcon from "../../images/login.png";
 import projectIcon from "../../images/project-carousel.jpg";
 import sponsorIcon from "../../images/become_a_sponsor.png";
+import axios from "axios"
 
 export default function Landing() {
   const [index, setIndex] = useState(0);
@@ -13,6 +14,13 @@ export default function Landing() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+  const onLogin = () => {
+    axios
+      .request("http://localhost:5000/users")
+      .then((res) => console.log(res.data));
+
+      window.location = "http://localhost:5000/users";
+    };
 
   return (
     <div class="fullpage">
@@ -46,8 +54,8 @@ export default function Landing() {
                 <h1
                   style={{ marginTop: 40, color: "white", textAlign: "center" }}
                 >
-                  <Button variant="primary" size="lg">
-                    Sign up here.
+                  <Button href="/pastprojects" variant="primary" size="lg">
+                    Click here
                   </Button>
                 </h1>
               </Carousel.Item>
@@ -55,13 +63,13 @@ export default function Landing() {
                 <h1
                   style={{ marginTop: 40, color: "white", textAlign: "center" }}
                 >
-                  Want to become a Project Sponsor?
+                  Want to submit a project?
                 </h1>
                 <h1
                   style={{ marginTop: 40, color: "white", textAlign: "center" }}
                 >
-                  <Button variant="primary" size="lg">
-                    Sign up here.
+                  <Button href="/addProject"variant="primary" size="lg">
+                    Submit here
                   </Button>
                 </h1>
               </Carousel.Item>
@@ -74,8 +82,8 @@ export default function Landing() {
                 <h1
                   style={{ marginTop: 40, color: "white", textAlign: "center" }}
                 >
-                  <Button variant="primary" size="lg">
-                    Sign in.
+                  <Button variant="primary" size="lg" onClick={(event) => onLogin()}>
+                    Sign in
                   </Button>
                 </h1>
               </Carousel.Item>
