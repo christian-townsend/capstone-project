@@ -27,7 +27,7 @@ export default function NavbarComponent() {
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Projects" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/getProject">
+              <NavDropdown.Item href="/Project">
                 Submitted Projects
               </NavDropdown.Item>
               <NavDropdown.Item href="/addProject">
