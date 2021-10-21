@@ -68,7 +68,7 @@ export default function Dashboard() {
         <Alert style={{ marginTop: 40 }} variant="success">
           <Alert.Heading>Welcome back, {firstName}</Alert.Heading>
           <p>
-            Welcome to the dashboard. Usin the accordions below, you can view
+            Welcome to the dashboard. Using the accordions below, you can view
             your contact information, projects you have submitted, projects you
             are sponsoring, and group details.
           </p>
