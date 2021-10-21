@@ -49,36 +49,6 @@ export default function PastProjectsFunction(props) {
 
         {/*Banner Logo*/}
 
-        {/*Body*/}
-        {projects.map((project) => {
-          if (project.expo) {
-            return (
-              <Container fluid>
-                <Row
-                  style={{
-                    backgroundColor: "white",
-                    borderBottom: "1px solid grey",
-                    padding: "10px 5px 10px 10px",
-                  }}
-                >
-                  <Col xs={8}>
-                    <h3
-                      class="title"
-                      style={{ color: "grey", fontFamily: "Nunito" }}
-                    >
-                      {project.title}
-                    </h3>
-                    <p style={{ fontFamily: "Nunito" }}>
-                      {project.description}
-                    </p>
-                  </Col>
-                  {/* image goes here */}
-                  <Col></Col>
-                </Row>
-              </Container>
-            );
-          }
-        })}
       </row>
       <div class="wrapper-body" style={{ marginTop: -150 }}>
         <div class="accordion" id="accordionBody">
@@ -122,10 +92,37 @@ export default function PastProjectsFunction(props) {
                     id="collapseSubOne"
                     class="accordion-collapse collapse"
                     aria-labelledby="subtextOne"
-                    data-bs-parent="#collapseSubOne"
-                  >
-                    <p>These are the past projects of Semester 1 2021</p>
+                    data-bs-parent="#collapseSubOne">
                     {/*INSERT TABLE HERE*/}
+                    {projects.map((project) => {
+                      if (project.expo) {
+                        return (
+                          <Container fluid>
+                            <Row
+                              style={{
+                                backgroundColor: "white",
+                                borderBottom: "1px solid grey",
+                                padding: "10px 5px 10px 10px",
+                              }}
+                            >
+                              <Col xs={8}>
+                                <h3
+                                  class="title"
+                                  style={{ color: "grey", fontFamily: "Nunito" }}
+                                >
+                                  {project.title}
+                                </h3>
+                                <p style={{ fontFamily: "Nunito" }}>
+                                  {project.description}
+                                </p>
+                              </Col>
+                              {/* image goes here */}
+                              <Col></Col>
+                            </Row>
+                          </Container>
+                        );
+                      }
+                    })}
                   </div>
                 </div>
               </div>
@@ -158,8 +155,33 @@ export default function PastProjectsFunction(props) {
                     aria-labelledby="subtextTwo"
                     data-bs-parent="#collapseSubTwo"
                   >
-                    <p>These are the past projects of Semester 2 2021</p>
-                    {/*INSERT TABLE HERE*/}
+                  
+                       <div class="past-projects-table">
+                        <table class=" table table-striped table-hover">
+                          <thead class="thead thead-dark">
+                            <tr>
+                              <th scope="col" style={{ width: "20vh" }}>
+                                Project ID
+                              </th>
+                              <th scope="col" style={{ width: "30vh" }}>
+                                Project Name
+                              </th>
+                              <th scope="col">Brief Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row-table-body">20S2-1</th>
+                              <td>
+                                Title
+                              </td>
+                              <td>
+                                desc
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                   </div>
                 </div>
               </div>

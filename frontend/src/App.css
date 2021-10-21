@@ -28,8 +28,7 @@ form {
 }
 
 .capstone-logo {
-  height: 100px;
-  left: 100px;
+  height: 75px;
 }
 
 .nav-header-left {
@@ -39,7 +38,7 @@ form {
 
 .nav-header-right {
   margin-top: 10px;
-  margin-left: 500px;
+  margin-left: 450px;
 }
 
 /*landing-component*/

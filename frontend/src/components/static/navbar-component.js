@@ -1,127 +1,49 @@
-import React, { Component } from "react";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import axios from "axios";
 
-export default class Navbar extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loggedIn: false,
-    };
-  }
-
-  onLogin(e) {
-    e.preventDefault();
-
+export default function NavbarComponent() {
+  const onLogin = () => {
     axios
       .request("http://localhost:5000/users")
       .then((res) => console.log(res.data));
 
-    window.location = "http://localhost:5000/users";
-  }
-
-  /* checkLogin {
-    if (res.cookie.jwt != NULL) {
-      this.state.loggedIn: true
-    }
-  } */
-
-  render() {
+      window.location = "/dashboard";
+    };
+  
     return (
-      <div className="container-fluid Navbar">
-        <nav className="navbar fixed-top navbar-dark navbar-expand-sm col-sm-12 col-md-12">
-          {/*Logo*/}
-          <Link to="/home">
-            <img
-              style={{ marginLeft: -70, marginRight: 60 }}
-              className="capstone-logo"
-              src="../capstone_logo.png"
-              alt="capstone logo"
-            ></img>
-          </Link>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-target="#collapseNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <div className="nav-header-left col-xs-12 col-md-6">
-              {/*Navbar Menu Left Hand Side*/}
-              <ul class="nav navbar-nav me-auto">
-                <li>
-                  <a class="nav-link" href="/about">
-                    About
-                  </a>
-                </li>
-                <br></br>
-                <li>
-                  <a class="nav-link" href="/sponsor">
-                    Sponsors
-                  </a>
-                </li>
-
-                <li>
-                  <a>
-                    <NavDropdown title="Groups" id="nav-dropdown">
-                      <NavDropdown.Item eventKey="4.1" href="/project">
-                        Join Group
-                      </NavDropdown.Item>
-                      <NavDropdown.Item eventKey="4.2" href="/addGroup">
-                        Create Group
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <NavDropdown title="Projects" id="nav-dropdown">
-                      <NavDropdown.Item eventKey="4.1" href="/project">
-                        Submitted Projects
-                      </NavDropdown.Item>
-                      <NavDropdown.Item eventKey="4.2" href="/pastprojects">
-                        Past Projects
-                      </NavDropdown.Item>
-                      <NavDropdown.Item eventKey="4.2" href="/addProject">
-                        New Project
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div
-              style={{ marginRight: -300 }}
-              className="nav-header-right col-xs-12 col-md-6"
-            >
-              {/*Navbar Menu Right Hand Side*/}
-              <ul class="nav navbar-nav ms-auto">
-                <li>
-                  <a class="nav-link" onClick={(e) => this.onLogin(e)}>
-                    Login
-                  </a>
-                </li>
-                <li>
-                  <a class="nav-link">/</a>
-                </li>
-
-                <li>
-                  <a class="nav-link" onClick={(e) => this.onLogin(e)}>
-                    Profile
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="/home">Capstone Project</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/sponsor">Sponsors</Nav.Link>
+              <NavDropdown title="Groups" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Join Group</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Create Group
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown title="Projects" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="/getProject">
+                  Submitted Projects
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/addProject">
+                  New Project
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/pastProjects">
+                  Past Projects
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Nav>
+              <Nav.Link onClick={(event) => onLogin()}>Login</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     );
   }
-}
