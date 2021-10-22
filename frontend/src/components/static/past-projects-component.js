@@ -34,7 +34,7 @@ export default function PastProjectsFunction(props) {
         <div class="content-area col-xs-12 col-md-12 px-0">
           <div class="card border-dark past-project-header">
             <div class="text-overlay-header col-xs-12 col-md-12">
-              <h1 class="banner-tl" style={{ color: "white" }}>
+              <h1 class="banner-tl" style={{ color: "white"}}>
                 Explore our Past Projects
               </h1>
               <div class="banner-text col-xs-12 col-sm-12 col-md-12">

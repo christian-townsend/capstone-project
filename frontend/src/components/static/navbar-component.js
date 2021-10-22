@@ -40,6 +40,9 @@ export default function NavbarComponent() {
                 <NavDropdown.Item href="/pastProjects">
                   Past Projects
                 </NavDropdown.Item>
+                <NavDropdown.Item href="/expoProjects">
+                  Capstone Expo
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Nav>
