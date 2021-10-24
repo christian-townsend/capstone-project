@@ -50,7 +50,8 @@ export default function PastProjectsFunction(props) {
         {/*Banner Logo*/}
 
       </row>
-      <div class="wrapper-body" style={{ marginTop: -150 }}>
+      <div class="bkg-white">
+      <div class="container-accordion">
         <div class="accordion" id="accordionBody">
           {/*Dropdown 1*/}
           <div class="accordion-item">
@@ -342,6 +343,7 @@ export default function PastProjectsFunction(props) {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -311,6 +311,15 @@ form {
 }
 
 /* Past Projects Component */
+.container-accordion {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.bkg-white{
+  background-color: #fff;
+}
 .accordion-title {
   font-size: 25px;
   font-weight: 900;
@@ -358,3 +367,5 @@ tr {
   white-space: pre-wrap;
   padding-top: 40px;
 }
+
+
