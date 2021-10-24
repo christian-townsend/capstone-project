@@ -43,7 +43,7 @@ export default function NavbarComponent() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link onClick={(event) => onLogin()}>Login</Nav.Link>
+            <Nav.Link onClick={(event) => onLogin()}>Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
