@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import loginIcon from "../../images/login.png";
 import projectIcon from "../../images/project-carousel.jpg";
 import sponsorIcon from "../../images/become_a_sponsor.png";
-import axios from "axios"
+import axios from "axios";
 
 export default function Landing() {
   const [index, setIndex] = useState(0);
@@ -19,8 +19,10 @@ export default function Landing() {
       .request("http://localhost:5000/users")
       .then((res) => console.log(res.data));
 
-      window.location = "http://localhost:5000/users";
-    };
+    window.location = "http://localhost:5000/users";
+  };
+
+ 
 
   return (
     <div class="fullpage">
@@ -68,7 +70,7 @@ export default function Landing() {
                 <h1
                   style={{ marginTop: 40, color: "white", textAlign: "center" }}
                 >
-                  <Button href="/addProject"variant="primary" size="lg">
+                  <Button href="/addProject" variant="primary" size="lg">
                     Submit here
                   </Button>
                 </h1>
@@ -82,7 +84,11 @@ export default function Landing() {
                 <h1
                   style={{ marginTop: 40, color: "white", textAlign: "center" }}
                 >
-                  <Button variant="primary" size="lg" onClick={(event) => onLogin()}>
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    onClick={(event) => onLogin()}
+                  >
                     Sign in
                   </Button>
                 </h1>
