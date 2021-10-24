@@ -19,6 +19,7 @@ import Sponsor from "./components/static/sponsor-component";
 import addGroup from "./components/functional/addGroup";
 import getGroup from "./components/functional/getGroup";
 import ReadProject from "./components/functional/getProject";
+import ExpoProjects from "./components/static/expo-component";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Route path="/sponsor" component={Sponsor} />
             <Route path="/pastprojects" component={PastProject} />
             <Route path="/UploadFile" component={UploadFile} />
+            <Route path="/expoProjects" component={ExpoProjects} />
 
             <Footer />
           </div>

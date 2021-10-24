@@ -342,3 +342,19 @@ tr {
   min-height: 25px;
   height: 200px;
 }
+
+.header-banner {
+  color: white;
+  display: block;
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: bold;
+  height: 100px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  white-space: pre-wrap;
+  padding-top: 40px;
+}

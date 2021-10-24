@@ -37,10 +37,13 @@ export default function NavbarComponent() {
               <NavDropdown.Item href="/pastProjects">
                 Past Projects
               </NavDropdown.Item>
+              <NavDropdown.Item href="/expoProjects">
+                Capstone Expo
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link onClick={(event) => onLogin()}>Profile</Nav.Link>
+            <Nav.Link onClick={(event) => onLogin()}>Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
