@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const fileUpload = require('express-fileupload');
 
 const mongoose = require("mongoose");
 const SERVER_PORT = process.env.PORT || 5000;
@@ -12,10 +13,11 @@ const corsOptions = {
 };
 
 require("dotenv").config();
-// Create Express App and Routes
+// Create Express App and Routes 
 const app = express();
 app.use(cors(corsOptions)); // Use this after the variable declaration
 app.use(express.json());
+app.use(fileUpload()); 
 
 // Allows us to return responses to the front-end when requests to the APIs are made
 app.use(function (req, res, next) {
@@ -46,6 +48,24 @@ app.listen(SERVER_PORT, () =>
     `Msal Node Auth Code Sample app listening on port ${SERVER_PORT}!`
   )
 );
+
+// Upload Endpoint for files
+app.post('/upload', (req, res) => {
+  if (req.files === null) {
+    return res.status(400).json({ msg: 'No file uploaded' });
+  }
+
+  const file = req.files.file;
+
+  file.mv(`${__dirname}/public/uploads/${file.name}`, err => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send(err);
+    }
+
+    res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+  });
+});
 
 // Define Routes
 const usersRouter = require("./routes/user"); // Routes for Users
